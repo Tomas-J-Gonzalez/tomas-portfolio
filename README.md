@@ -8,7 +8,7 @@
 
 My portfolio is a website that showcases my User Experience related projects and other related cotent.
 
-/pages/index.html
+Go to: [/pages/index.html](https://tomas-j-gonzalez.github.io/pages/index.html)
 
 ## Prerequisites
 
@@ -23,11 +23,11 @@ Search: 'www.tomasjgonzalez.com' or 'tomasjgonzalez.com'
 ```
 
 ## No contributions
-View human.txt
+View /humans.txt (URL)
 
 ## Contact
 
-If you want to contact me you can reach me at <admin08@tomasjgonzalez.com>.
+If you want to contact me you can reach me at <admin@tomasjgonzalez.com>.
 
 ## License
 
