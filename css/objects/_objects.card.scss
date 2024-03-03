@@ -1,0 +1,100 @@
+/*------------------------------------*\
+    #OBJECTS: CARDS
+\*------------------------------------*/
+
+/**
+ * Component Block
+ */
+
+ .card__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+  overflow: hidden;
+}
+
+.card {
+margin: 20px; /* Changes cols/rows */
+padding-bottom: 1rem;
+overflow: hidden;
+flex: 1 0 calc(50% - 20px); /* Initially 50% width with margin */
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    flex-basis: calc(50% - 20px); /* Set initial basis to 50% */
+    max-width: calc(50% - 20px); /* Set max-width to ensure maximum 2 cards per row */
+  }
+}
+
+.card__img {
+  border-radius: 0.6rem;
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;  /* Maintain aspect */
+  margin-top: -0.5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .card__img {
+      height: auto; /* Switch to automatic height on smaller screens */
+      max-width: 100%; /* Ensure images don't exceed container width */
+  }
+}
+.card__content {
+  padding-top: 0.5rem;
+  padding-bottom: 1.2rem;
+}
+
+.card:hover,
+.card:active,
+.card:focus,
+.card.is-pressed {
+  transform: translateY(-2px);
+  filter: brightness(0.9);
+  transition: 0.2s;
+}
+
+.card__title {
+  font-size: var(--step-1);
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+
+/*
+.card__text {
+  font-size: var(--step-1);
+  margin-bottom: 0.5rem;
+}
+*/
+
+/*
+.card__btn {
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #3363ff;
+  background-color: #e6ecff;
+  border: none;
+  border-radius: 0.4rem;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.card__btn span {
+  margin-left: 1rem;
+  transition: 0.2s;
+}
+.card__btn:hover, .card__btn:active {
+  background-color: #dce4ff;
+}
+.card__btn:hover span, .card__btn:active span {
+  margin-left: 1.5rem;
+}
+*/

@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    #LAYOUTS: PROJECT
+\*------------------------------------*/
+
+
+/**
+ * Component Block
+ */
+
+.Project {
+  @include margin-bottom(3);
+}
+
+@include breakpoint(md) {
+  .Project-description {
+    @include margin-top(1);
+  }
+}
+
+.Project .Message {
+  border: dotted 1px;
+  padding: 32px 64px;
+}
+
+.Project-heading {
+  margin-top: 1.25rem;
+}
+
+.Hero_h1 {
+  text-align: center;
+  text-align: -webkit-center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  cursor: default;
+  }

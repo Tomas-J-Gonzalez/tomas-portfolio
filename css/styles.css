@@ -1,0 +1,1909 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    #ABSTRACTS: COLORS
+\*------------------------------------*/
+/*------------------------------------*\
+    #ABSTRACTS: TYPOGRAPHY
+\*------------------------------------*/
+/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+:root {
+  --fluid-min-width: 320;
+  --fluid-max-width: 1140;
+  --fluid-screen: 100vw;
+  --fluid-bp: calc( (var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) / (var(--fluid-max-width) - var(--fluid-min-width)) )
+;
+}
+
+@media screen and (min-width: 1140px) {
+  :root {
+    --fluid-screen:calc(var(--fluid-max-width) * 1px)
+  ;
+  }
+}
+
+:root {
+  --f--1-min: 14.22;
+  --f--1-max: 16.00;
+  --step--1: calc( ((var(--f--1-min) / 16) * 1rem) + (var(--f--1-max) - var(--f--1-min)) * var(--fluid-bp) );
+  --f-0-min: 16.00;
+  --f-0-max: 20.00;
+  --step-0: calc( ((var(--f-0-min) / 16) * 1rem) + (var(--f-0-max) - var(--f-0-min)) * var(--fluid-bp) );
+  --f-1-min: 18.00;
+  --f-1-max: 25.00;
+  --step-1: calc( ((var(--f-1-min) / 16) * 1rem) + (var(--f-1-max) - var(--f-1-min)) * var(--fluid-bp) );
+  --f-2-min: 20.25;
+  --f-2-max: 31.25;
+  --step-2: calc( ((var(--f-2-min) / 16) * 1rem) + (var(--f-2-max) - var(--f-2-min)) * var(--fluid-bp) );
+  --f-3-min: 22.78;
+  --f-3-max: 39.06;
+  --step-3: calc( ((var(--f-3-min) / 16) * 1rem) + (var(--f-3-max) - var(--f-3-min)) * var(--fluid-bp) );
+  --f-4-min: 25.63;
+  --f-4-max: 48.83;
+  --step-4: calc( ((var(--f-4-min) / 16) * 1rem) + (var(--f-4-max) - var(--f-4-min)) * var(--fluid-bp) )
+;
+}
+
+/* Type   VALRIBLES(Variable Maps  */
+/* font-weights: normal, medium, bold ->  to call =  map-get($font-weights, bold); */
+/* font-size: h1, h2, p */
+/*   Functions are used to compute and return values whereas Mixins should define styles  ---------*/
+/*------------------------------------*\
+    #ABSTRACTS: BREAKPOINTS
+\*------------------------------------*/
+/**
+ * Breakpoints
+ *
+ *
+$base-font-size = 100%/16px
+  *
+*/
+/**
+* Mobile-first styles FTW
+*
+Example:
+*/
+aside.primary {
+  /* Regular content */
+}
+
+@media (min-width: 37.5em) {
+  aside.primary {
+    /* responsive content */
+  }
+}
+
+/*------------------------------------*\
+    #ABSTRACTS: SPACING
+\*------------------------------------*/
+/****** Tomas Gonzalez CSS RESET *******/
+/*** box sizing border-box for all elements ***/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /*** why is box-sizing set to border-box though??? ***/
+}
+
+/**
+ * More sensible default box-sizing:
+ * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+ */
+* {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* Div reset --------------------------------------------*/
+div {
+  display: block;
+}
+
+/* Typography reset-------------------------------------*/
+p {
+  margin: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Misc reset -------------------*/
+cite {
+  font-style: normal;
+}
+
+fieldset {
+  border-width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  background-color: transparent;
+  color: inherit;
+  border-width: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  margin: 0;
+}
+
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove default padding AND styling*/
+ul,
+ol,
+dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/*------------------------------------*\
+    #BASE: BODY
+\*------------------------------------*/
+html {
+  -webkit-font-feature-settings: "calt", "liga", "hist", "onum", "pnum";
+          font-feature-settings: "calt", "liga", "hist", "onum", "pnum";
+  background-color: #542bff;
+}
+
+@media screen and (min-width: 675px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+body {
+  background-color: #F5F8FE;
+  color: #333444;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 400;
+  line-height: 1.6;
+  font-style: normal;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
+
+p {
+  max-width: 680px;
+}
+
+p:not(:last-of-type) {
+  margin-bottom: 1.2rem;
+}
+
+@media screen and (min-width: 48em) {
+  p:not(:last-of-type) {
+    margin-bottom: 1.28rem;
+  }
+}
+
+/*------------------------------------*\
+    #BASE: HEADINGS
+\*------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-dark);
+  font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+  font-weight: 700;
+  letter-spacing: -.015em;
+  max-width: 35ch;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.2;
+}
+
+h1, .h1 {
+  font-size: var(--step-4);
+  max-width: 33ch;
+}
+
+h2, .h2 {
+  font-size: var(--step-2);
+  margin-top: 3.75rem;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 48em) {
+  h2, .h2 {
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  h2, .h2 {
+    margin-bottom: 1.6rem;
+  }
+}
+
+h3, .h3 {
+  font-size: var(--step-1);
+  margin-top: 2.25rem;
+  margin-bottom: .75rem;
+}
+
+@media screen and (min-width: 48em) {
+  h3, .h3 {
+    margin-top: 2.4rem;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  h3, .h3 {
+    margin-bottom: .8rem;
+  }
+}
+
+h4, .h4 {
+  font-size: var(--step-0);
+  line-height: 1.4;
+  margin-top: 2.25rem;
+  margin-bottom: .75rem;
+}
+
+@media screen and (min-width: 48em) {
+  h4, .h4 {
+    margin-top: 2.4rem;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  h4, .h4 {
+    margin-bottom: .8rem;
+  }
+}
+
+/*------------------------------------*\
+    #BASE: IMAGES
+\*------------------------------------*/
+img {
+  max-width: 100%;
+  width: 100%;
+  vertical-align: middle;
+}
+
+/**
+ * Figures
+ */
+figure {
+  margin: 0;
+}
+
+figure > img {
+  display: block;
+}
+
+figcaption {
+  font-size: 80%;
+  margin-top: 0.75rem;
+}
+
+@media screen and (min-width: 48em) {
+  figcaption {
+    margin-top: 0.8rem;
+  }
+}
+
+/*------------------------------------*\
+    #BASE: LINKS
+\*------------------------------------*/
+a {
+  color: #542bff;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #fffefc;
+  background-color: #542bff;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: 1px dotted;
+  outline-offset: 4px;
+}
+
+a:visited {
+  text-decoration: underline;
+}
+
+a:before {
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+a:hover {
+  color: #111111;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/*------------------------------------*\
+    #BASE: LISTS
+\*------------------------------------*/
+ul,
+ol {
+  color: #111111;
+  list-style-position: inside;
+  max-width: 675px;
+  padding-left: 0;
+}
+
+@media (min-width: 48em) {
+  ul,
+  ol {
+    list-style-position: outside;
+  }
+}
+
+ul + p,
+ol + p {
+  margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 48em) {
+  ul + p,
+  ol + p {
+    margin-top: 1.6rem;
+  }
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/*------------------------------------*\
+    #BASE: QUOTES
+\*------------------------------------*/
+blockquote {
+  border-left: 2px solid var(--color-dark);
+  color: var(--color-dark);
+  font-weight: 400;
+  font-style: italic;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 48em) {
+  blockquote {
+    margin-top: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  blockquote {
+    margin-bottom: 1.6rem;
+  }
+}
+
+blockquote p {
+  margin-left: 1.5rem;
+}
+
+@media screen and (min-width: 48em) {
+  blockquote p {
+    margin-left: 1.6rem;
+  }
+}
+
+blockquote cite, blockquote figcaption {
+  display: block;
+  font-size: 80%;
+  font-style: normal;
+  font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+  font-weight: 700;
+  margin-top: .75rem;
+}
+
+@media screen and (min-width: 48em) {
+  blockquote cite, blockquote figcaption {
+    margin-top: .8rem;
+  }
+}
+
+code,
+kbd,
+samp {
+  background: #f9f9f9;
+  color: var(--color-light);
+  font-size: 0.9rem;
+}
+
+pre {
+  background: #f9f9f9;
+  font-size: 0.9rem;
+  overflow: auto;
+  overflow-x: scroll;
+  overflow-wrap: normal;
+  padding: 3%;
+}
+
+pre + p {
+  margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 48em) {
+  pre + p {
+    margin-top: 1.6rem;
+  }
+}
+
+p code,
+li code {
+  padding: .125rem .35rem;
+}
+
+code, pre {
+  font-family: Menlo,Monaco,"Courier New",monospace;
+}
+
+code {
+  font-size: 85%;
+  color: #396ca0;
+  background-color: #f9f9f9;
+  border-radius: 2px;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+pre code {
+  padding: 0;
+  font-size: 100%;
+  color: inherit;
+  background-color: transparent;
+}
+
+/*------------------------------------*\
+    #BASE: SELECT
+\*------------------------------------*/
+select {
+  background: #444444;
+  border: 0;
+  cursor: pointer;
+  font-size: 0.8rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline-style: none;
+  height: 64px;
+  width: 100%;
+}
+
+/*------------------------------------*\
+    #BASE: VIDEO
+\*------------------------------------*/
+/**
+ * Component Block
+ */
+video {
+  width: 100%;
+  height: auto;
+}
+
+/*------------------------------------*\
+    #LAYOUTS: WRAPPER
+\*------------------------------------*/
+/**
+ * Component Block
+ */
+.Wrapper {
+  padding: 0 4%;
+}
+
+@media (min-width: 48em) {
+  .Wrapper {
+    padding: 0 7% 0 7%;
+  }
+}
+
+@media (min-width: 48em) {
+  .Wrapper {
+    padding: 0 7%;
+  }
+}
+
+.Wrapper h-card {
+  padding-right: 52.984;
+  padding-left: 52.984;
+  margin-bottom: 10%;
+}
+
+/*------------------------------------*\
+    #LAYOUTS: CONTAINER
+\*------------------------------------*/
+/**
+ * Component Block
+ */
+.Container {
+  padding-top: 20%;
+  padding-bottom: 7%;
+  max-width: 1248px;
+  margin: 0 auto;
+}
+
+@media (min-width: 48em) {
+  .Container {
+    padding-top: 5%;
+  }
+}
+
+/*------------------------------------*\
+    #LAYOUTS: SECTION
+\*------------------------------------*/
+/**
+ * Component Block
+ */
+.Section {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 48em) {
+  .Section {
+    margin-top: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .Section {
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .Section {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (min-width: 48em) and (min-width: 48em) {
+  .Section {
+    margin-top: 3.2rem;
+  }
+}
+
+@media screen and (min-width: 48em) and (min-width: 48em) {
+  .Section {
+    margin-bottom: 3.2rem;
+  }
+}
+
+.Section {
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/*------------------------------------*\
+    #LAYOUTS: FLEX
+\*------------------------------------*/
+/**
+ * Component Block
+ */
+.Flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Flex-item {
+  -ms-flex-preferred-size: 1;
+      flex-basis: 1;
+}
+
+/*------------------------------------*\
+    #LAYOUTS: GRID
+\*------------------------------------*/
+/**
+ * A utility that creates a simple 1 dimentional 12 column grid, using CSS grid
+ *
+ * Content will span a minimum of 3 columns, for sake of simplicity
+ */
+.Grid {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 24px;
+}
+
+.Grid--2col {
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 48em) {
+  /**
+   * Component Block
+   */
+  .Grid,
+  .Grid--2col {
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+    grid-gap: 48px;
+    max-width: 1248px;
+  }
+  /**
+   * Component Element
+   */
+  /* From column 1, span 3 columns */
+  .Grid-1-3 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / span 3;
+  }
+  /* From column 1, span 6 columns */
+  .Grid-1-6 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1 / span 6;
+  }
+  /* From column 1, span 12 columns */
+  .Grid-1-12 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / span 12;
+  }
+  /* From column 4, span 3 columns */
+  .Grid-4-3 {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 3;
+    grid-column: 4 / span 3;
+  }
+  /* From column 7, span 3 columns */
+  .Grid-7-3 {
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 3;
+    grid-column: 7 / span 3;
+  }
+  /* From column 7, span 6 columns */
+  .Grid-7-6 {
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 6;
+    grid-column: 7 / span 6;
+  }
+  /* From column 10, span 3 columns */
+  .Grid-10-3 {
+    -ms-grid-column: 10;
+    -ms-grid-column-span: 3;
+    grid-column: 10 / span 3;
+  }
+  .Grid-as-center {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+/*------------------------------------*\
+    #LAYOUTS: PROJECT
+\*------------------------------------*/
+/**
+ * Component Block
+ */
+.Project {
+  margin-bottom: 4.5rem;
+}
+
+@media screen and (min-width: 48em) {
+  .Project {
+    margin-bottom: 4.8rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .Project-description {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 48em) and (min-width: 48em) {
+  .Project-description {
+    margin-top: 1.6rem;
+  }
+}
+
+.Project .Message {
+  border: dotted 1px;
+  padding: 32px 64px;
+}
+
+.Project-heading {
+  margin-top: 1.25rem;
+}
+
+.Hero_h1 {
+  text-align: center;
+  text-align: -webkit-center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  cursor: default;
+}
+
+/*------------------------------------*\
+    #LAYOUTS: BLOCKS
+\*------------------------------------*/
+/**
+ * Component Block
+ */
+.Blocks h1,
+.Blocks h2,
+.Blocks h3,
+.Blocks h4 {
+  margin: 0;
+}
+
+/*------------------------------------*\
+    #LAYOUTS: POSTS
+\*------------------------------------*/
+/**
+ * Component Block
+ */
+.Post .intro, .intro {
+  font-size: 110%;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  max-width: 52ch;
+}
+
+@media screen and (min-width: 48em) {
+  .Post .intro, .intro {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.PostAuthor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 4.5rem;
+  margin-bottom: 4.5rem;
+}
+
+@media screen and (min-width: 48em) {
+  .PostAuthor {
+    margin-top: 4.8rem;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .PostAuthor {
+    margin-bottom: 4.8rem;
+  }
+}
+
+.PostAuthor h2 {
+  font-size: var(--step-1);
+}
+
+.PostAuthor h2, .PostAuthor p {
+  margin: 0;
+}
+
+.Post .heading-anchor {
+  display: inline;
+  margin-left: .5rem;
+  opacity: 0;
+}
+
+.Post h2:focus > .heading-anchor, .Post h2:hover > .heading-anchor, .Post h3:focus > .heading-anchor, .Post h3:hover > .heading-anchor, .Post h4:focus > .heading-anchor, .Post h4:hover > .heading-anchor {
+  opacity: 1;
+}
+
+.Post .heading-anchor {
+  text-decoration: none;
+}
+
+.Post .heading-anchor:hover {
+  text-decoration: underline;
+  color: var(--color-brand);
+  background: 0 0;
+}
+
+.Blocks h1, .Blocks h2 {
+  margin: 0;
+  line-height: 1.1;
+}
+
+.Blocks h3 {
+  line-height: 1.2;
+}
+
+.Blocks section {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 48em) {
+  .Blocks section {
+    margin-top: 3.2rem;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .Blocks section {
+    margin-bottom: 3.2rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .Blocks section {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+}
+
+@media screen and (min-width: 48em) and (min-width: 48em) {
+  .Blocks section {
+    margin-top: 6.4rem;
+  }
+}
+
+@media screen and (min-width: 48em) and (min-width: 48em) {
+  .Blocks section {
+    margin-bottom: 6.4rem;
+  }
+}
+
+/*------------------------------------*\
+    #LAYOUTS: POST LIST
+\*------------------------------------*/
+/**
+ * Component Block
+ */
+.Post .intro, .intro {
+  font-size: 110%;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  max-width: 52ch;
+}
+
+@media screen and (min-width: 48em) {
+  .Post .intro, .intro {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.PostAuthor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 4.5rem;
+  margin-bottom: 4.5rem;
+}
+
+@media screen and (min-width: 48em) {
+  .PostAuthor {
+    margin-top: 4.8rem;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .PostAuthor {
+    margin-bottom: 4.8rem;
+  }
+}
+
+.PostAuthor h2 {
+  font-size: var(--step-1);
+}
+
+.PostAuthor h2, .PostAuthor p {
+  margin: 0;
+}
+
+.Post .heading-anchor {
+  display: inline;
+  margin-left: .5rem;
+  opacity: 0;
+}
+
+.Post h2:focus > .heading-anchor, .Post h2:hover > .heading-anchor, .Post h3:focus > .heading-anchor, .Post h3:hover > .heading-anchor, .Post h4:focus > .heading-anchor, .Post h4:hover > .heading-anchor {
+  opacity: 1;
+}
+
+.Post .heading-anchor {
+  text-decoration: none;
+}
+
+.Post .heading-anchor:hover {
+  text-decoration: underline;
+  color: var(--color-brand);
+  background: 0 0;
+}
+
+.Post .heading-anchor {
+  text-decoration: none;
+}
+
+.Post .heading-anchor {
+  display: inline;
+  margin-left: 0.5rem;
+  opacity: 0;
+}
+
+.PostListItem {
+  margin-bottom: 4.5rem;
+}
+
+@media screen and (min-width: 48em) {
+  .PostListItem {
+    margin-bottom: 4.8rem;
+  }
+}
+
+.PostListItem:first-of-type {
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 48em) {
+  .PostListItem:first-of-type {
+    margin-top: 3.2rem;
+  }
+}
+
+.PostListItem p {
+  color: var(--color-dark);
+}
+
+.PostListItem-title {
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: .75rem;
+  max-width: 30ch;
+}
+
+@media screen and (min-width: 48em) {
+  .PostListItem-title {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .PostListItem-title {
+    margin-bottom: .8rem;
+  }
+}
+
+.PostListItem-title a {
+  color: var(--color-dark);
+  text-decoration: none;
+}
+
+.PostListItem-title a:hover {
+  background-color: unset;
+  text-decoration: underline;
+}
+
+.PostListItem-meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: .75rem;
+}
+
+@media screen and (min-width: 48em) {
+  .PostListItem-meta {
+    margin-bottom: .8rem;
+  }
+}
+
+.TagList {
+  -webkit-columns: 17rem auto;
+          columns: 17rem auto;
+}
+
+@media (min-width: 48em) {
+  .TagList {
+    -webkit-column-gap: 64px;
+            column-gap: 64px;
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+}
+
+.TagListItem {
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 48em) {
+  .TagListItem {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.TagListItem-title {
+  margin: 0;
+  font-size: var(--step-2);
+}
+
+ul.Pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: calc(var(--space) *12);
+  margin-bottom: calc(var(--space) *12);
+}
+
+ul.Pagination .Pagination-item {
+  margin-top: calc(var(--space) *1.5);
+  margin-bottom: calc(var(--space) *1.5);
+}
+
+ul.Pagination .Pagination-item:not(:first-of-type) {
+  margin-left: calc(var(--space)/1.5);
+}
+
+ul.Pagination .Pagination-itemLink {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: calc(var(--space)/1.5) calc(var(--space) *1.5);
+}
+
+@media (min-width: 48em) {
+  ul.Pagination .Pagination-itemLink {
+    font-size: var(--font-size-xxs);
+  }
+}
+
+ul.Pagination .Pagination-item--current {
+  background-color: var(--color-brand);
+}
+
+ul.Pagination .Pagination-item--current a {
+  color: var(--color-light);
+  text-decoration: none;
+}
+
+/*------------------------------------*\
+    #OBJECTS: CARDS
+\*------------------------------------*/
+/**
+ * Component Block
+ */
+.card__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+  overflow: hidden;
+}
+
+.card {
+  margin: 20px;
+  /* Changes cols/rows */
+  padding-bottom: 1rem;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc(50% - 20px);
+          flex: 1 0 calc(50% - 20px);
+  /* Initially 50% width with margin */
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    -ms-flex-preferred-size: calc(50% - 20px);
+        flex-basis: calc(50% - 20px);
+    /* Set initial basis to 50% */
+    max-width: calc(50% - 20px);
+    /* Set max-width to ensure maximum 2 cards per row */
+  }
+}
+
+.card__img {
+  border-radius: 0.6rem;
+  display: block;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* Maintain aspect */
+  margin-top: -0.5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .card__img {
+    height: auto;
+    /* Switch to automatic height on smaller screens */
+    max-width: 100%;
+    /* Ensure images don't exceed container width */
+  }
+}
+
+.card__content {
+  padding-top: 0.5rem;
+  padding-bottom: 1.2rem;
+}
+
+.card:hover,
+.card:active,
+.card:focus,
+.card.is-pressed {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.card__title {
+  font-size: var(--step-1);
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/*
+.card__text {
+  font-size: var(--step-1);
+  margin-bottom: 0.5rem;
+}
+*/
+/*
+.card__btn {
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #3363ff;
+  background-color: #e6ecff;
+  border: none;
+  border-radius: 0.4rem;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.card__btn span {
+  margin-left: 1rem;
+  transition: 0.2s;
+}
+.card__btn:hover, .card__btn:active {
+  background-color: #dce4ff;
+}
+.card__btn:hover span, .card__btn:active span {
+  margin-left: 1.5rem;
+}
+*/
+/*------------------------------------*\
+    #OBJECTS: BUTTON
+\*------------------------------------*/
+/**
+ * Component Block
+ */
+.ButtonWrap {
+  margin-bottom: 6rem;
+  margin-top: 6rem;
+}
+
+@media screen and (min-width: 48em) {
+  .ButtonWrap {
+    margin-bottom: 6.4rem;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .ButtonWrap {
+    margin-top: 6.4rem;
+  }
+}
+
+.Button {
+  all: initial;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  padding: 1em 1.25em;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1;
+  background-color: transparent;
+  color: #585858;
+  border: .075em solid #d5d5d5;
+  border-radius: .125em;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+  text-decoration: none !important;
+}
+
+.contact-cta {
+  text-align: center;
+  width: 100%;
+  margin-top: 2em;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .contact-cta > .Button {
+    display: block;
+    margin: 1em;
+  }
+}
+
+.Button:hover,
+.Button:focus,
+.Button:active,
+.Button.is-pressed {
+  background-color: transparent;
+  border-color: #111111;
+  color: #111111;
+  -webkit-transform: translateY(-0.5px);
+          transform: translateY(-0.5px);
+}
+
+.Badge {
+  color: #542bff;
+  background-color: rgba(84, 43, 255, 0.05);
+  border-radius: 0.2rem;
+  padding: calc(calc(1rem/2) / 1.5);
+  margin: calc(calc(1rem/2) / 1.5);
+  cursor: default;
+}
+
+.Badge:hover,
+.Badge:focus,
+.Badge:active,
+.Badge.is-pressed {
+  background-color: rgba(84, 43, 255, 0.1);
+  color: #542bff;
+}
+
+/*------------------------------------*\
+    #COMPONENTS: HEADER
+\*------------------------------------*/
+/**
+ * Component Block
+ */
+.Header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 500;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1248px;
+  margin: 0 auto;
+  padding: 6% 0% 5%;
+}
+
+.Header a {
+  color: #111111;
+  text-decoration: none;
+}
+
+.Header a:hover {
+  background-color: unset;
+  text-decoration: underline;
+}
+
+/*------------------------------------*\
+    #COMPONENTS: NAV
+
+
+/**
+ * Component Block
+ */
+.Nav-list {
+  text-align: right;
+}
+
+@media (min-width: 48em) {
+  .Nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left;
+  }
+  .Nav-listItem:not(:last-of-type) {
+    margin-right: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 48em) and (min-width: 48em) {
+  .Nav-listItem:not(:last-of-type) {
+    margin-right: 1.6rem;
+  }
+}
+
+/**
+* Current page is active
+*/
+.Nav-linkActive {
+  text-decoration: underline;
+}
+
+/*------------------------------------*\
+    #COMPONENTS: FOOTER
+\*------------------------------------*/
+/**
+ * Component Block
+ */
+.Footer {
+  max-width: 1248px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media screen and (min-width: 48em) {
+  .Footer {
+    margin-top: 3.2rem;
+  }
+}
+
+.Footer p {
+  margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 48em) {
+  .Footer p {
+    margin-top: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .Footer {
+    margin-top: 3.2rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .footer-credits {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.footer-copyright {
+  font-weight: 600;
+  margin: 0;
+}
+
+@media screen and (max-width: 700px) {
+  .notice {
+    display: none !important;
+  }
+}
+
+.notice {
+  display: inline;
+  margin: 0px 0px 0px 2.4rem;
+}
+
+.notice, .to-the-top {
+  color: #6d6d6d;
+}
+
+#site-footer a {
+  text-decoration: none;
+  color: #111111;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#site-footer a:hover {
+  background-color: unset;
+  text-decoration: underline;
+}
+
+#site-footer .section-inner {
+  width: calc(100% - 0rem);
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.to-the-top-long::after {
+  border-bottom: 2px solid #111;
+  border-right: 2px solid #111;
+  content: "";
+  display: inline-block;
+  height: 0.5em;
+  margin-left: 0.5em;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  width: 0.5em;
+}
+
+/*------------------------------------*\
+    #COMPONENTS: IMAGE
+\*------------------------------------*/
+/**
+ * Component Block
+ */
+.Image figcaption {
+  line-height: 20px;
+  margin-top: 0.75rem;
+}
+
+@media screen and (min-width: 48em) {
+  .Image figcaption {
+    margin-top: 0.8rem;
+  }
+}
+
+.Image + p,
+p + .Image {
+  margin-top: 2.25rem;
+}
+
+@media screen and (min-width: 48em) {
+  .Image + p,
+  p + .Image {
+    margin-top: 2.4rem;
+  }
+}
+
+.ImageCover {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 350px;
+}
+
+@media (min-width: 37.5em) {
+  .ImageCover {
+    -o-object-fit: fill;
+       object-fit: fill;
+    height: auto;
+  }
+}
+
+/**
+ * Component Modifier
+ */
+@media (min-width: 37.5em) {
+  .Image--pullRight {
+    width: 40%;
+    float: right;
+    margin-left: 48px;
+    margin-bottom: 32px;
+    margin-top: 0;
+  }
+}
+
+.Image--headShot {
+  border-radius: 0.4rem;
+}
+
+/**
+ * Component Utility
+ */
+/* Animate the lazyloading */
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+
+.lazyloaded {
+  opacity: 1;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms;
+}
+
+/*------------------------------------*\
+    #COMPONENTS: QUOTE
+\*------------------------------------*/
+/**
+ * Component Block
+ */
+.Quote {
+  max-width: 400px;
+}
+
+/**
+ * Component Modifier
+ */
+.Quote--left {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  margin-left: 1.5rem;
+}
+
+@media screen and (min-width: 48em) {
+  .Quote--left {
+    margin-top: 0rem;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .Quote--left {
+    margin-bottom: 0rem;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .Quote--left {
+    margin-left: 1.6rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .Quote--left {
+    margin-left: 0rem;
+  }
+}
+
+@media screen and (min-width: 48em) and (min-width: 48em) {
+  .Quote--left {
+    margin-left: 0rem;
+  }
+}
+
+.Quote--right {
+  float: right;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  margin-left: 3rem;
+  margin-right: 1.5rem;
+  width: 400px;
+}
+
+@media screen and (min-width: 48em) {
+  .Quote--right {
+    margin-top: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .Quote--right {
+    margin-bottom: 3.2rem;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .Quote--right {
+    margin-left: 3.2rem;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .Quote--right {
+    margin-right: 1.6rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .Quote--right {
+    margin-right: 12rem;
+  }
+}
+
+@media screen and (min-width: 48em) and (min-width: 48em) {
+  .Quote--right {
+    margin-right: 12.8rem;
+  }
+}
+
+/*------------------------------------*\
+    #UTILITIES: LAYOUT
+\*------------------------------------*/
+.u-visually-hidden {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+/**
+ * FULL BLEED
+ *
+ * Add this class to an element to make it fill the width of the screen 
+ * and sit horizontally central
+ * https://andy-bell.design/wrote/creating-a-full-bleed-css-utility/
+ */
+.full-bleed {
+  width: 100vw;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.full-bleed-skinny {
+  width: 100vw;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  overflow: hidden;
+  /* Ensure the clipped part is hidden */
+}
+
+.full-bleed-skinny img {
+  width: 100%;
+  /* Ensure the image fills the container */
+  height: 60vh;
+  /* Ensure the image fills the container */
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* Ensure the image maintains its aspect ratio */
+  -o-object-position: 50% 20%;
+     object-position: 50% 20%;
+  /* Center the image */
+}
+
+.Project .Message {
+  border: dotted 1px;
+  padding: 32px 64px;
+  cursor: default;
+}
+
+/* Apply stickyBoy only when screen size is above 1500px */
+@media screen and (min-width: 1500px) {
+  .stickyBoy {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10px;
+    bottom: 10px;
+  }
+}
+
+/*------------------------------------*\
+    #UTILITIES: COLOR
+\*------------------------------------*/
+.white {
+  color: #ffffff;
+}
+
+.dark {
+  color: #111111;
+}
+
+.body {
+  color: #333444;
+}
+
+.link {
+  color: #542bff;
+}
+
+.brand {
+  color: #542bff;
+}
+
+.accent-color {
+  color: #544bff75;
+}
+
+.gradient-light {
+  background: linear-gradient(45deg, #542BFF, #156B90);
+  -webkit-linear-gradient: linear-gradient(45deg, #542BFF, #156B90);
+  -moz-linear-gradient: linear-gradient(45deg, #542BFF, #156B90);
+}
+
+.gradient-dark {
+  background: linear-gradient(45deg, #542BFF, #2D1590);
+  -webkit-linear-gradient: linear-gradient(45deg, #542BFF, #2D1590);
+  -moz-linear-gradient: linear-gradient(45deg, #542BFF, #2D1590);
+}
+
+.light {
+  color: #030303;
+}
+
+.lighter {
+  color: #333333;
+}
+
+.lightest {
+  color: #444444;
+}
+
+/*------------------------------------*\
+    #UTILITIES: LINK
+\*------------------------------------*/
+/* External Link SVG icon after every link == rel="external" */
+a[rel*="external"]::after {
+  content: "";
+  width: 13px;
+  height: 13px;
+  margin-left: 4px;
+  margin-bottom: 2px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+
+.link-reset {
+  color: #111111;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.heading--permalink {
+  margin-bottom: 0.2em;
+  opacity: 0.8;
+}
+
+.heading--permalink:hover {
+  color: #fffefc;
+  background: #542bff;
+}
+
+/*------------------------------------*\
+    #UTILITIES: TYPOGRAPHY
+\*------------------------------------*/
+/* font family */
+.mono {
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
+  font-size: 0.7em;
+}
+
+/* font size */
+.body {
+  font-size: var(--step-0);
+}
+
+.small {
+  font-size: 80%;
+}
+
+.smaller {
+  font-size: 0.6em;
+}
+
+::-moz-selection {
+  background-color: #542bff;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+::selection {
+  background-color: #542bff;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.justify-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.justify-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.Project h2 {
+  max-width: 50%;
+  word-wrap: break-word;
+}
+
+/* 
+ITCSS — Inverted Triangle CSS
+
+****************   1. Variables
+ **************    2. Tools
+  ************     3. Generic
+   **********      4. Base
+    ********       5. Layouts    ==    Common non-cosmetic structural design patterns. Containers, rows, grids, colums etc.
+     ******        6. Components
+      ****         7. Modules    ==    Multi-part components.  Navbar, footer etc.
+       **          8. Utilities
+    
+       *           9. Shame     ==     All the CSS, hacks and things we are not proud of.
+*/
+/*# sourceMappingURL=styles.css.map */

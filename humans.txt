@@ -1,0 +1,20 @@
+/* TEAM */
+
+Creator: Tomás González
+Site: Tomás González
+Url: https://www.tomasjgonzalez.com/
+Contact: admin@tomasjgonzalez.com
+Social: @tomasjgonzalez
+Location: Auckland, NZ
+
+/* THANKS */
+
+Name: Hamlet
+Url: 
+
+
+/* SITE */
+
+Last update: 06/01/2022
+Standards: HTML5, CSS3
+Software: VSCode

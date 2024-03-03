@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    #LAYOUTS: SECTION
+\*------------------------------------*/
+
+/**
+ * Component Block
+ */
+
+//Includes margin top and bottom styling to section class.
+.Section {
+  @include margin-top(1);
+
+  @include margin-bottom(1);
+}
+
+//Includes breakpoints to section class.
+@include breakpoint(md) {
+  .Section {
+    @include margin-top(2);
+    @include margin-bottom(2);
+  }
+}
+
+.Section {
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}

@@ -1,0 +1,39 @@
+//  Importing SCSS Partials 
+
+//Abstracts - Variables: typography — colors — breakpoints                             
+@import "/Users/tomasgonzalez/Documents/portfolio/css/abstracts/_all.scss"; 
+
+//Reset.css - tinker with opinionination
+@import "/Users/tomasgonzalez/Documents/portfolio/css/_reset.scss";                      
+
+// Base styles (for html, body, links, heading, image, list, quote, video, select, etc)
+@import "/Users/tomasgonzalez/Documents/portfolio/css/base/_all.scss"; 
+
+// Layout styles (grid, section, etc.)
+@import "/Users/tomasgonzalez/Documents/portfolio/css/layouts/_all.scss"; 
+
+// Object styles — Video, form and button styling
+@import "/Users/tomasgonzalez/Documents/portfolio/css/objects/_all.scss"; 
+
+// Component styles
+@import "/Users/tomasgonzalez/Documents/portfolio/css/components/_all.scss"; 
+
+// Utilities for styles * highest specifcity to override previous styles
+@import "/Users/tomasgonzalez/Documents/portfolio/css/utilities/_all.scss"; 
+
+
+/* 
+ITCSS — Inverted Triangle CSS
+
+****************   1. Variables
+ **************    2. Tools
+  ************     3. Generic
+   **********      4. Base
+    ********       5. Layouts    ==    Common non-cosmetic structural design patterns. Containers, rows, grids, colums etc.
+     ******        6. Components
+      ****         7. Modules    ==    Multi-part components.  Navbar, footer etc.
+       **          8. Utilities
+    
+       *           9. Shame     ==     All the CSS, hacks and things we are not proud of.
+*/
+

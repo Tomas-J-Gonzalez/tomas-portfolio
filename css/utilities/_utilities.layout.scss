@@ -1,0 +1,64 @@
+/*------------------------------------*\
+    #UTILITIES: LAYOUT
+\*------------------------------------*/
+
+.u-visually-hidden {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+/**
+ * FULL BLEED
+ *
+ * Add this class to an element to make it fill the width of the screen 
+ * and sit horizontally central
+ * https://andy-bell.design/wrote/creating-a-full-bleed-css-utility/
+ */
+ 
+.full-bleed {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.full-bleed-skinny {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden; /* Ensure the clipped part is hidden */
+
+    img {
+  width: 100%; /* Ensure the image fills the container */
+  height: 60vh; /* Ensure the image fills the container */
+  object-fit: cover; /* Ensure the image maintains its aspect ratio */
+  object-position: 50% 20%; /* Center the image */
+  }
+}
+
+
+.Project .Message {
+  border: dotted 1px;
+  padding: 32px 64px;
+  cursor: default;
+}
+
+/* Apply stickyBoy only when screen size is above 1500px */
+@media screen and (min-width: 1500px) {
+  .stickyBoy {
+    position: sticky;
+    top: 10px;
+    bottom: 10px;
+  }
+}

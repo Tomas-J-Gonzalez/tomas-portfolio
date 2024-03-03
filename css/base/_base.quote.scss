@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    #BASE: QUOTES
+\*------------------------------------*/
+
+blockquote {
+  border-left: 2px solid var(--color-dark);
+  color: var(--color-dark);
+  font-weight: 400;
+  font-style: italic;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem
+}
+
+@media screen and (min-width: 48em) {
+  blockquote {
+      margin-top:1.6rem
+  }
+}
+
+@media screen and (min-width: 48em) {
+  blockquote {
+      margin-bottom:1.6rem
+  }
+}
+
+blockquote p {
+  margin-left: 1.5rem
+}
+
+@media screen and (min-width: 48em) {
+  blockquote p {
+      margin-left:1.6rem
+  }
+}
+
+blockquote cite,blockquote figcaption {
+  display: block;
+  font-size: 80%;
+  font-style: normal;
+  font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+  font-weight: 700;
+  margin-top: .75rem
+}
+
+@media screen and (min-width: 48em) {
+  blockquote cite,blockquote figcaption {
+      margin-top:.8rem
+  }
+}

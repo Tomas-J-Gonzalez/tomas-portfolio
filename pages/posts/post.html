@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+  <title> Writing — Tomas Gonzalez — UX Portfolio</title>
+  <meta name="title" content="Tomás González" />
+  <meta name="description" content="User Experience Design Portfolio. UX Design related information." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tomasjgonzalez.com/" />
+  <meta property="og:title" content="Tomas Gonzalez — UX Portfolio" />
+  <meta property="og:description" content="A User Experience design portfolio. Im Tomas Gonzalez, this is my corner of the internet where I share my design related projects." />
+
+  <meta name="keywords"
+    content="Product Design, UX Design, UI Design, Small businesses, Automation, Typography" />
+  <meta http-equiv="content-language" content="en" />
+
+  <meta name="author" content="Tomas Gonzalez" />
+  <link href="mailto:admin@tomasjgonzalez.com" rel="me" />
+  <link href="https://linkedin.com/in/tomasjgo/" rel="me" />
+
+  <link rel="shortcut icon" href="/img/s-favicon.png" type="image/x-icon" />
+
+  <!--       ?Stylesheets /////////////////////////////////////////////////////////////////////////////////-->
+  <link rel="stylesheet" href="/css/styles.css" />
+
+</head>
+
+<body class="Wrapper h-card">
+
+  <!--        ?Navigation ////////////////////////////////////////////////////////////////////////////////-->
+  <section class="Header" id="scroll">
+    <div>
+        <a href="/pages/index.html">
+        <p>Tomas Gonzalez</p>
+        </a>
+    </div>
+    
+    <nav class="Nav">
+        <ul class="Nav-list">
+          <li class="Nav-listItem"> <a class="Nav-listItemlink"
+              href="/pages/index.html">Work</a> </li>
+          <li class="Nav-listItem"> <a class="Nav-listItemlink" href="/pages/bio.html">Bio</a> </li>
+          <li class="Nav-listItem Nav-linkActive"> <a class="Nav-listItemlink" href="/blog/notes/">Writing </a> </li>
+          <li class="Nav-listItem"> <a target="_blank" rel="external noopener noreferrer"
+            href="https://drive.google.com/file/d/1na8pLh2TmXVfZDpBSKh1FqNkI3_Tk09i/view?usp=sharing"
+            class="Nav-listItemlink Header-external">Resume</a> </li>
+        </ul>
+      </nav>
+    </section>
+    
+
+    <!--     ?Section main /////////////////////////////-->
+    <main id="main-content" class="Container">
+      <article id="content" class="Post h-entry">
+        <header class="Hero Hero--page">
+          <h1 class="Hero-title p-name">Adding a “last updated” date to posts</h1>
+          
+          <div class="Hero-date">
+            <time class="dt-published" datetime="2024-02-06 09:52:55 +0000 UTC">Feb 6, 2024</time>  <span>—</span>
+      
+          <div class="Tag"><a href="/topics/hugo" class="p-category">Hugo</a>
+           </div>
+            </div>
+    
+    <div class="Hero-mod"></div>
+  
+      </header>
+
+  <section class="e-content"><p>I often find myself updating posts I’ve previously published. Usually this happens when I re-read what I’ve written and think of a better way to say it. Or when I discover more about the subject and I feel a supplement is relevant. Sometimes it’s when my process changes, which typically outdates the post, compared to the way I’m currently doing things.</p>
+    <p>Whatever the case, these updates happen frequently. They keep the content on my personal site somewhat evergreen, which I like and feel is important. But it‘s not always clear to readers when content has changed.</p>
+    <p>To solve this, I’d eventually like to add some form of footnotes to document the exact changes. But as an interim solution, I’m adding a date to these posts (or pages) which specifies when the content was updated. You’ll find this “updated” date just beneath the published date on certain pages on my site, such as on my <a href="/writing/app-defaults/">app defaults</a> post.</p>
+    <p>If you also build your site using <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>, then adding this fuctionality is straight forward to automate. In this post I’ll explain how it works.</p>
+    <h2 id="understanding-publishdate-and-lastmod">Understanding <code>.PublishDate</code> and <code>.Lastmod</code>&nbsp;<a class="heading-anchor" href="#understanding-publishdate-and-lastmod" aria-label="Anchor">#</a>
+    </h2
+    
+    ><p>Getting a “Last updated” date set up on your pages requires two Hugo page methods – <a href="https://gohugo.io/methods/page/publishdate/" target="_blank" rel="noopener">PublishDate</a> and <a href="https://gohugo.io/methods/page/lastmod/" target="_blank" rel="noopener">Lastmod</a>.</p>
+   
+    <p>
+      <code>.PublishDate</code> returns the publish date of your content, whereas <code>.Lastmod</code> returns the date a page was last modified.</p>
+      <p>Consider the following code found in my <code>single.html</code> template.</p>
+      
+      <pre tabindex="0"><code>{{ $published := .PublishDate | time.Format ":date_medium" }}
+      {{ $updated := .Lastmod | time.Format ":date_medium" }}
+      </code>
+    </pre>
+
+      <p>First, we grab the published date and assign it to a variable, in this case the variable is called <code>$published</code>. Then, we use the <a href="https://gohugo.io/methods/page/lastmod/" target="_blank" rel="noopener">Lastmod</a> method to grab the date the page was last modified. Again, the value is stored in a variable, this time called <code>$updated</code>.</p>
+      <p>It’s important to note, by default, Hugo will look for a value for both <code>publishDate</code> and <code>lastmod</code> set in the front matter of a page:</p>
+      <pre tabindex="0"> 
+        
+        <code>---
+      title: A new post
+      publishDate: 2024-02-01T00:40:04-07:00
+      lastmod: 2024-02-05T00:40:04-07:00
+      ---
+      
+      Some post content.
+      </code></pre><p>This may be convenient depending on your needs, but personally I’d rather automate this step, if I can. That way I don’t have to remember to manually change the <code>lastmod</code> value in the front matter, every time I update a page.</p><p>Assuming you’re using Git to manage your project and your code is stored in a repository – Github or similar –&nbsp;then this is a simple problem to solve.</p><p>With the following added to your <code>hugo.toml</code> config file, you can forget about adding <code>lastmod</code> values to your front matter altogether.</p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Toml" data-lang="Toml"><span class="line"><span class="cl"><span class="nx">enableGitInfo</span> <span class="p">=</span> <span class="kc">true</span>
+      </span></span></code></pre></div><p>Now your <code>lastmod</code> date will derive from the last git commit of a given page. See the <a href="https://gohugo.io/methods/page/gitinfo/" target="_blank" rel="noopener">Gitinfo</a> method for more details.</p><h2 id="comparing-publishdate-and-lastmod">Comparing <code>.PublishDate</code> and <code>.Lastmod</code>&nbsp;<a class="heading-anchor" href="#comparing-publishdate-and-lastmod" aria-label="Anchor">#</a></h2><p>The final step in getting this working is to compare <em>publishDate</em> with <em>lastmod</em>. Then return the date the page was last modified (when the last commit was made), should the two values differ.</p><p>Let’s head back to our <code>single.html</code> file, for an example:</p><pre tabindex="0"><code>{{ $published := .PublishDate | time.Format ":date_medium" }}
+      {{ $modified := .Lastmod | time.Format ":date_medium" }}
+      
+      {{ if ne $published $modified }}
+        &lt;span&gt; Updated: {{ $modified }} &lt;/span&gt;
+      {{ end }}
+      </code></pre><p>Notice we’re using the <a href="https://gohugo.io/functions/go-template/if/" target="_blank" rel="noopener">if</a> function and the <a href="https://gohugo.io/functions/collections/where/#operators" target="_blank" rel="noopener">ne comparison operator</a>, to check whether the two values are “not equal to” each other. <em>if</em> returns a boolean value (<code>true</code> or <code>false</code>), so if this statement holds <code>true</code>, then we return the value of <code>$modified</code>, in other words, our last modified date.</p><h2 id="formatting-time-to-the-day-not-the-second">Formatting <code>time</code> to the day, not the second&nbsp;<a class="heading-anchor" href="#formatting-time-to-the-day-not-the-second" aria-label="Anchor">#</a></h2><p>Notice both <code>date</code> and <code>lastmod</code> consist of <a href="https://pkg.go.dev/time#time" target="_blank" rel="noopener">time</a> values, which, when generated, will return values to the nearest second, by default.</p><p>Here’s that example content file once again.</p><pre tabindex="0"><code>---
+      title: A new post
+      publishDate: 2024-02-01T00:40:04-07:00
+      lastmod: 2024-02-05T00:40:04-07:00
+      ---
+      
+      Some post content.
+      </code></pre><p>Therefore, it’s important to format dates to the day, rather than second. Doing so will ensure the comparison is between days “not equal to“ each other, rather than seconds “not equal to“ each other. That way, the <em>if</em> condition won’t always return <code>true</code> when comparing that the two values do not match.</p><p>We can achieve this by using the <a href="https://gohugo.io/functions/time/format/" target="_blank" rel="noopener">time.format</a> method as a pipe, so we get consistent dates, to the day.</p><p>Let’s consider those variables once again:</p><pre tabindex="0"><code>{{ $published := .PublishDate | time.Format ":date_medium" }}
+      {{ $modified := .Lastmod | time.Format ":date_medium" }}
+      </code></pre><p>Using <code>:date_medium</code> returns something like: <code>Jan 27, 2023</code>, which is what we’re looking for.</p><p>Now our <em>if</em> statement is checking that the day differs, rather than the seconds –&nbsp;exactly what we want. As a result, the “last updated” date will only show on content updated days later than the publish date, rather than seconds later.</p><h2 id="summary">Summary&nbsp;<a class="heading-anchor" href="#summary" aria-label="Anchor">#</a></h2><p>It’s worth mentioning, whilst I’ve used <code>publishDate</code> in the context of the examples in this post, you could quite easily compare <code>lastmod</code> with the value of <code>date</code>, using the <a href="https://gohugo.io/methods/page/date/" target="_blank" rel="noopener">Date</a> method instead.</p><p>In other words, this works just as well:</p><pre tabindex="0"><code>---
+      title: A new post
+      date: 2024-02-01T00:40:04-07:00
+      lastmod: 2024-02-05T00:40:04-07:00
+      ---
+      
+      Some post content.
+      </code></pre><p>With you front matter using a <code>date</code>, as above, your template might look like this:</p><pre tabindex="0"><code>{{ $published := .Date | time.Format ":date_medium" }}
+      {{ $modified := .Lastmod | time.Format ":date_medium" }}
+      
+      {{ if ne $published $modified }}
+        &lt;span&gt; Updated: {{ $modified }} &lt;/span&gt;
+      {{ end }}
+      </code></pre><p>Ok, that’s all for this one.</p><aside class="Callout" style="margin-top:3rem;max-width:800px"><strong>Interested in learning Hugo?</strong> I’m working on a free course
+      over at <a href="https://practicalhugo.com/">practicalhugo.com</a>.</aside></section><section style="margin-top:4rem" id="reply-by-email"><a data-decode="email" class="Button Button--secondary" href="mailto:aGFycnkuYjBkcmpAYWxlZWFzLmNvbQ==">Reply by email</a></section><footer><div class="PostAuthor"><img alt="Harry Cresswell" class="Avatar Avatar--round Avatar--m u-photo" src="https://harrycresswell.com/img/hc.jpg"><div class="PostAuthor-text"><h2>Was this helpful?</h2><p><a href="https://www.buymeacoffee.com/harrycresswell">Buy me a coffee</a> or sign up to my newsletter ↓</p></div></div><div hidden=""><a class="u-url" href="https://harrycresswell.com/newsletter/118/">#118 - Teaching CSS</a><p class="h-card p-author"><a class="p-name u-url" href="https://harrycresswell.com/" rel="author">Harry Cresswell</a>
+      <img alt="Harry Cresswell" class="u-photo" src="https://harrycresswell.com/img/hc.jpg"></p></div></footer></article></main>
+    
+    </main>
+
+<!-- Footer collapsable  -->
+<footer id="site-footer" class="Footer" role="contentinfo">
+  <div class="section-inner">
+    <div class="footer-credits">
+
+      <p class="footer-copyright">© 2024 <a href="https://tomasjgonzalez.com/">Tomas</a> </p>
+
+      <p class="notice"> Coded by <a href="https://www.websitecarbon.com" target="_blank">yours</a> truly.</p>
+    </div>
+    <a class="to-the-top" href="#scroll">
+      <span href="#scroll" class="to-the-top-long">To the top</span>
+    </a>
+  </div>
+</footer>
+
+</body>
+
+</html>

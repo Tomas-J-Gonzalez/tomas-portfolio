@@ -1,0 +1,95 @@
+/*------------------------------------*\
+    #COMPONENTS: FOOTER
+\*------------------------------------*/
+
+/**
+ * Component Block
+ */
+
+.Footer {
+  max-width: 1248px;
+  margin: 0 auto;
+  @include margin-top(2);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  p {
+    @include margin-top(1);
+  }
+}
+
+
+@media screen and (min-width: 48em) {
+  .Footer {
+      margin-top:3.2rem
+  }
+}
+
+
+// Footer copyright //
+@media (min-width: 700px) {
+.footer-credits {
+display: flex;
+}
+}
+
+.footer-copyright {
+  font-weight: 600;
+  margin: 0;
+  }
+
+
+
+@media screen and (max-width: 700px) {
+  .notice {
+      display: none !important;
+  }
+}
+
+  .notice {
+      display: inline;
+      margin: 0px 0px 0px 2.4rem;
+  }
+
+  .notice, .to-the-top {
+      color: rgb(109, 109, 109);
+  }
+ 
+#site-footer a {
+    text-decoration: none;
+      color: $color-dark;
+      text-decoration: none;
+      font-weight: 500;
+  
+      &:hover {
+        background-color: unset;
+        text-decoration: underline;
+      }
+
+    }
+
+// Footer inner //
+
+
+#site-footer .section-inner {
+  width: calc(100% - 0rem);
+
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+  }
+  
+
+  //top - long
+
+ .to-the-top-long::after { 
+    border-bottom: 2px solid #111;
+    border-right: 2px solid #111;
+    content: "";
+    display: inline-block;
+    height: 0.5em;
+    margin-left: 0.5em;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    width: 0.5em;
+}
