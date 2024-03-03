@@ -8,6 +8,8 @@
 
 My portfolio is a website that showcases my User Experience related projects and other related cotent.
 
+/pages/index.html
+
 ## Prerequisites
 
 No prerequisites.
@@ -29,5 +31,5 @@ If you want to contact me you can reach me at <admin08@tomasjgonzalez.com>.
 
 ## License
 
-This project uses the following license: [<MIT Licence>](<https://choosealicense.com/licenses/cc-by-sa-4.0/>).
+This project uses the following license: MIT Licence [<MIT Licence>](<https://choosealicense.com/licenses/cc-by-sa-4.0/>).
 
