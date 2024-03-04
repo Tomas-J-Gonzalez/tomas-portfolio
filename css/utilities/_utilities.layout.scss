@@ -19,6 +19,10 @@
   white-space: nowrap;
 }
 
+.items-center {
+  align-items: center
+}
+
 /**
  * FULL BLEED
  *
@@ -52,13 +56,4 @@
   border: dotted 1px;
   padding: 32px 64px;
   cursor: default;
-}
-
-/* Apply stickyBoy only when screen size is above 1500px */
-@media screen and (min-width: 1500px) {
-  .stickyBoy {
-    position: sticky;
-    top: 10px;
-    bottom: 10px;
-  }
 }

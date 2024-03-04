@@ -5,13 +5,12 @@
 a {
   color: $color-link;
   text-decoration: underline;
-  //transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out;
 
   &:hover {
-    //color: darken($color-link, 25%);
-    color: $color-paper;
-    background-color: $color-link;
-    text-decoration: none;
+  color: $color-white;
+  background-color: $color-link;
+  text-decoration: none;
   }
 
   &:focus {
@@ -29,12 +28,5 @@ a {
     -ms-transition: all 300ms ease-in-out;
     -o-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out;
-  }
-
-
-  &:hover {
-    color: $color-dark;
-    background-color: transparent;
-    text-decoration: none;
   }
 }

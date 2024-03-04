@@ -4,7 +4,7 @@
 // Set fulid type on the root
 html {
   font-feature-settings: "calt", "liga", "hist", "onum", "pnum";
-  background-color: $color-link;
+  background-color: $color-brand;
 }
 
 @media screen and (min-width: 675px) {
@@ -13,8 +13,15 @@ html {
   }
 }
 
+@media(prefers-reduced-motion:no-preference) {
+  html {
+      scroll-behavior: smooth
+  }
+}
+
+
 body {
-  background-color: $color-light-mod-1;
+  background-color: $color-light-mod-2;
   color: $color-body;
   font-family: $font-system-rg;
   font-weight: $font-weight-regular;
@@ -26,9 +33,38 @@ body {
 }
 
 p {
-  max-width: 680px;
+  max-width: 57ch;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+}
 
-  &:not(:last-of-type) {
-    @include margin-bottom(0.8);
+p:not(:last-of-type) {
+  margin-bottom:1.2rem; 
+}
+
+@media screen and (min-width: 48em) {
+  p:not(:last-of-type) {
+      margin-bottom:1.28rem;
   }
+}
+
+
+[id] {
+  scroll-margin-top: 2ex
+}
+
+hr {
+  border: dashed 1px;
+  max-width: 60%;
+  margin: 3rem 0
+}
+
+:focus:not(:focus-visible) {
+  outline: 0
+}
+
+:focus-visible {
+  outline: dotted 2px var(--color-dark);
+  outline-offset: 3px
 }

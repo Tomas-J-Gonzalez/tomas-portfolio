@@ -25,3 +25,51 @@
   }
 }
 
+
+.Hero {
+  margin-top: 4rem;
+  margin-bottom: 4rem
+}
+
+@media screen and (min-width: 48em) {
+  .Hero {
+      margin-top:5rem
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .Hero {
+      margin-bottom:5rem
+  }
+}
+
+.Hero-date {
+  display: flex;
+  margin-top: .8rem
+}
+
+.Hero-mod {
+  margin-top: 2rem
+}
+
+.Callout {
+  padding: 2% 0;
+  border-top: 2px dotted;
+  border-bottom: 2px dotted
+}
+
+.Callout a {
+  text-decoration: underline
+}
+
+.Callout a:hover {
+  text-decoration: none
+}
+
+p.Callout:not(:last-of-type) {
+  margin-bottom: 3rem
+}
+
+p.Callout:not(:first-of-type) {
+  margin-top: 3rem
+}

@@ -22,7 +22,7 @@
 }
 
 ::selection {
-  background-color: #542bff;
+  background-color: $color-brand;
   color: #ffffff;
   text-shadow: none;
 }
@@ -33,6 +33,8 @@
 
 .text-center {
   text-align: center;
+  text-align: -moz-center;
+  text-align: -webkit-center;
 }
 
 .text-right{

@@ -37,3 +37,34 @@
   top: 0;
   left: 0;
 }
+
+
+
+
+.aspect-ratio-wide {
+  padding-bottom: 56.25%
+}
+
+.aspect-ratio-square {
+  padding-bottom: 100%
+}
+
+.aspect-ratio-landscape {
+  padding-bottom: 66.6666%
+}
+
+.aspect-ratio-portrait {
+  padding-bottom: calc(564/395 * 100%)
+}
+
+.aspect-ratio-full {
+  padding-top: calc(276/414 * 100%);
+  -o-object-fit: cover;
+  object-fit: cover
+}
+
+@media(min-width: 48em) {
+  .aspect-ratio-full {
+      padding-top:calc(886/2880 * 100%)
+  }
+}

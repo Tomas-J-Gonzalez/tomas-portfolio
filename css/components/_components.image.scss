@@ -45,12 +45,18 @@ p + .Image {
   }
 }
 
+/* Apply stickyBoy only when screen size is above 1500px */
+@media screen and (min-width: 1500px) {
+.stickyBoy {
+  position: sticky;
+  top: 10px;
+  bottom: 10px;
+}
+}
 
 .Image--headShot {
   border-radius: 0.4rem;
-  }
-  
-
+}
 
 /**
  * Component Utility

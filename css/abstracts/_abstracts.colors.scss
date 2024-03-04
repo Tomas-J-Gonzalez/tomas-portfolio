@@ -2,17 +2,28 @@
     #ABSTRACTS: COLORS
 \*------------------------------------*/
 
-$color-brand: #542bff;
-$color-accent:#544bff75;
+$color-link: #1B4F39;
+$color-brand: #1B4F39;
+$color-accent:#97AB70;
 $color-paper: #fffefc;
-$color-dark: #111111;
+$color-dark: #1a0e04;
 $color-body: #333444;
-$color-light: #030303;
+$color-black: #030303;
 $color-lighter: #333333;
 $color-lightest: #444444;
 $color-light-mod-1: #F5F8FE;
+$color-light-mod-2: #FEFDF8;
 $color-white: #ffffff;
-$color-link: #542bff;
 
 $gradient-light: linear-gradient(45deg, #542BFF, #156B90);
 $gradient-dark: linear-gradient(45deg, #542BFF, #2D1590);
+
+
+/* Alternate color way: 
+Brand: #542BFF;
+Accent:  #544bff75;
+Text: ##172240;
+Background:  #F5F8FE;
+Link:   #542BFF;
+Gradient: (#542BFF, #156B90);
+*/

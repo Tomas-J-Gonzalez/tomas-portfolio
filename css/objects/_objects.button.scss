@@ -65,14 +65,15 @@ margin: 1em;
 .Button:active,
 .Button.is-pressed {
   background-color: transparent;
-  border-color: $color-dark;
-  color: $color-dark;
+  border-color: $color-brand;
+  color: $color-brand;
   transform: translateY(-0.5px);
+  transition: 0.4s ease-in-out; 
 }
 
 
 .Badge {
-  color: ($color-link);
+  color: $color-link;
   background-color: rgba($color-link,.05);
   border-radius: 0.2rem;
   padding: calc(#{$space} / 1.5);

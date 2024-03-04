@@ -2,8 +2,12 @@
     #ABSTRACTS: SPACING
 \*------------------------------------*/
 
+:root {
+  --space: calc(1rem / 2);
+}
 
 $space: calc(1rem/2);
+
 
 // Vertical rhythm mixins
 @mixin line-height($number) {

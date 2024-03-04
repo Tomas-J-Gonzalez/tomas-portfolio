@@ -17,17 +17,48 @@
 }
 
 .link-reset {
-  color: ($color-dark);
-  text-decoration:none;
+  color: $color-dark;
+  text-decoration: none; 
   cursor: pointer; 
-}
-
-.heading--permalink { 
-  margin-bottom: 0.2em;
-  opacity: 0.8;
 
   &:hover {
-    color: ($color-paper);
-    background: ($color-link);
+    transition: color .2s ease-in-out;
+    color: $color-black;
+    text-decoration: underline;
+    background: none !important;
   }
+}
+
+
+.heading-permalink { 
+  margin-bottom: 0.2em;
+  //opacity: 0.8;
+
+  &:hover {
+    transition: color .2s ease-in-out;
+    transform: translateY(-4px);
+    background: none;
+    color: $color-dark;
+  }
+}
+
+
+.skip-link:not(:focus) {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap
+}
+
+.skip-link:focus {
+  background-color: $color-white;
+  position: absolute;
+  z-index: 2;
+  top: 1rem;
+  right: 1rem
 }
