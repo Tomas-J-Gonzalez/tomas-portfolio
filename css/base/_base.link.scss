@@ -14,7 +14,7 @@ a {
   }
 
   &:focus {
-    outline: 1px dotted;
+    outline: dotted 1px $color-dark;
     outline-offset: 4px;
   }
 

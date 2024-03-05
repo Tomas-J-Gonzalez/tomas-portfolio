@@ -25,3 +25,9 @@ $(document).ready(function() {
 });
 
 //slow scroll to top of page --end
+
+
+function toggleAccordion() {
+  var accordionContent = document.getElementById("accordionContent");
+  accordionContent.classList.toggle("show");
+}
