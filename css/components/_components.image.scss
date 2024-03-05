@@ -45,7 +45,7 @@ p + .Image {
   }
 }
 
-/* Apply stickyBoy only when screen size is above 1500px */
+/* Apply stickyBoy only when screen size is above 1500px 
 @media screen and (min-width: 1500px) {
 .stickyBoy {
   position: sticky;
@@ -54,6 +54,7 @@ p + .Image {
   overflow: hidden;
 }
 }
+*/
 
 .Image--headShot {
   border-radius: 0.4rem;
@@ -71,5 +72,10 @@ p + .Image {
 .lazyloaded {
 	opacity: 1;
 	transition: opacity 300ms;
+}
+
+.doodle {
+  width: 320px;
+  margin-bottom: 40px;
 }
 
