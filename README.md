@@ -6,10 +6,13 @@ My portfolio is a website that showcases; User Experience design projects and ot
 
 ## Built with
 - Lazysizes.js for image lazy loading
-- Responsive image with Cloudinary
+- Responsive images and asset hosting with Cloudinary
 - Minimal dependencies
 - SASS Pre-processor
 - Visual Studio Code
+
+## Deployment
+- Netlify via Github Repository
 
 ## Methodologies
 - ITCSS 
