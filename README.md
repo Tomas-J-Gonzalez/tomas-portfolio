@@ -1,19 +1,21 @@
 # Portfolio
- Tomas' - Website - 2024
+
+Tomas' - Website - 2024
 
 My portfolio is a website that showcases; User Experience design projects and other related content.
 
 Go to: [/pages/index.html](https://tomas-j-gonzalez.github.io/pages/index.html)
 
 ## Built with
-Lazysizes.js for image lazy loading
-Responsive image with Cloudinary
-Minimal dependencies
-SASS Pre-processor
+- Lazysizes.js for image lazy loading
+- Responsive image with Cloudinary
+- Minimal dependencies
+- SASS Pre-processor
+- Visual Studio Code
 
 ## Methodologies
-ITCSS 
-BEMIT
+- ITCSS 
+- BEMIT
 
 ## Prerequisites
 
