@@ -1,6 +1,8 @@
 # Portfolio
 
-Tomas' - Website - 2024
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d57e35b2-4edc-4e09-b08a-7f85f0454d6f/deploy-status)](https://app.netlify.com/sites/tomasjgonzalez/deploys)
+
+Tomas Gonzalez - Portfolio - 2024
 
 My portfolio is a website that showcases; User Experience design projects and other related content.
 
