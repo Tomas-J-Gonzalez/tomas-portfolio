@@ -7,16 +7,10 @@
  */
 
 
+// Base styles
 .accordion {
-  max-width: 600px; /* Adjust the max-width as needed */
+  max-width: 600px; //
   margin: 0 auto;
-  //display: flex;
-}
-
-
-.accordion__item {
-  padding-top: 1.6rem;
-//border-bottom: 1px solid rgba($color-brand,0.3);
 }
 
 .accordion__label {
@@ -24,18 +18,13 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px;
- // margin-top: 1rem;
   cursor: pointer;
   background-color: #f5f5f5;
 
-  &:hover{
-    background-color: rgba($color-accent,0.09);
-   transition: 0.4s ease-in-out; 
+  &:hover {
+    background-color: rgba($color-accent, 0.09);
+    transition: 0.4s ease-in-out;
   }
-}
-
-.accordion__checkbox {
-  display: none;
 }
 
 .accordion__content {
@@ -47,34 +36,4 @@
   display: block;
 }
 
-.accordion__icon {
-  font-size: 20px;
-  margin-left: 10px;
-  color: $color-brand;
-  transition: transform 0.3s ease;
-}
-
-
-/* Responsive Styles */
-@media screen and (max-width: 600px) {
-  .accordion__label {
-    padding: 10px;
-  }
-
-  .accordion__content {
-    padding: 10px;
-  }
-}
-
-/* Hidden Accordion */
-
-/* Hide the accordion content by default */
-.accordion__content--hidden {
-  display: none;
-}
-
-/* Show the accordion content when the "show" class is added */
-.accordion__content--hidden.show {
-  display: block;
-}
 

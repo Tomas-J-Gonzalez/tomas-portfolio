@@ -25,15 +25,3 @@ $(document).ready(function() {
 });
 
 //slow scroll to top of page --end
-
-
-function toggleCheckbox(link) {
-  link.classList.toggle("active");
-  toggleAccordion(); // Assuming you also want to toggle accordion functionality
-}
-
-function toggleAccordion() {
-  var accordionContent = document.getElementById("accordionContent");
-  accordionContent.classList.toggle("show");
-}
-

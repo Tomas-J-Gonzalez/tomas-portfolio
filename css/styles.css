@@ -1867,12 +1867,8 @@ form button {
  * Component Block
  */
 .accordion {
-  max-width: 600px; /* Adjust the max-width as needed */
+  max-width: 600px;
   margin: 0 auto;
-}
-
-.accordion__item {
-  padding-top: 1.6rem;
 }
 
 .accordion__label {
@@ -1888,43 +1884,12 @@ form button {
   transition: 0.4s ease-in-out;
 }
 
-.accordion__checkbox {
-  display: none;
-}
-
 .accordion__content {
   display: none;
   padding: 15px;
 }
 
 .accordion__checkbox:checked + .accordion__label + .accordion__content {
-  display: block;
-}
-
-.accordion__icon {
-  font-size: 20px;
-  margin-left: 10px;
-  color: #1B4F39;
-  transition: transform 0.3s ease;
-}
-
-/* Responsive Styles */
-@media screen and (max-width: 600px) {
-  .accordion__label {
-    padding: 10px;
-  }
-  .accordion__content {
-    padding: 10px;
-  }
-}
-/* Hidden Accordion */
-/* Hide the accordion content by default */
-.accordion__content--hidden {
-  display: none;
-}
-
-/* Show the accordion content when the "show" class is added */
-.accordion__content--hidden.show {
   display: block;
 }
 
@@ -2747,4 +2712,6 @@ a[rel*=external]::after {
 
 .items-center {
   align-items: center;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/* Be ashamed *//*# sourceMappingURL=styles.css.map */
