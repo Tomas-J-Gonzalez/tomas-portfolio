@@ -1,7 +1,6 @@
 # Portfolio
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d57e35b2-4edc-4e09-b08a-7f85f0454d6f/deploy-status)](https://app.netlify.com/sites/tomasjgonzalez/deploys)
-![Netlify](https://img.shields.io/netlify/d57e35b2-4edc-4e09-b08a-7f85f0454d6f)
 ![GitHub License](https://img.shields.io/github/license/Tomas-J-Gonzalez/tomas-portfolio?labelColor=%231B4F39)
 
 
