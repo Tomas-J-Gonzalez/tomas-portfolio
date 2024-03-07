@@ -26,18 +26,6 @@
 color: $color-accent;
 }
 
-.gradient-light {
-  background: $gradient-light;
-  -webkit-linear-gradient: $gradient-light;
-  -moz-linear-gradient: $gradient-light;
-}
-
-.gradient-dark {
-  background: $gradient-dark;
-  -webkit-linear-gradient: $gradient-dark;
-  -moz-linear-gradient: $gradient-dark;
-}
-
 .light {
   color: $color-black;
 }
@@ -48,4 +36,14 @@ color: $color-accent;
 
 .lightest {
   color: $color-lightest;
+}
+
+.the-lightest {
+  color: $color-the-lightest;
+}
+
+.gradient-primary {
+  background: $gradient-primary;
+  -webkit-linear-gradient: $gradient-primary;
+  -moz-linear-gradient: $gradient-primary;
 }

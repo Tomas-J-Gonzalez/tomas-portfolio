@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    #OBJECTS: TAG
+\*------------------------------------*/
+
+
+/**
+ * Component Block
+ */
+
+
+.Tag {
+
+ a {
+   color: $color-dark;
+ }
+
+ a:hover {
+   background-color: $color-brand;
+   color: $color-paper;
+   text-decoration: none;
+ }
+
+ a:not(:last-child):after {
+   content: ',';
+ }
+
+}

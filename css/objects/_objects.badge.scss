@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    #OBJECTS: BADGE
+\*------------------------------------*/
+
+/**
+ * Component Block
+ */
+
+.Badge {
+  color: $color-link;
+  background-color: rgba($color-link,.05);
+  border-radius: 0.2rem;
+  padding: calc(#{$space} / 1.5);
+  margin: calc(#{$space} / 1.5);
+  cursor: default;
+}
+
+
+.Badge a:hover,
+.Badge a:focus,
+.Badge a:active,
+.Badge a.is-pressed {
+  background-color:  rgba($color-link,.1);
+  color: $color-brand;
+}

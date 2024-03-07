@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    #LAYOUTS: TAG-LIST
+\*------------------------------------*/
+
+
+/**
+ * Component Block
+ */
+
+.TagList {
+  columns: 17rem auto;
+  -moz-columns: 17rem auto;
+}
+
+@include breakpoint(md) {
+  .TagList {
+    -moz-column-gap:64px;
+    column-gap: 64px;
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+}
+
+.TagListItem {
+  @include margin-bottom(1);
+}
+
+
+.TagListItem-title {
+  margin: 0;
+  font-size: var(--step-2);
+}

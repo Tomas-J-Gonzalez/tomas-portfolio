@@ -1,14 +1,19 @@
 # Portfolio
- Tomas' ux portfolio-2024
+ Tomas' - Website - 2024
 
-![GitHub repo size](https://img.shields.io/github/repo-size/tomas-j-gonzalez/portfolio)
-![GitHub contributors](https://img.shields.io/github/contributors-anon/tomas-j-gonzalez/portfolio)
-![GitHub stars](https://img.shields.io/github/stars/tomas-j-gonzalez/portfolio?style=social)
-![GitHub forks](https://img.shields.io/github/forks/tomas-j-gonzalez/portfolio?label=Fork&style=social)
-
-My portfolio is a website that showcases my User Experience related projects and other related cotent.
+My portfolio is a website that showcases; User Experience design projects and other related content.
 
 Go to: [/pages/index.html](https://tomas-j-gonzalez.github.io/pages/index.html)
+
+## Built with
+Lazysizes.js for image lazy loading
+Responsive image with Cloudinary
+Minimal dependencies
+SASS Pre-processor
+
+## Methodologies
+ITCSS 
+BEMIT
 
 ## Prerequisites
 

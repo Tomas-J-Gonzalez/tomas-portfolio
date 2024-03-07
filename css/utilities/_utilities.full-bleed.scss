@@ -1,0 +1,30 @@
+/**
+ * FULL BLEED
+ *
+ * Add this class to an element to make it fill the width of the screen 
+ * and sit horizontally central
+ * https://andy-bell.design/wrote/creating-a-full-bleed-css-utility/
+ */
+ .full-bleed {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+
+  & figcaption {
+    margin-left: calc(var(--space) *2);
+  }
+}
+
+.full-bleed-skinny {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden; /* Ensure the clipped part is hidden */
+
+    img {
+  width: 100%; /* Ensure the image fills the container */
+  height: 60vh; /* Ensure the image fills the container */
+  object-fit: cover; /* Ensure the image maintains its aspect ratio */
+  object-position: 50% 20%; /* Center the image */
+  }
+}

@@ -1,0 +1,44 @@
+/*------------------------------------*\
+    #COMPONENTS: HERO
+\*------------------------------------*/
+
+/**
+ * Component Block
+ */
+
+.Hero {
+  @include margin-top(4);
+  @include margin-bottom(4);
+}
+
+.Hero-date {
+  display: flex;
+  margin-top: .8rem;
+}
+
+.Hero-mod {
+  margin-top: 2rem;
+}
+
+
+
+@media screen and (min-width: 48em) {
+  .Hero {
+      margin-top:5rem
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .Hero {
+      margin-bottom:5rem
+  }
+}
+
+
+
+
+.Project h2 { //h2 elements, when descendants of an element with the class .Project, will have a max-width of 60% before they wrap to next line
+  max-width: 60%; 
+  word-wrap: break-word; 
+}
+

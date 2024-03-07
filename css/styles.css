@@ -10,43 +10,63 @@ Accent:  #544bff75;
 Text: ##172240;
 Background:  #F5F8FE;
 Link:   #542BFF;
-Gradient: (#542BFF, #156B90);
 */
 /*------------------------------------*\
     #ABSTRACTS: TYPOGRAPHY
 \*------------------------------------*/
-/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+/* @link https://utopia.fyi/type/calculator?c=320,16,1.125,1140,20,1.25,4,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 :root {
   --fluid-min-width: 320;
   --fluid-max-width: 1140;
   --fluid-screen: 100vw;
-  --fluid-bp: calc( (var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) / (var(--fluid-max-width) - var(--fluid-min-width)) ) ;
+  --fluid-bp: calc(
+    (var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) /
+      (var(--fluid-max-width) - var(--fluid-min-width))
+  );
 }
 
 @media screen and (min-width: 1140px) {
   :root {
-    --fluid-screen:calc(var(--fluid-max-width) * 1px) ;
+    --fluid-screen: calc(var(--fluid-max-width) * 1px);
   }
 }
 :root {
   --f--1-min: 14.22;
   --f--1-max: 16.00;
-  --step--1: calc( ((var(--f--1-min) / 16) * 1rem) + (var(--f--1-max) - var(--f--1-min)) * var(--fluid-bp) );
+  --step--1: calc(
+    ((var(--f--1-min) / 16) * 1rem) + (var(--f--1-max) - var(--f--1-min)) *
+      var(--fluid-bp)
+  );
   --f-0-min: 16.00;
   --f-0-max: 20.00;
-  --step-0: calc( ((var(--f-0-min) / 16) * 1rem) + (var(--f-0-max) - var(--f-0-min)) * var(--fluid-bp) );
+  --step-0: calc(
+    ((var(--f-0-min) / 16) * 1rem) + (var(--f-0-max) - var(--f-0-min)) *
+      var(--fluid-bp)
+  );
   --f-1-min: 18.00;
   --f-1-max: 25.00;
-  --step-1: calc( ((var(--f-1-min) / 16) * 1rem) + (var(--f-1-max) - var(--f-1-min)) * var(--fluid-bp) );
+  --step-1: calc(
+    ((var(--f-1-min) / 16) * 1rem) + (var(--f-1-max) - var(--f-1-min)) *
+      var(--fluid-bp)
+  );
   --f-2-min: 20.25;
   --f-2-max: 31.25;
-  --step-2: calc( ((var(--f-2-min) / 16) * 1rem) + (var(--f-2-max) - var(--f-2-min)) * var(--fluid-bp) );
+  --step-2: calc(
+    ((var(--f-2-min) / 16) * 1rem) + (var(--f-2-max) - var(--f-2-min)) *
+      var(--fluid-bp)
+  );
   --f-3-min: 22.78;
   --f-3-max: 39.06;
-  --step-3: calc( ((var(--f-3-min) / 16) * 1rem) + (var(--f-3-max) - var(--f-3-min)) * var(--fluid-bp) );
+  --step-3: calc(
+    ((var(--f-3-min) / 16) * 1rem) + (var(--f-3-max) - var(--f-3-min)) *
+      var(--fluid-bp)
+  );
   --f-4-min: 25.63;
   --f-4-max: 48.83;
-  --step-4: calc( ((var(--f-4-min) / 16) * 1rem) + (var(--f-4-max) - var(--f-4-min)) * var(--fluid-bp) ) ;
+  --step-4: calc(
+    ((var(--f-4-min) / 16) * 1rem) + (var(--f-4-max) - var(--f-4-min)) *
+      var(--fluid-bp)
+  );
 }
 
 /* Type   VALRIBLES(Variable Maps  */
@@ -230,7 +250,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 400;
   line-height: 1.6;
-  /*  font-size: var(--step-0);  fluid font */
+  font-size: var(--step-0);
   font-style: normal;
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -276,7 +296,7 @@ hr {
     #BASE: HEADINGS
 \*------------------------------------*/
 h1, h2, h3, h4, h5, h6 {
-  color: var(--color-dark);
+  color: #1a0e04;
   font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
   font-weight: 700;
   letter-spacing: -0.015em;
@@ -367,7 +387,7 @@ figcaption {
 }
 @media screen and (min-width: 48em) {
   figcaption {
-    margin-top: 0.8rem;
+    margin-top: 0.85rem;
   }
 }
 
@@ -419,7 +439,7 @@ ol + p {
 @media screen and (min-width: 48em) {
   ul + p,
   ol + p {
-    margin-top: 1.6rem;
+    margin-top: 1.7rem;
   }
 }
 
@@ -495,7 +515,7 @@ pre + p {
 }
 @media screen and (min-width: 48em) {
   pre + p {
-    margin-top: 1.6rem;
+    margin-top: 1.7rem;
   }
 }
 
@@ -554,6 +574,475 @@ video {
 }
 
 /*------------------------------------*\
+    #BASE: INPUT
+\*------------------------------------*/
+form {
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 48em) {
+  form {
+    margin-bottom: 1.7rem;
+  }
+}
+
+/**
+  * Component Element
+  */
+input,
+textarea {
+  background: var(--color-light-mod-2);
+  border: solid 2px var(--color-light-mod-2);
+  border-radius: 0;
+  outline: 2px solid var(--color-light-mod-2);
+  outline-offset: 0;
+  padding: 4px 16px;
+  position: relative;
+  width: 100%;
+  -webkit-appearance: none;
+}
+
+textarea {
+  min-height: 96px;
+  padding: 8px 16px;
+}
+
+select {
+  background: var(--color-light-mod-2);
+  border: 0;
+  cursor: pointer;
+  font-size: 0.8rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline-style: none;
+  width: 100%;
+}
+select:after {
+  color: var(--color-dark);
+  content: "▾";
+  display: block;
+  height: 14px;
+  position: absolute;
+  right: 24px;
+  top: 16px;
+  width: 14px;
+}
+
+label {
+  display: block;
+  margin-top: 0.75rem;
+  margin-bottom: 0.375rem;
+}
+@media screen and (min-width: 48em) {
+  label {
+    margin-top: 0.85rem;
+  }
+}
+@media screen and (min-width: 48em) {
+  label {
+    margin-bottom: 0.425rem;
+  }
+}
+
+form button {
+  margin-top: 0.75rem;
+}
+@media screen and (min-width: 48em) {
+  form button {
+    margin-top: 0.85rem;
+  }
+}
+
+/* Background */
+.chroma {
+  background-color: var(--color-light-mod-2);
+}
+
+/* Error */
+.chroma .err {
+  color: #2838b0;
+}
+
+/* LineTableTD */
+.chroma .lntd {
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/* LineTable */
+.chroma .lntable {
+  border-spacing: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: auto;
+  overflow: auto;
+  display: block;
+}
+
+/* LineHighlight */
+.chroma .hl {
+  display: block;
+  width: 100%;
+  background-color: #ffffcc;
+}
+
+/* LineNumbersTable */
+.chroma .lnt {
+  margin-right: 0.4em;
+  padding: 0 0.4em 0 0.4em;
+  color: #7f7f7f;
+}
+
+/* LineNumbers */
+.chroma .ln {
+  margin-right: 0.4em;
+  padding: 0 0.4em 0 0.4em;
+  color: #7f7f7f;
+}
+
+/* Keyword */
+.chroma .k {
+  color: #2838b0;
+}
+
+/* KeywordConstant */
+.chroma .kc {
+  color: #444444;
+  font-style: italic;
+}
+
+/* KeywordDeclaration */
+.chroma .kd {
+  color: #2838b0;
+  font-style: italic;
+}
+
+/* KeywordNamespace */
+.chroma .kn {
+  color: #2838b0;
+}
+
+/* KeywordPseudo */
+.chroma .kp {
+  color: #2838b0;
+}
+
+/* KeywordReserved */
+.chroma .kr {
+  color: #2838b0;
+}
+
+/* KeywordType */
+.chroma .kt {
+  color: #2838b0;
+  font-style: italic;
+}
+
+/* NameAttribute */
+.chroma .na {
+  color: #388038;
+}
+
+/* NameBuiltin */
+.chroma .nb {
+  color: #388038;
+}
+
+/* NameBuiltinPseudo */
+.chroma .bp {
+  font-style: italic;
+}
+
+/* NameClass */
+.chroma .nc {
+  color: #287088;
+}
+
+/* NameConstant */
+.chroma .no {
+  color: #b85820;
+}
+
+/* NameDecorator */
+.chroma .nd {
+  color: #287088;
+}
+
+/* NameEntity */
+.chroma .ni {
+  color: #709030;
+}
+
+/* NameException */
+.chroma .ne {
+  color: #908828;
+}
+
+/* NameFunction */
+.chroma .nf {
+  color: #785840;
+}
+
+/* NameFunctionMagic */
+.chroma .fm {
+  color: #b85820;
+}
+
+/* NameLabel */
+.chroma .nl {
+  color: #289870;
+}
+
+/* NameNamespace */
+.chroma .nn {
+  color: #289870;
+}
+
+/* NameTag */
+.chroma .nt {
+  color: #2838b0;
+}
+
+/* NameVariable */
+.chroma .nv {
+  color: #b04040;
+}
+
+/* NameVariableGlobal */
+.chroma .vg {
+  color: #908828;
+}
+
+/* NameVariableMagic */
+.chroma .vm {
+  color: #b85820;
+}
+
+/* LiteralString */
+.chroma .s {
+  color: #b83838;
+}
+
+/* LiteralStringAffix */
+.chroma .sa {
+  color: #444444;
+}
+
+/* LiteralStringBacktick */
+.chroma .sb {
+  color: #b83838;
+}
+
+/* LiteralStringChar */
+.chroma .sc {
+  color: #a848a8;
+}
+
+/* LiteralStringDelimiter */
+.chroma .dl {
+  color: #b85820;
+}
+
+/* LiteralStringDoc */
+.chroma .sd {
+  color: #b85820;
+  font-style: italic;
+}
+
+/* LiteralStringDouble */
+.chroma .s2 {
+  color: #b83838;
+}
+
+/* LiteralStringEscape */
+.chroma .se {
+  color: #709030;
+}
+
+/* LiteralStringHeredoc */
+.chroma .sh {
+  color: #b83838;
+}
+
+/* LiteralStringInterpol */
+.chroma .si {
+  color: #b83838;
+  text-decoration: underline;
+}
+
+/* LiteralStringOther */
+.chroma .sx {
+  color: #a848a8;
+}
+
+/* LiteralStringRegex */
+.chroma .sr {
+  color: #a848a8;
+}
+
+/* LiteralStringSingle */
+.chroma .s1 {
+  color: #b83838;
+}
+
+/* LiteralStringSymbol */
+.chroma .ss {
+  color: #b83838;
+}
+
+/* LiteralNumber */
+.chroma .m {
+  color: #444444;
+}
+
+/* LiteralNumberBin */
+.chroma .mb {
+  color: #444444;
+}
+
+/* LiteralNumberFloat */
+.chroma .mf {
+  color: #444444;
+}
+
+/* LiteralNumberHex */
+.chroma .mh {
+  color: #444444;
+}
+
+/* LiteralNumberInteger */
+.chroma .mi {
+  color: #444444;
+}
+
+/* LiteralNumberIntegerLong */
+.chroma .il {
+  color: #444444;
+}
+
+/* LiteralNumberOct */
+.chroma .mo {
+  color: #444444;
+}
+
+/* Operator */
+.chroma .o {
+  color: #666666;
+}
+
+/* OperatorWord */
+.chroma .ow {
+  color: #a848a8;
+}
+
+/* Punctuation */
+.chroma .p {
+  color: #888888;
+}
+
+/* Comment */
+.chroma .c {
+  color: #888888;
+  font-style: italic;
+}
+
+/* CommentHashbang */
+.chroma .ch {
+  color: #287088;
+  font-style: italic;
+}
+
+/* CommentMultiline */
+.chroma .cm {
+  color: #888888;
+  font-style: italic;
+}
+
+/* CommentSingle */
+.chroma .c1 {
+  color: #888888;
+  font-style: italic;
+}
+
+/* CommentSpecial */
+.chroma .cs {
+  color: #888888;
+  font-style: italic;
+}
+
+/* CommentPreproc */
+.chroma .cp {
+  color: #289870;
+}
+
+/* CommentPreprocFile */
+.chroma .cpf {
+  color: #289870;
+}
+
+/* GenericDeleted */
+.chroma .gd {
+  color: #c02828;
+}
+
+/* GenericEmph */
+.chroma .ge {
+  font-style: italic;
+}
+
+/* GenericError */
+.chroma .gr {
+  color: #c02828;
+}
+
+/* GenericHeading */
+.chroma .gh {
+  color: #666666;
+}
+
+/* GenericInserted */
+.chroma .gi {
+  color: #388038;
+}
+
+/* GenericOutput */
+.chroma .go {
+  color: #666666;
+}
+
+/* GenericPrompt */
+.chroma .gp {
+  color: #444444;
+}
+
+/* GenericStrong */
+.chroma .gs {
+  font-weight: bold;
+}
+
+/* GenericSubheading */
+.chroma .gu {
+  color: #444444;
+}
+
+/* GenericTraceback */
+.chroma .gt {
+  color: #2838b0;
+}
+
+/* GenericUnderline */
+.chroma .gl {
+  text-decoration: underline;
+}
+
+/* TextWhitespace */
+.chroma .w {
+  color: #a89028;
+}
+
+/*------------------------------------*\
     #LAYOUTS: WRAPPER
 \*------------------------------------*/
 /**
@@ -609,12 +1098,12 @@ video {
 }
 @media screen and (min-width: 48em) {
   .Section {
-    margin-top: 1.6rem;
+    margin-top: 1.7rem;
   }
 }
 @media screen and (min-width: 48em) {
   .Section {
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.7rem;
   }
 }
 
@@ -626,12 +1115,12 @@ video {
 }
 @media screen and (min-width: 48em) and (min-width: 48em) {
   .Section {
-    margin-top: 3.2rem;
+    margin-top: 3.4rem;
   }
 }
 @media screen and (min-width: 48em) and (min-width: 48em) {
   .Section {
-    margin-bottom: 3.2rem;
+    margin-bottom: 3.4rem;
   }
 }
 .Section {
@@ -726,7 +1215,7 @@ video {
 }
 @media screen and (min-width: 48em) {
   .Project {
-    margin-bottom: 4.8rem;
+    margin-bottom: 5.1rem;
   }
 }
 
@@ -737,7 +1226,7 @@ video {
 }
 @media screen and (min-width: 48em) and (min-width: 48em) {
   .Project-description {
-    margin-top: 1.6rem;
+    margin-top: 1.7rem;
   }
 }
 .Project .Message {
@@ -762,6 +1251,46 @@ video {
   margin: 0;
 }
 
+.Blocks h1, .Blocks h2 {
+  margin: 0;
+  line-height: 1.1;
+}
+
+.Blocks h3 {
+  line-height: 1.2;
+}
+
+.Blocks section {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 48em) {
+  .Blocks section {
+    margin-top: 3.2rem;
+  }
+}
+@media screen and (min-width: 48em) {
+  .Blocks section {
+    margin-bottom: 3.2rem;
+  }
+}
+@media (min-width: 48em) {
+  .Blocks section {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+}
+@media screen and (min-width: 48em) and (min-width: 48em) {
+  .Blocks section {
+    margin-top: 6.4rem;
+  }
+}
+@media screen and (min-width: 48em) and (min-width: 48em) {
+  .Blocks section {
+    margin-bottom: 6.4rem;
+  }
+}
 /*------------------------------------*\
     #LAYOUTS: POSTS
 \*------------------------------------*/
@@ -811,7 +1340,12 @@ video {
   opacity: 0;
 }
 
-.Post h2:focus > .heading-anchor, .Post h2:hover > .heading-anchor, .Post h3:focus > .heading-anchor, .Post h3:hover > .heading-anchor, .Post h4:focus > .heading-anchor, .Post h4:hover > .heading-anchor {
+.Post h2:focus > .heading-anchor,
+.Post h2:hover > .heading-anchor,
+.Post h3:focus > .heading-anchor,
+.Post h3:hover > .heading-anchor,
+.Post h4:focus > .heading-anchor,
+.Post h4:hover > .heading-anchor {
   opacity: 1;
 }
 
@@ -821,123 +1355,26 @@ video {
 
 .Post .heading-anchor:hover {
   text-decoration: underline;
-  color: var(--color-brand);
+  color: #1B4F39;
   background: 0 0;
 }
 
-.Blocks h1, .Blocks h2 {
-  margin: 0;
-  line-height: 1.1;
+.Post .heading-anchor {
+  text-decoration: none;
 }
 
-.Blocks h3 {
-  line-height: 1.2;
+.Post .heading-anchor {
+  display: inline;
+  margin-left: 0.5rem;
+  opacity: 0;
 }
 
-.Blocks section {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
-@media screen and (min-width: 48em) {
-  .Blocks section {
-    margin-top: 3.2rem;
-  }
-}
-@media screen and (min-width: 48em) {
-  .Blocks section {
-    margin-bottom: 3.2rem;
-  }
-}
-@media (min-width: 48em) {
-  .Blocks section {
-    margin-top: 6rem;
-    margin-bottom: 6rem;
-  }
-}
-@media screen and (min-width: 48em) and (min-width: 48em) {
-  .Blocks section {
-    margin-top: 6.4rem;
-  }
-}
-@media screen and (min-width: 48em) and (min-width: 48em) {
-  .Blocks section {
-    margin-bottom: 6.4rem;
-  }
-}
 /*------------------------------------*\
     #LAYOUTS: POST LIST
 \*------------------------------------*/
 /**
  * Component Block
  */
-.Post .intro, .intro {
-  font-size: 110%;
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
-  max-width: 52ch;
-}
-
-@media screen and (min-width: 48em) {
-  .Post .intro, .intro {
-    margin-bottom: 1.6rem;
-  }
-}
-.PostAuthor {
-  display: flex;
-  align-items: center;
-  margin-top: 4.5rem;
-  margin-bottom: 4.5rem;
-}
-
-@media screen and (min-width: 48em) {
-  .PostAuthor {
-    margin-top: 4.8rem;
-  }
-}
-@media screen and (min-width: 48em) {
-  .PostAuthor {
-    margin-bottom: 4.8rem;
-  }
-}
-.PostAuthor h2 {
-  font-size: var(--step-1);
-}
-
-.PostAuthor h2, .PostAuthor p {
-  margin: 0;
-}
-
-.Post .heading-anchor {
-  display: inline;
-  margin-left: 0.5rem;
-  opacity: 0;
-}
-
-.Post h2:focus > .heading-anchor, .Post h2:hover > .heading-anchor, .Post h3:focus > .heading-anchor, .Post h3:hover > .heading-anchor, .Post h4:focus > .heading-anchor, .Post h4:hover > .heading-anchor {
-  opacity: 1;
-}
-
-.Post .heading-anchor {
-  text-decoration: none;
-}
-
-.Post .heading-anchor:hover {
-  text-decoration: underline;
-  color: var(--color-brand);
-  background: 0 0;
-}
-
-.Post .heading-anchor {
-  text-decoration: none;
-}
-
-.Post .heading-anchor {
-  display: inline;
-  margin-left: 0.5rem;
-  opacity: 0;
-}
-
 .PostListItem {
   margin-bottom: 4.5rem;
 }
@@ -997,9 +1434,15 @@ video {
     margin-bottom: 0.8rem;
   }
 }
+/*------------------------------------*\
+    #LAYOUTS: TAG-LIST
+\*------------------------------------*/
+/**
+ * Component Block
+ */
 .TagList {
-  -moz-columns: 17rem auto;
   columns: 17rem auto;
+  -moz-columns: 17rem auto;
 }
 
 @media (min-width: 48em) {
@@ -1013,53 +1456,15 @@ video {
 .TagListItem {
   margin-bottom: 1.5rem;
 }
-
 @media screen and (min-width: 48em) {
   .TagListItem {
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.7rem;
   }
 }
+
 .TagListItem-title {
   margin: 0;
   font-size: var(--step-2);
-}
-
-ul.Pagination {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(var(--space) * 12);
-  margin-bottom: calc(var(--space) * 12);
-}
-
-ul.Pagination .Pagination-item {
-  margin-top: calc(var(--space) * 1.5);
-  margin-bottom: calc(var(--space) * 1.5);
-}
-
-ul.Pagination .Pagination-item:not(:first-of-type) {
-  margin-left: calc(var(--space) / 1.5);
-}
-
-ul.Pagination .Pagination-itemLink {
-  font-family: var(--font-mono);
-  font-size: var(--font-size-xs);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: calc(var(--space) / 1.5) calc(var(--space) * 1.5);
-}
-
-@media (min-width: 48em) {
-  ul.Pagination .Pagination-itemLink {
-    font-size: var(--font-size-xxs);
-  }
-}
-ul.Pagination .Pagination-item--current {
-  background-color: var(--color-brand);
-}
-
-ul.Pagination .Pagination-item--current a {
-  color: var(--color-light);
-  text-decoration: none;
 }
 
 /*------------------------------------*\
@@ -1089,23 +1494,6 @@ ul.Pagination .Pagination-item--current a {
     max-width: calc(50% - 20px); /* Set max-width to ensure maximum 2 cards per row */
   }
 }
-.card__img {
-  border-radius: 0.6rem;
-  display: block;
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover; /* Maintain aspect */
-  margin-top: -0.5px;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 768px) {
-  .card__img {
-    height: auto; /* Switch to automatic height on smaller screens */
-    max-width: 100%; /* Ensure images don't exceed container width */
-  }
-}
 .card__content {
   padding-top: 0.5rem;
   padding-bottom: 1.2rem;
@@ -1125,6 +1513,43 @@ ul.Pagination .Pagination-item--current a {
   font-weight: 600;
   margin-top: 1.25rem;
   margin-bottom: 0.5rem;
+}
+
+/** Card Image  **/
+.card__img-container {
+  position: relative;
+}
+
+.card__img {
+  border-radius: 0.6rem;
+  display: block;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; /* Maintain aspect */
+  margin-top: -0.5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .card__img {
+    height: auto;
+    max-width: 100%;
+  }
+}
+.card__img-overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  pointer-events: none;
+}
+
+.card__img-container:hover .card__img-overlay {
+  background-color: #1B4F39;
+  opacity: 1.9;
 }
 
 /*
@@ -1170,12 +1595,12 @@ ul.Pagination .Pagination-item--current a {
 }
 @media screen and (min-width: 48em) {
   .ButtonWrap {
-    margin-bottom: 6.4rem;
+    margin-bottom: 6.8rem;
   }
 }
 @media screen and (min-width: 48em) {
   .ButtonWrap {
-    margin-top: 6.4rem;
+    margin-top: 6.8rem;
   }
 }
 
@@ -1231,7 +1656,12 @@ ul.Pagination .Pagination-item--current a {
   outline-offset: 3px;
 }
 
-/* Badges */
+/*------------------------------------*\
+    #OBJECTS: BADGE
+\*------------------------------------*/
+/**
+ * Component Block
+ */
 .Badge {
   color: #1B4F39;
   background-color: rgba(27, 79, 57, 0.05);
@@ -1241,10 +1671,10 @@ ul.Pagination .Pagination-item--current a {
   cursor: default;
 }
 
-.Badge:hover,
-.Badge:focus,
-.Badge:active,
-.Badge.is-pressed {
+.Badge a:hover,
+.Badge a:focus,
+.Badge a:active,
+.Badge a.is-pressed {
   background-color: rgba(27, 79, 57, 0.1);
   color: #1B4F39;
 }
@@ -1278,32 +1708,6 @@ ul.Pagination .Pagination-item--current a {
   line-height: 80px;
 }
 
-/*
-
-.PromoBanner {
-  background-color: $color-link;
-  color: $color-white;
-  font-family: sf mono,monaco,inconsolata,fira mono,droid sans mono,source code pro,monospace;
-  font-size: var(--step--1);
-  padding: calc(var(--space)/2)var(--space);
-  text-align: center;
-}
-
-.PromoBanner p {
-  max-width: 100%
-}
-
-.PromoBanner a {
-  background-color: $color-link;
-  color: $color-white;
-}
-
-.PromoBanner a:hover {
-  background-color: $color-white;
-  color: $color-link;
-}
-
-*/
 /*------------------------------------*\
     #OBJECTS: VIDEO
 \*------------------------------------*/
@@ -1316,12 +1720,12 @@ ul.Pagination .Pagination-item--current a {
 }
 @media screen and (min-width: 48em) {
   .Video {
-    margin-top: 2.4rem;
+    margin-top: 2.55rem;
   }
 }
 @media screen and (min-width: 48em) {
   .Video {
-    margin-bottom: 2.4rem;
+    margin-bottom: 2.55rem;
   }
 }
 
@@ -1337,7 +1741,7 @@ ul.Pagination .Pagination-item--current a {
 }
 @media screen and (min-width: 48em) {
   .Form-label {
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.85rem;
   }
 }
 
@@ -1371,7 +1775,7 @@ ul.Pagination .Pagination-item--current a {
   .Form-input,
   .Form-textarea,
   .Form-select {
-    margin-top: 0.4rem;
+    margin-top: 0.425rem;
   }
 }
 .Form-input:focus, .Form-input:active,
@@ -1407,12 +1811,12 @@ ul.Pagination .Pagination-item--current a {
 }
 @media screen and (min-width: 48em) {
   .Form-button {
-    margin-top: 1.6rem;
+    margin-top: 1.7rem;
   }
 }
 @media screen and (min-width: 48em) {
   .Form-button {
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.7rem;
   }
 }
 
@@ -1463,13 +1867,12 @@ ul.Pagination .Pagination-item--current a {
  * Component Block
  */
 .accordion {
-  max-width: 400px; /* Adjust the max-width as needed */
+  max-width: 600px; /* Adjust the max-width as needed */
   margin: 0 auto;
 }
 
 .accordion__item {
-  display: flex;
-  padding: 1.6rem 0;
+  padding-top: 1.6rem;
 }
 
 .accordion__label {
@@ -1526,6 +1929,76 @@ ul.Pagination .Pagination-item--current a {
 }
 
 /*------------------------------------*\
+    #OBJECTS: PROMOBANNER
+\*------------------------------------*/
+/**
+ * Component Block
+ */
+.PromoBanner {
+  background-color: var(--color-link);
+  color: var(--color-white);
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
+  font-size: var(--step--1);
+  padding: calc(var(--space) / 2) var(--space);
+  text-align: center;
+}
+.PromoBanner p {
+  max-width: 100%;
+}
+.PromoBanner a {
+  background-color: var(--color-link);
+  color: var(--color-white);
+}
+.PromoBanner a:hover {
+  background-color: var(--color-white);
+  color: var(--color-link);
+}
+
+/*------------------------------------*\
+    #OBJECTS: TAG
+\*------------------------------------*/
+/**
+ * Component Block
+ */
+.Tag a {
+  color: #1a0e04;
+}
+.Tag a:hover {
+  background-color: #1B4F39;
+  color: #fffefc;
+  text-decoration: none;
+}
+.Tag a:not(:last-child):after {
+  content: ",";
+}
+
+/*------------------------------------*\
+    #OBJECTS: SKIP-LINK
+\*------------------------------------*/
+/**
+ * Component Block
+ */
+.skip-link:not(:focus) {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.skip-link:focus {
+  background-color: #ffffff;
+  position: absolute;
+  z-index: 2;
+  top: 1rem;
+  right: 1rem;
+}
+
+/*------------------------------------*\
     #COMPONENTS: HEADER
 \*------------------------------------*/
 /**
@@ -1537,7 +2010,7 @@ ul.Pagination .Pagination-item--current a {
   justify-content: space-between;
   max-width: 1248px;
   margin: 0 auto;
-  padding: 6% 0% 5%;
+  padding: 5% 0% 4%;
 }
 .Header a {
   color: #1a0e04;
@@ -1546,52 +2019,6 @@ ul.Pagination .Pagination-item--current a {
 .Header a:hover {
   background-color: unset;
   text-decoration: underline;
-}
-
-.Hero {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
-
-@media screen and (min-width: 48em) {
-  .Hero {
-    margin-top: 5rem;
-  }
-}
-@media screen and (min-width: 48em) {
-  .Hero {
-    margin-bottom: 5rem;
-  }
-}
-.Hero-date {
-  display: flex;
-  margin-top: 0.8rem;
-}
-
-.Hero-mod {
-  margin-top: 2rem;
-}
-
-.Callout {
-  padding: 2% 0;
-  border-top: 2px dotted;
-  border-bottom: 2px dotted;
-}
-
-.Callout a {
-  text-decoration: underline;
-}
-
-.Callout a:hover {
-  text-decoration: none;
-}
-
-p.Callout:not(:last-of-type) {
-  margin-bottom: 3rem;
-}
-
-p.Callout:not(:first-of-type) {
-  margin-top: 3rem;
 }
 
 /*------------------------------------*\
@@ -1616,7 +2043,7 @@ p.Callout:not(:first-of-type) {
 }
 @media screen and (min-width: 48em) and (min-width: 48em) {
   .Nav-listItem:not(:last-of-type) {
-    margin-right: 1.6rem;
+    margin-right: 1.7rem;
   }
 }
 .NavlistItemLink {
@@ -1655,7 +2082,7 @@ p.Callout:not(:first-of-type) {
 }
 @media screen and (min-width: 48em) {
   .Footer {
-    margin-top: 3.2rem;
+    margin-top: 3.4rem;
   }
 }
 .Footer p {
@@ -1663,7 +2090,7 @@ p.Callout:not(:first-of-type) {
 }
 @media screen and (min-width: 48em) {
   .Footer p {
-    margin-top: 1.6rem;
+    margin-top: 1.7rem;
   }
 }
 
@@ -1737,7 +2164,7 @@ p.Callout:not(:first-of-type) {
 }
 @media screen and (min-width: 48em) {
   .Image figcaption {
-    margin-top: 0.8rem;
+    margin-top: 0.85rem;
   }
 }
 
@@ -1748,7 +2175,7 @@ p + .Image {
 @media screen and (min-width: 48em) {
   .Image + p,
   p + .Image {
-    margin-top: 2.4rem;
+    margin-top: 2.55rem;
   }
 }
 
@@ -1789,21 +2216,7 @@ p + .Image {
 }
 */
 .Image--headShot {
-  border-radius: 0.4rem;
-}
-
-/**
- * Component Utility
- */
-/* Animate the lazyloading */
-.lazyload,
-.lazyloading {
-  opacity: 0;
-}
-
-.lazyloaded {
-  opacity: 1;
-  transition: opacity 300ms;
+  border-radius: 0rem;
 }
 
 .doodle {
@@ -1841,7 +2254,7 @@ p + .Image {
 }
 @media screen and (min-width: 48em) {
   .Quote--left {
-    margin-left: 1.6rem;
+    margin-left: 1.7rem;
   }
 }
 @media (min-width: 48em) {
@@ -1865,22 +2278,22 @@ p + .Image {
 }
 @media screen and (min-width: 48em) {
   .Quote--right {
-    margin-top: 1.6rem;
+    margin-top: 1.7rem;
   }
 }
 @media screen and (min-width: 48em) {
   .Quote--right {
-    margin-bottom: 3.2rem;
+    margin-bottom: 3.4rem;
   }
 }
 @media screen and (min-width: 48em) {
   .Quote--right {
-    margin-left: 3.2rem;
+    margin-left: 3.4rem;
   }
 }
 @media screen and (min-width: 48em) {
   .Quote--right {
-    margin-right: 1.6rem;
+    margin-right: 1.7rem;
   }
 }
 @media (min-width: 48em) {
@@ -1890,62 +2303,123 @@ p + .Image {
 }
 @media screen and (min-width: 48em) and (min-width: 48em) {
   .Quote--right {
-    margin-right: 12.8rem;
+    margin-right: 13.6rem;
   }
+}
+
+/*------------------------------------*\
+    #COMPONENTS: CALLOUT
+\*------------------------------------*/
+/**
+ * Component Block
+ */
+.Callout {
+  padding: 2% 0;
+  border-top: 2px dotted;
+  border-bottom: 2px dotted;
+}
+.Callout a {
+  text-decoration: underline;
+}
+.Callout a:hover {
+  text-decoration: none;
+}
+
+p.Callout:not(:last-of-type) {
+  margin-bottom: 3rem;
+}
+
+p.Callout:not(:first-of-type) {
+  margin-top: 3rem;
+}
+
+/*------------------------------------*\
+    #COMPONENTS: HERO
+\*------------------------------------*/
+/**
+ * Component Block
+ */
+.Hero {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+@media screen and (min-width: 48em) {
+  .Hero {
+    margin-top: 6.8rem;
+  }
+}
+@media screen and (min-width: 48em) {
+  .Hero {
+    margin-bottom: 6.8rem;
+  }
+}
+
+.Hero-date {
+  display: flex;
+  margin-top: 0.8rem;
+}
+
+.Hero-mod {
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 48em) {
+  .Hero {
+    margin-top: 5rem;
+  }
+}
+@media screen and (min-width: 48em) {
+  .Hero {
+    margin-bottom: 5rem;
+  }
+}
+.Project h2 {
+  max-width: 60%;
+  word-wrap: break-word;
+}
+
+/*------------------------------------*\
+    #COMPONENTS: PAGINATION
+\*------------------------------------*/
+/**
+ * Component Block
+ */
+ul.Pagination {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--space) * 12);
+  margin-bottom: calc(var(--space) * 12);
+}
+ul.Pagination .Pagination-item {
+  margin-top: calc(var(--space) * 1.5);
+  margin-bottom: calc(var(--space) * 1.5);
+}
+ul.Pagination .Pagination-item:not(:first-of-type) {
+  margin-left: calc(var(--space) / 1.5);
+}
+ul.Pagination .Pagination-itemLink {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: calc(var(--space) / 1.5) calc(var(--space) * 1.5);
+}
+@media (min-width: 48em) {
+  ul.Pagination .Pagination-itemLink {
+    font-size: var(--font-size-xxs);
+  }
+}
+ul.Pagination .Pagination-item--current {
+  background-color: var(--color-brand);
+}
+ul.Pagination .Pagination-item--current a {
+  color: var(--color-light);
+  text-decoration: none;
 }
 
 /*------------------------------------*\
     #UTILITIES: LAYOUT
 \*------------------------------------*/
-.u-visually-hidden {
-  position: absolute !important;
-  top: -9999px !important;
-  left: -9999px !important;
-}
-
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  height: auto;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  white-space: nowrap;
-}
-
-.items-center {
-  align-items: center;
-}
-
-/**
- * FULL BLEED
- *
- * Add this class to an element to make it fill the width of the screen 
- * and sit horizontally central
- * https://andy-bell.design/wrote/creating-a-full-bleed-css-utility/
- */
-.full-bleed {
-  width: 100vw;
-  margin-left: 50%;
-  transform: translateX(-50%);
-}
-
-.full-bleed-skinny {
-  width: 100vw;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  overflow: hidden; /* Ensure the clipped part is hidden */
-}
-.full-bleed-skinny img {
-  width: 100%; /* Ensure the image fills the container */
-  height: 60vh; /* Ensure the image fills the container */
-  -o-object-fit: cover;
-     object-fit: cover; /* Ensure the image maintains its aspect ratio */
-  -o-object-position: 50% 20%;
-     object-position: 50% 20%; /* Center the image */
-}
-
 .Project .Message {
   border: dotted 1px;
   padding: 32px 64px;
@@ -1979,18 +2453,6 @@ p + .Image {
   color: #97AB70;
 }
 
-.gradient-light {
-  background: linear-gradient(45deg, #542BFF, #156B90);
-  -webkit-linear-gradient: linear-gradient(45deg, #542BFF, #156B90);
-  -moz-linear-gradient: linear-gradient(45deg, #542BFF, #156B90);
-}
-
-.gradient-dark {
-  background: linear-gradient(45deg, #542BFF, #2D1590);
-  -webkit-linear-gradient: linear-gradient(45deg, #542BFF, #2D1590);
-  -moz-linear-gradient: linear-gradient(45deg, #542BFF, #2D1590);
-}
-
 .light {
   color: #030303;
 }
@@ -2001,6 +2463,16 @@ p + .Image {
 
 .lightest {
   color: #444444;
+}
+
+.the-lightest {
+  color: #666666;
+}
+
+.gradient-primary {
+  background: linear-gradient(45deg, #1B4F39, #1b5434);
+  -webkit-linear-gradient: linear-gradient(45deg, #1B4F39, #1b5434);
+  -moz-linear-gradient: linear-gradient(45deg, #1B4F39, #1b5434);
 }
 
 /*------------------------------------*\
@@ -2042,24 +2514,26 @@ a[rel*=external]::after {
   color: #1a0e04;
 }
 
-.skip-link:not(:focus) {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: auto;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  white-space: nowrap;
+/* Link a. as a checbox input      */
+.link__checkbox {
+  border: solid 2px #1B4F39;
+  background-color: transparent;
+  color: #1B4F39;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0 1%;
+  transition: all 0.3s ease-in-out;
 }
 
-.skip-link:focus {
-  background-color: #ffffff;
-  position: absolute;
-  z-index: 2;
-  top: 1rem;
-  right: 1rem;
+.link__checkbox.active {
+  background-color: #1B4F39;
+  color: #fffefc;
+}
+
+.link__checkbox:hover {
+  outline: dotted 2px #1B4F39;
+  outline-offset: 3px;
 }
 
 /*------------------------------------*\
@@ -2110,10 +2584,100 @@ a[rel*=external]::after {
   text-align: right;
 }
 
+/*------------------------------------*\
+    #UTILITIES: LAYOUT
+\*------------------------------------*/
+.u-visually-hidden {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+/**
+ * Component Utility
+ */
+/* Animate the lazyloading */
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+/**
+ * FULL BLEED
+ *
+ * Add this class to an element to make it fill the width of the screen 
+ * and sit horizontally central
+ * https://andy-bell.design/wrote/creating-a-full-bleed-css-utility/
+ */
+.full-bleed {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.full-bleed figcaption {
+  margin-left: calc(var(--space) * 2);
+}
+
+.full-bleed-skinny {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden; /* Ensure the clipped part is hidden */
+}
+.full-bleed-skinny img {
+  width: 100%; /* Ensure the image fills the container */
+  height: 60vh; /* Ensure the image fills the container */
+  -o-object-fit: cover;
+     object-fit: cover; /* Ensure the image maintains its aspect ratio */
+  -o-object-position: 50% 20%;
+     object-position: 50% 20%; /* Center the image */
+}
+
+/*------------------------------------*\
+    #LAYOUTS: FLEX
+\*------------------------------------*/
+/**
+ * Component Block
+ */
 .flex {
   display: flex;
 }
 
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+/*------------------------------------*\
+    #LAYOUTS: WRAPPER
+\*------------------------------------*/
+/**
+ * Component Block
+ */
+.wrapper {
+  padding: 0 4% 0 4%;
+}
+
+@media (min-width: 48em) {
+  .wrapper {
+    padding: 0 7% 0 7%;
+  }
+}
 .justify-center {
   justify-content: center;
 }
@@ -2122,7 +2686,65 @@ a[rel*=external]::after {
   justify-content: space-between;
 }
 
-.Project h2 {
-  max-width: 60%;
-  word-wrap: break-word;
+/*------------------------------------*\
+    #COMPONENTS: RATIO
+\*------------------------------------*/
+/**
+ * A utility that provides you with a predictable aspect ratio
+ *
+ * 16:9 = ratio wide
+ * 1:1 = ratio square
+ * 3:2 = ratio landscape
+ * 3:4 = ratio portrait
+ */
+[class*=ratio-] {
+  background-color: var(--color-light-mod-2);
+  display: block;
+  position: relative;
+}
+
+[class*=ratio-] > * {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.aspect-ratio-wide {
+  padding-bottom: 56.25%;
+  /* 16:9 Aspect Ratio */
+}
+
+.aspect-ratio-square {
+  padding-bottom: 100%;
+  /* 1:1 Aspect Ratio */
+}
+
+.aspect-ratio-landscape {
+  padding-bottom: 66.6666%;
+  /* 3:2 Aspect Ratio */
+}
+
+.aspect-ratio-portrait {
+  padding-bottom: 142.7848101266%;
+  /* 5:7 Aspect Ratio */
+}
+
+.aspect-ratio-full {
+  padding-top: 66.6666666667%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 48em) {
+  .aspect-ratio-full {
+    padding-top: 30.7638888889%;
+  }
+}
+
+.items-center {
+  align-items: center;
 }/*# sourceMappingURL=styles.css.map */

@@ -44,22 +44,26 @@ a[rel*="external"]::after {
 }
 
 
-.skip-link:not(:focus) {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: auto;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  white-space: nowrap
+/* Link a. as a checbox input      */
+
+.link__checkbox{
+  border: solid 2px $color-brand;
+  background-color: transparent;
+  color: $color-brand;
+  //border-radius: 4px;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0 1%;
+  transition: all 0.3s ease-in-out;
 }
 
-.skip-link:focus {
-  background-color: $color-white;
-  position: absolute;
-  z-index: 2;
-  top: 1rem;
-  right: 1rem
+.link__checkbox.active {
+  background-color: $color-brand;
+  color: $color-paper;
+}
+
+.link__checkbox:hover{
+  outline: dotted 2px $color-brand;
+  outline-offset: 3px
 }

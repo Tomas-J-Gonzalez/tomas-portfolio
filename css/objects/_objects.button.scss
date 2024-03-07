@@ -69,24 +69,3 @@
   outline: dotted 2px $color-dark;
   outline-offset: 3px
 }
-
-
-
-/* Badges */
-
-.Badge {
-  color: $color-link;
-  background-color: rgba($color-link,.05);
-  border-radius: 0.2rem;
-  padding: calc(#{$space} / 1.5);
-  margin: calc(#{$space} / 1.5);
-  cursor: default;
-}
-
-.Badge:hover,
-.Badge:focus,
-.Badge:active,
-.Badge.is-pressed {
-  background-color:  rgba($color-link,.1);
-  color: $color-brand;
-}

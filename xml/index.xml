@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+     ,.,
+        MMMM_    ,..,
+          "_ "__"MMMMM          ,...,,
+   ,..., __." "    ,.,     _-"MMMMMMM
+  MMMMMM"___ "_._   MMM"_."" _ """"""
+   """""    "" , \_.   "_. ."
+          ,., _"__ \__./ ."
+         MMMMM_"  "_    ./
+          ''''      (    )
+   ._______________.-'____"-._.
+    \                          /
+     \________________________/
+     (_)                    (_)
+     Tomas Jose Gonzalez — 2024 -  TJG Website 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=, initial-scale=1.0"/>
+    <meta name="color-scheme" content="light dark"/>
+    <meta name="description" content="UX Porfolio of Tomas Gonzalez"/>
+    <title>Tomas Gonzalez &#183; UX Designer</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle fill='%231B4F39' cx='12' cy='12' r='10'/%3E%3C/svg%3E"/>
+    <!--  COLOR: %231B4F39   %23 == # -->
+    <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
+    <script src="/script.js" defer="defer"></script>
+</head>
+<body class="Wrapper h-card">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="Header" id="scroll">
+    <div hidden="">
+        <img class="u-photo" src="/img/tomas.jpeg" alt="Tomas Gonzalez"/>
+        <p class="p-note">UX Designer</p>
+        <a href="mailto:admin@tomasjgonzalez.com"  class="u-email">admin@tomasjgonzalez.com</a>
+        <span class="p-name u-url u-visually-hidden">Tomas Gonzalez</span>
+    </div>
+    <div>
+        <p><a href="/pages/index.html">Tomas Gonzalez</a></p>
+    </div>
+
+    <nav class="Nav" aria-label="Main Navigation">
+        <ul class="Nav-list ">
+            <li class="Nav-listItem Nav-linkActive">
+                <a class="Nav-listItemlink" href="https://tomasjgonzalez.com/">Work</a>
+            </li>
+            <li class="Nav-listItem">
+                <a class="Nav-listItemlink" href="/pages/bio.html">Bio</a>
+            </li>
+            <li class="Nav-listItem">
+                <a href="/pages/writing.html" class="Nav-listItemlink">Writing</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main id="main-content" class="Container">
+    <header class="text-center" role="heading" aria-level="1">
+        <h1 class="Hero Hero-title">Hi, I'm Tomas, a UX designer solving problems with creative &amp; data-driven solutions.</h1>
+        <article>
+            <p>Based in Auckland, New Zealand. UX/UI Design, Strategy, Brand Identity, and Research. See some of my case studies and projects below.</p>
+            <p>Keen to work on a project together? — <a target="_blank" href="mailto:admin@tomasjgonzalez">Let's talk</a>. Maybe take a look at <a target="_blank" rel="noopener noreferrer" href="/pdf/Tomas_Gonzalez_ Resume.pdf">my CV</a> to learn more about my experience.</p>
+        </article>
+    </header>
+
+    <section class="PostBody">
+        <div class="card__container">
+            <!-- Case study 1  -->
+            <div class="card">
+                <figure>
+                    <a href="/pages/projects/bh.html" >
+                        <img class="card__img lazyloaded" src="/img/bh-thumb.png" alt="Desktop mockup"/>
+                    </a>
+                </figure>
+
+                <div>
+                    <h4 class="card__title text-center"><a class="link-reset" href="www.google.com">Evolution of a Work Program</a></h4>
+                    <div class="text-center">
+                        <span class="Badge small">UX/UI</span>
+                        <span class="Badge small">Research</span>
+                        <span class="Badge small">Web/Mobile</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case study 2  -->
+            <div class="card">
+                <figure>
+                    <a href="/pages/404.html" >
+                        <img class="card__img lazyloaded" src="/img/karu-thumb.jpg" alt="Desktop mockup"/>
+                    </a>
+                </figure>
+
+                <div>
+                    <h4 class="card__title text-center"><a class="link-reset" href="www.google.com">Karü</a></h4>
+                    <div class="text-center">
+                        <span class="Badge small">UX/UI</span>
+                        <span class="Badge small">E-com</span>
+                        <span class="Badge small">Identity</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case study 3  -->
+            <div class="card">
+                <figure>
+                    <a href="/pages/404.html" >
+                        <img class="card__img lazyloaded" src="/img/tooezzi-thumb.jpg" alt="Desktop mockup"/>
+                    </a>
+                </figure>
+
+                <div>
+                    <h4 class="card__title text-center"><a class="link-reset" href="www.google.com">International Student Hub</a></h4>
+                    <div class="text-center">
+                        <span class="Badge small">UX/UI</span>
+                        <span class="Badge small">Visual</span>
+                        <span class="Badge small">Research</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Misc 1  -->
+            <div class="card">
+                <figure>
+                    <a href="/pages/projects/brandmarks.html"> <img  class="card__img lazyloaded" src="/img/brandmarks-thumb.jpg" alt="Desktop mockup"  > </img></a>
+                </figure>
+                <div> 
+                    <h4 class="card__title text-center"><a class="link-reset" href="/pages/projects/brandmarks.html">Brandmarks</a></h4> 
+                    <div class="text-center"> 
+                    <span class="Badge small">Identity</span>
+                    <span class="Badge small">Logos</span>
+                    </div>
+                    </div>
+                </div>
+
+
+        <!-- Misc 2  -->
+        <div class="card">
+          <figure>
+            <a href="/pages/projects/textile-initiative.html" >  
+            <img class="card__img lazyloaded" src="/img/textile-thumb.jpg" alt="Desktop mockup" >  </img>
+          </a>
+        </figure>
+           <div> 
+            <h4 class="card__title text-center"><a class="link-reset" href="/pages/projects/textile-initiative.html">Textile Waste Initiative</a></h4> 
+            <div class="text-center"> 
+              <span class="Badge small">Sustainability</span>
+              <span class="Badge small">Community</span>
+              <span class="Badge small">Program</span>
+            </div>
+            </div>
+        </div>
+
+        <!-- Misc 3  -->
+        <div class="card">
+            <figure>
+              <a href="/pages/projects/sustainable-gardening.html" >  
+              <img class="card__img lazyloaded" src="/img/abroad-thumb.jpg" alt="Desktop mockup">  </img>
+            </a>
+          </figure>
+             <div> 
+              <h4 class="card__title text-center"><a class="link-reset" href="/pages/projects/sustainable-gardening.html">Sustainable Urban Gardening</a></h4> 
+              <div class="text-center"> 
+                <span class="Badge small">Sustainability</span>
+                <span class="Badge small">Community</span>
+                <span class="Badge small">Program</span>
+              </div>
+              </div>
+          </div>
+
+            <!-- Misc 4  -->
+            <div class="card">
+              <figure>
+                <a href="/pages/projects/holistic-english.html" >  
+                <img class="card__img lazyloaded" src="/img/hol_eng-thumb.jpg" alt="Desktop mockup" >  </img> 
+              </a>
+            </figure>
+               <div> 
+                <h4 class="card__title text-center"><a class="link-reset" href="/pages/projects/holistic-english.html">Holistic English</a></h4> 
+                <div class="text-center"> 
+                  <span class="Badge small">Community</span>
+                  <span class="Badge small">English</span>
+                  <span class="Badge small">Workshops</span>
+                </div>
+                </div>
+            </div>
+
+             <!-- Misc 5  -->
+            <div class="card">
+              <figure>
+                <a href="/pages/projects/holistic-english.html" >  
+                <img class="card__img lazyloaded" src="/img/forum-thumb.jpg" alt="Desktop mockup" >  </img> 
+              </a>
+            </figure>
+               <div> 
+                <h4 class="card__title text-center"><a class="link-reset" href="/pages/projects/holistic-english.html">Forum</a></h4> 
+                <div class="text-center"> 
+                  <span class="Badge small">Networking</span>
+                  <span class="Badge small">Charities</span>
+                  <span class="Badge small">Soon</span>
+                </div>
+                </div>
+            </div>
+        
+      </div>
+</section>
+</main>
+
+<footer id="site-footer" class="Footer" role="contentinfo">
+  <div class="section-inner">
+    <div class="footer-credits">
+      <p class="footer-copyright">© 2024 <a href="#scroll">Tomas</a> </p>
+      <p class="notice"><a href="/xml/index.xml" target="_blank">RSS</a></p>
+      <p class="notice"> Coded by <a href="/pages/bio.html" target="_blank">yours</a> truly.</p>
+    </div>
+    <a class="to-the-top" href="#scroll"> <span href="#scroll" class="to-the-top-long">To the top</span> </a>
+    </div>
+</footer>
+
+<!--     ?Scripts ////-->
+<!-- Load in jQuery library</-->
+<script src="/scripts/jquery/dist/jquery.js"></script>
+
+<!-- Load in Lazy Load jQuery Plugin library</-->
+<script src="/scripts/js/jquery.lazyload.js"></script>
+
+<!-- Load in main.js - Script document/-->
+<script src="scripts/js/main.js"> </script>
+</body>
+</html>

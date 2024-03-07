@@ -30,31 +30,3 @@
 .font-bold {
   font-weight: 700;
 }
-
-.text-center {
-  text-align: center;
-  text-align: -moz-center;
-  text-align: -webkit-center;
-}
-
-.text-right{
-  text-align: right;
-}
-
-.flex {
-  display: flex;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-
-.Project h2 { //h2 elements, when descendants of an element with the class .Project, will have a max-width of 60% before they wrap to next line
-  max-width: 60%; 
-  word-wrap: break-word; 
-}

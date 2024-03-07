@@ -1,0 +1,44 @@
+/*------------------------------------*\
+    #COMPONENTS: PAGINATION
+\*------------------------------------*/
+
+/**
+ * Component Block
+ */
+
+ul.Pagination {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--space) *12);
+  margin-bottom: calc(var(--space) *12);
+
+  .Pagination-item {
+    margin-top: calc(var(--space) *1.5);
+    margin-bottom: calc(var(--space) *1.5);
+  }
+
+  .Pagination-item:not(:first-of-type) {
+    margin-left: calc(var(--space) /1.5);
+  }
+
+  .Pagination-itemLink {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-xs);
+    @include breakpoint(md) {
+      font-size: var(--font-size-xxs);
+    }
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: calc(var(--space) /1.5) calc(var(--space) *1.5);
+  }
+
+  .Pagination-item--current {
+    background-color: var(--color-brand);
+
+    a  {
+      color: var(--color-light);
+      text-decoration: none;
+    }
+  }
+}
+

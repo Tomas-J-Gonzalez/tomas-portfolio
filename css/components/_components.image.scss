@@ -57,22 +57,9 @@ p + .Image {
 */
 
 .Image--headShot {
-  border-radius: 0.4rem;
+ border-radius: 0rem;
 }
 
-/**
- * Component Utility
- */
-
-/* Animate the lazyloading */
-.lazyload,
-.lazyloading {
-	opacity: 0;
-}
-.lazyloaded {
-	opacity: 1;
-	transition: opacity 300ms;
-}
 
 .doodle {
   width: 300px;
