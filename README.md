@@ -1,17 +1,22 @@
 # Portfolio
 
-Tomas' - Website - 2024
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d57e35b2-4edc-4e09-b08a-7f85f0454d6f/deploy-status)](https://app.netlify.com/sites/tomasjgonzalez/deploys)
+![GitHub License](https://img.shields.io/github/license/Tomas-J-Gonzalez/tomas-portfolio?labelColor=%231B4F39)
+
+
+Tomas Gonzalez - Portfolio - 2024
 
 My portfolio is a website that showcases; User Experience design projects and other related content.
 
-Go to: [/pages/index.html](https://tomas-j-gonzalez.github.io/pages/index.html)
-
 ## Built with
 - Lazysizes.js for image lazy loading
-- Responsive image with Cloudinary
+- Responsive images and asset hosting with Cloudinary
 - Minimal dependencies
 - SASS Pre-processor
 - Visual Studio Code
+
+## Deployment
+- Netlify via Github Repository
 
 ## Methodologies
 - ITCSS 
