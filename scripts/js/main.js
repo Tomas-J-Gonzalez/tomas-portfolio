@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const data = {
         pages: [
             { title: 'Index', url: '/', id: 'index-link' },
-            { title: 'Bio', url: '/bio.html', id: 'bio-link' },
-            { title: 'Writing', url: '/writing.html', id: 'writing-link' },
+            { title: 'Bio', url: '/bio', id: 'bio-link' },
+            { title: 'Writing', url: '/writing', id: 'writing-link' },
         ]
     };
 
