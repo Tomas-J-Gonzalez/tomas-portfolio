@@ -5,41 +5,39 @@
  * Component Block
  */
 
-.Nav-list {
+.Nav__list {
   text-align: right;
   gap: calc(var(--space) *1.5)
 }
 
 @include breakpoint(md) {
-  .Nav-list {
+  .Nav__list {
     display: flex;
     text-align: left;
   }
 
-  .Nav-listItem:not(:last-of-type) {
+  .Nav__listItem:not(:last-of-type) {
     @include margin-right(1);
   }
 }
 
-.NavlistItemLink{
+.Nav--listItemLink{
   padding: calc(var(--space) *.5)
 }
 
-
-.Nav-listItemLink:hover {
+.Nav--listItemLink:hover {
   color: inherit;
   background-color: unset;
   text-decoration: underline
 }
 
-.Nav-listItemLink.is-active {
+.Nav--listItemLink.is-active {
   text-decoration: underline
 }
-.Nav-linkActive {
+
+.Nav--linkActive {
   text-decoration: underline;
 }
-/**
-* Current page is active
-*/
+
 
 

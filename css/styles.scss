@@ -1,25 +1,25 @@
 //  Importing SCSS Partials 
 
 //Abstracts - Variables: typography — colors — breakpoints                             
-@import "/Users/tomasgonzalez/tomas-j-gonzalez.github.io/css/abstracts/_all.scss"; 
+@import "/Users/tomasgonzalez/tomas-portfolio/css/abstracts/_all.scss"; 
 
 //Reset.css - tinker with opinionination
-@import "/Users/tomasgonzalez/tomas-j-gonzalez.github.io/css/_reset.scss";                      
+@import "/Users/tomasgonzalez/tomas-portfolio/css/_reset.scss";                      
 
 // Base styles (for html, body, links, heading, image, list, quote, video, select, etc)
-@import "/Users/tomasgonzalez/tomas-j-gonzalez.github.io/css/base/_all.scss"; 
+@import "/Users/tomasgonzalez/tomas-portfolio/css/base/_all.scss"; 
 
 // Layout styles (grid, section, etc.)
-@import "/Users/tomasgonzalez/tomas-j-gonzalez.github.io/css/layouts/_all.scss"; 
+@import "/Users/tomasgonzalez/tomas-portfolio/css/layouts/_all.scss"; 
 
 // Object styles — Video, form and button styling
-@import "/Users/tomasgonzalez/tomas-j-gonzalez.github.io/css/objects/_all.scss"; 
+@import "/Users/tomasgonzalez/tomas-portfolio/css/objects/_all.scss"; 
 
 // Component styles
-@import "/Users/tomasgonzalez/tomas-j-gonzalez.github.io/css/components/_all.scss"; 
+@import "/Users/tomasgonzalez/tomas-portfolio/css/components/_all.scss"; 
 
 // Utilities for styles * highest specifcity to override previous styles
-@import "/Users/tomasgonzalez/tomas-j-gonzalez.github.io/css/utilities/_all.scss"; 
+@import "/Users/tomasgonzalez/tomas-portfolio/css/utilities/_all.scss"; 
 
 // Be ashamed
-@import "/Users/tomasgonzalez/tomas-j-gonzalez.github.io/css/shame/_shame.scss";
+@import "/Users/tomasgonzalez/tomas-portfolio/css/shame/_shame.scss";

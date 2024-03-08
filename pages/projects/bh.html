@@ -27,6 +27,23 @@
     <link rel="canonical" href="https://tomasjgonzalez.com/" />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle fill='%231B4F39' cx='12' cy='12' r='10'/%3E%3C/svg%3E">  <!--  COLOR: %231B4F39   %23 == # -->
     <link rel="stylesheet"  type="text/css" href="/css/styles.css">
+    <!-- Include Handlebars library--> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js" integrity="sha512-E1dSFxg+wsfJ4HKjutk/WaCzK7S2wv1POn1RRPGh8ZK+ag9l244Vqxji3r6wgz9YBf6+vhQEYJZpSjqWFPg9gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Header Template script-->
+    <script id="SiteHead__template" type="text/x-handlebars-template">
+       <header class="SiteHead" id="scroll">
+        <div><p><a href="/">Tomas Gonzalez</a></p></div>
+        <nav class="Nav" aria-label="Main Navigation">
+          <ul  class="Nav__list">
+            {{#each pages}}
+                <li class="Nav__listItem" ><a class="Nav--listItemLink" id="{{id}}" href="{{url}}">{{title}}</a></li>
+            {{/each}}
+          </ul>
+        </nav>
+      </header>
+     </div>  
+    </script>
+
     <!-- 
     <link rel="preconnect" href="https://tomasjgonzalez.com" />
     <link rel="prefetch" href="/path/to/resource" />
@@ -34,21 +51,8 @@
 </head>
 <body class="Wrapper h-card">
 <a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="Header" id="scroll">
-  <div hidden=""><img class="u-photo" src="https://res.cloudinary.com/tomasgo/image/upload/v1709798879/tomas-master/img/tomas_wvj9lh.jpg" alt="Tomas Gonzalez"><p class="p-note">UX Designer</p><a href="mailto:admin@tomasjgonzalez.com" rel="me" class="u-email">admin@tomasjgonzalez.com</a>
-    <span class="p-name u-url u-visually-hidden" rel="me">Tomas Gonzalez</span></div>
-<div>
-  <p><a href="/pages/index.html">Tomas Gonzalez</a></p>
-</div>
-
-<nav class="Nav" aria-label="Main Navigation">
-    <ul class="Nav-list ">
-      <li class="Nav-listItem"> <a class="Nav-listItemlink" href="/pages/index.html">Work</a></li>
-      <li class="Nav-listItem"> <a class="Nav-listItemlink" href="/pages/bio.html">Bio</a> </li>
-      <li class="Nav-listItem"> <a class="Nav-listItemlink" href="/pages/writing.html"> Writing</a> </li>
-    </ul>
-  </nav>
-</header>
+<div hidden=""><img class="u-photo" src="https://res.cloudinary.com/tomasgo/image/upload/v1709798879/tomas-master/img/tomas_wvj9lh.jpg" alt="Tomas Gonzalez"><p class="p-note">UX Designer</p><a href="mailto:admin@tomasjgonzalez.com" rel="me" class="u-email">admin@tomasjgonzalez.com</a><span class="p-name u-url u-visually-hidden" rel="me">Tomas Gonzalez</span></div>
+  <div id="SiteHead__container"></div>
 
   <!--      ?Project entry ///////////////-->
   <main id="main" class="Container">
@@ -354,7 +358,7 @@
 </footer>
     <script src="/scripts/jquery/dist/jquery.js"></script>  <!-- Load in jQuery library</-->
     <script src="/scripts/js/jquery.lazyload.js" async></script>  <!-- Load in Lazy Load jQuery Plugin library</-->
-    <script src="scripts/js/main.js"> </script>     <!-- Load in main.js - Script document/-->
+    <script src="/scripts/js/main.js"> </script>     <!-- Load in main.js - Script document/-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.3.0/cloudinary-core-shrinkwrap.min.js"></script>
     <script type="application/ld+json">
       {
