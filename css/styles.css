@@ -1075,7 +1075,7 @@ form button {
  * Component Block
  */
 .Container {
-  padding-top: 20%;
+  padding-top: 12%;
   padding-bottom: 7%;
   max-width: 1248px;
   margin: 0 auto;
@@ -2303,12 +2303,12 @@ p.Callout:not(:first-of-type) {
  * Component Block
  */
 .Hero {
-  margin-top: 6rem;
+  margin-top: 4.5rem;
   margin-bottom: 6rem;
 }
 @media screen and (min-width: 48em) {
   .Hero {
-    margin-top: 6.8rem;
+    margin-top: 5.1rem;
   }
 }
 @media screen and (min-width: 48em) {

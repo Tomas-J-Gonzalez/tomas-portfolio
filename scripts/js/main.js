@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const data = {
         pages: [
             { title: 'Index', url: '/', id: 'index-link' },
-            { title: 'Bio', url: '/bio', id: 'bio-link' },
-            { title: 'Writing', url: '/writing', id: 'writing-link' },
+            { title: 'Bio', url: '/bio.html', id: 'bio-link' },
+            { title: 'Writing', url: '/writing.html', id: 'writing-link' },
         ]
     };
 
@@ -68,4 +68,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+
+// The mango effect //
+document.addEventListener('DOMContentLoaded', function() {
+    var svg = document.getElementById('randomGradientSVG');
+
+    svg.addEventListener('click', function() {
+        var color1 = getRandomNatureColor();
+        var color2 = getRandomNatureColor();
+        
+        document.getElementById('stop1').setAttribute('stop-color', color1);
+        document.getElementById('stop2').setAttribute('stop-color', color2);
+    });
+});
+
+function getRandomNatureColor() {
+    var natureColors = ['#228B22', '#8B4513', '#8B0000', '#CD853F', '#6B8E23'];
+    return natureColors[Math.floor(Math.random() * natureColors.length)];
+}
 
