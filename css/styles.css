@@ -2727,4 +2727,11 @@ a[rel*=external]:hover::after {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.hr--full {
+  border: dashed 1px;
+  max-width: 60%;
+  margin: 4rem 0rem 1rem 0;
+  opacity: 0.1;
 }/*# sourceMappingURL=styles.css.map */
