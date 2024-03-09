@@ -2013,6 +2013,9 @@ form button {
 }
 .Nav--listItemLink {
   padding: calc(var(--space) * 0.5);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .Nav--listItemLink:hover {
@@ -2315,6 +2318,12 @@ p.Callout:not(:first-of-type) {
   .Hero {
     margin-bottom: 6.8rem;
   }
+}
+
+.Hero-title {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .Hero-date {

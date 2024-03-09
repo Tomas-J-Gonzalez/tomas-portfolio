@@ -22,10 +22,12 @@
 }
 
 .Nav--listItemLink{
-  padding: calc(var(--space) *.5)
+  padding: calc(var(--space) *.5);
+   user-select: none;
 }
 
 .Nav--listItemLink:hover {
+  
   color: inherit;
   background-color: unset;
   text-decoration: underline

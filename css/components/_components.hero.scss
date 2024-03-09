@@ -11,6 +11,10 @@
   @include margin-bottom(4);
 }
 
+.Hero-title {
+   user-select: none;
+}
+
 .Hero-date {
   display: flex;
   margin-top: .8rem;
