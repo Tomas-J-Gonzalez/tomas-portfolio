@@ -2013,9 +2013,6 @@ form button {
 }
 .Nav--listItemLink {
   padding: calc(var(--space) * 0.5);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 
 .Nav--listItemLink:hover {
@@ -2318,12 +2315,6 @@ p.Callout:not(:first-of-type) {
   .Hero {
     margin-bottom: 6.8rem;
   }
-}
-
-.Hero-title {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 
 .Hero-date {
@@ -2743,4 +2734,11 @@ a[rel*=external]:hover::after {
   max-width: 60%;
   margin: 4rem 0rem 1rem 0;
   opacity: 0.1;
+}
+
+#randomGradientSVG {
+  user-select: none; /* Prevent text selection */
+  -webkit-user-select: none; /* For Safari */
+  -moz-user-select: none; /* For Firefox */
+  -ms-user-select: none; /* For Internet Explorer/Edge */
 }/*# sourceMappingURL=styles.css.map */
