@@ -452,8 +452,8 @@ ol[class] {
     #BASE: QUOTES
 \*------------------------------------*/
 blockquote {
-  border-left: 2px solid var(--color-dark);
-  color: var(--color-dark);
+  border-left: 2px solid #1a0e04;
+  color: #1a0e04;
   font-weight: 400;
   font-style: italic;
   margin-top: 1.5rem;
@@ -2741,4 +2741,22 @@ a[rel*=external]:hover::after {
   -webkit-user-select: none; /* For Safari */
   -moz-user-select: none; /* For Firefox */
   -ms-user-select: none; /* For Internet Explorer/Edge */
+}
+
+.two-column-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 30% 30%; /* Adjust column widths */
+  row-gap: -10%;
+}
+
+.two-column-list li {
+  margin-bottom: 5%; /* Adjust spacing between items */
+}
+
+/* Adjust the margin between columns */
+.two-column-list li:first-child {
+  margin-right: -50px; /* Adjust this value to bring the columns closer together */
 }/*# sourceMappingURL=styles.css.map */
