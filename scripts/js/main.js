@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
 */
 
 
-// Prevent zooming on double tap for mobile devices
+ // Prevent zooming on double tap for mobile devices
     var touchStartTimestamp = 0;
     var svg = document.getElementById('circle');
 
@@ -111,4 +111,11 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
         }
         touchStartTimestamp = now;
+    });
+
+    svg.addEventListener('touchend', function(event) {
+        // Reset touch start timestamp after a short delay
+        setTimeout(function() {
+            touchStartTimestamp = 0;
+        }, 300);
     });

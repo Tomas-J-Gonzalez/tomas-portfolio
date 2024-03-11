@@ -8,3 +8,43 @@
   padding: 32px 64px;
   cursor: default;
 }
+
+
+/* Object position classes for moving images */
+
+.center-image {
+    object-position: center center !important;
+   // object-position: 50% 50% !important;
+}
+
+.top-centered-image {
+    object-position: center top;
+}
+
+.bottom-centered-image {
+    object-position: center bottom;
+}
+
+.left-centered-image {
+    object-position: left center;
+}
+
+.right-centered-image {
+    object-position: right center;
+}
+
+.top-left-image {
+    object-position: left top;
+}
+
+.top-right-image {
+    object-position: right top;
+}
+
+.bottom-left-image {
+    object-position: left bottom;
+}
+
+.bottom-right-image {
+    object-position: right bottom;
+}

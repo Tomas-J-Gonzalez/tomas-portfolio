@@ -231,7 +231,7 @@ body {
 \*------------------------------------*/
 html {
   font-feature-settings: "calt", "liga", "hist", "onum", "pnum";
-  background-color: #1B4F39;
+  background-color: #061b11;
 }
 
 @media screen and (min-width: 675px) {
@@ -2152,7 +2152,7 @@ p + .Image {
   }
 }
 
-/* Apply stickyBoy only when screen size is above 1500px 
+/*
 @media screen and (min-width: 1500px) {
 .stickyBoy {
   position: sticky;
@@ -2162,16 +2162,6 @@ p + .Image {
 }
 }
 */
-.Image--headShot {
-  border-radius: 0.4rem;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.doodle {
-  width: 300px;
-  margin-bottom: 40px;
-}
-
 /*------------------------------------*\
     #COMPONENTS: QUOTE
 \*------------------------------------*/
@@ -2374,11 +2364,61 @@ ul.Pagination .Pagination-item--current a {
   cursor: default;
 }
 
+/* Object position classes for moving images */
+.center-image {
+  -o-object-position: center center !important;
+     object-position: center center !important;
+}
+
+.top-centered-image {
+  -o-object-position: center top;
+     object-position: center top;
+}
+
+.bottom-centered-image {
+  -o-object-position: center bottom;
+     object-position: center bottom;
+}
+
+.left-centered-image {
+  -o-object-position: left center;
+     object-position: left center;
+}
+
+.right-centered-image {
+  -o-object-position: right center;
+     object-position: right center;
+}
+
+.top-left-image {
+  -o-object-position: left top;
+     object-position: left top;
+}
+
+.top-right-image {
+  -o-object-position: right top;
+     object-position: right top;
+}
+
+.bottom-left-image {
+  -o-object-position: left bottom;
+     object-position: left bottom;
+}
+
+.bottom-right-image {
+  -o-object-position: right bottom;
+     object-position: right bottom;
+}
+
 /*------------------------------------*\
     #UTILITIES: COLOR
 \*------------------------------------*/
 .white {
   color: #ffffff;
+}
+
+.black {
+  color: #030303;
 }
 
 .dark {
@@ -2399,10 +2439,6 @@ ul.Pagination .Pagination-item--current a {
 
 .accent {
   color: #97AB70;
-}
-
-.light {
-  color: #030303;
 }
 
 .lighter {
@@ -2486,6 +2522,19 @@ a[rel*=external]:hover::after {
 .link__checkbox:hover {
   outline: dotted 2px #1B4F39;
   outline-offset: 3px;
+}
+
+/*------------------------------------*\
+    #UTILITIES: LIST
+\*------------------------------------*/
+.list-disc {
+  list-style: disc !important;
+  margin-left: 18px !important;
+}
+
+.list-decimal {
+  list-style: decimal !important;
+  margin-left: 18px !important;
 }
 
 /*------------------------------------*\
@@ -2590,15 +2639,15 @@ a[rel*=external]:hover::after {
   width: 100vw;
   margin-left: 50%;
   transform: translateX(-50%);
-  overflow: hidden; /* Ensure the clipped part is hidden */
+  overflow: hidden;
 }
 .full-bleed-skinny img {
-  width: 100%; /* Ensure the image fills the container */
-  height: 60vh; /* Ensure the image fills the container */
+  width: 100%;
+  height: 75vh;
   -o-object-fit: cover;
-     object-fit: cover; /* Ensure the image maintains its aspect ratio */
+     object-fit: cover;
   -o-object-position: 50% 20%;
-     object-position: 50% 20%; /* Center the image */
+     object-position: 50% 20%;
 }
 
 /*------------------------------------*\
@@ -2719,6 +2768,17 @@ a[rel*=external]:hover::after {
   max-width: 60%;
   margin: 4rem 0rem 1rem 0;
   opacity: 0.1;
+}
+
+.three-column-list ol {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 35% 35% 35%; /* Adjust column widths */
+}
+.three-column-list olli {
+  margin-bottom: 6%; /* Adjust spacing between items */
 }
 
 .two-column-list ul {
