@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Prevent zooming on double tap for mobile devices
     var touchStartTimestamp = 0;
-    var svg = document.getElementById('mySvg');
+    var svg = document.getElementById('circle');
 
     svg.addEventListener('touchstart', function(event) {
         var now = new Date().getTime();
