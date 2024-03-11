@@ -98,3 +98,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 */
+
+
+// Prevent zooming on double tap for mobile devices
+    var touchStartTimestamp = 0;
+    var svg = document.getElementById('mySvg');
+
+    svg.addEventListener('touchstart', function(event) {
+        var now = new Date().getTime();
+        var delta = now - touchStartTimestamp;
+        if (delta < 300) {
+            event.preventDefault();
+        }
+        touchStartTimestamp = now;
+    });
