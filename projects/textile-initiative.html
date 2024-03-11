@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Textile Initiative &#183; UX Designer - Tomas is a User Experience designer based in Auckland, New Zealand.</title>
+    <meta name="robots" content="index, follow"> <!-- Search engine crawling allowed-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="content-language" content="en" />
-    <!-- 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    -->
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#FFFFFF">
+    <link rel="canonical" href="https://tomasjgonzalez.com/" />
+    <meta name="application-name" content="Tomas Gonzalez">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="https://res.cloudinary.com/tomasgo/image/upload/v1710132659/favicon_yoymvc.png">
+    <link rel="shortcut icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/tomasgo/image/upload/v1710132659/favicon_yoymvc.png"> 
     <meta name="author" content="Tomas Gonzalez" />
     <meta name="description" content="UX Porfolio of Tomas Gonzalez">
     <meta name="keywords" content="Product Design, UX Design, UI Design, Small businesses, Automation, Typography" />
-    <meta name="robots" content="index, follow"> <!-- Search engine crawling allowed-->
-
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tomasjgonzalez.com/" />
     <meta property="og:title" content="Tomas Gonzalez — UX Portfolio" />
@@ -22,32 +24,33 @@
     <meta property="og:site_name" content="Tomas Gonzalez" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="A User Experience design portfolio. Im Tomas Gonzalez, this is my corner of the internet where I share my design related projects." />
-    
-    <title>Textile Initiative &#183; Tomas Gonzalez is a User Experience designer based in Auckland, New Zealand.</title>
-    <link rel="canonical" href="https://tomasjgonzalez.com/" />
-    <link rel="shortcut icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/tomasgo/image/upload/v1709874724/tomas-master/img/s-favicon_qowu24.png"> 
-    <link rel="stylesheet"  type="text/css" href="/css/styles.css">
-       <!-- Include Handlebars library--> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js" integrity="sha512-E1dSFxg+wsfJ4HKjutk/WaCzK7S2wv1POn1RRPGh8ZK+ag9l244Vqxji3r6wgz9YBf6+vhQEYJZpSjqWFPg9gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- Header Template script-->
-    <script id="SiteHead__template" type="text/x-handlebars-template">
-       <header class="SiteHead" id="scroll">
-        <div><svg id="randomGradientSVG" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="paint0_linear_337_2891" x1="-1.50874e-06" y1="40" x2="40" y2="1.5788" gradientUnits="userSpaceOnUse"><stop id="stop1" stop-color="#1B4F39"></stop><stop id="stop2" offset="1" stop-color="#E1924B"></stop></linearGradient><clipPath id="clip0_337_2891"><rect width="40" height="40" fill="white"></rect></clipPath></defs><g clip-path="url(#clip0_337_2891)"><rect width="40" height="40" rx="120" fill="url(#paint0_linear_337_2891)"></rect></g></svg></div>
-        <nav class="Nav" aria-label="Main Navigation">
-          <ul  class="Nav__list">
-            {{#each pages}}
-                <li class="Nav__listItem" ><a class="Nav--listItemLink" id="{{id}}" href="{{url}}">{{title}}</a></li>
-            {{/each}}
-          </ul>
-        </nav>
-      </header>
-     </div>  
-    </script>
-
     <!-- 
     <link rel="preconnect" href="https://tomasjgonzalez.com" />
     <link rel="prefetch" href="/path/to/resource" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
     -->
+    <link rel="stylesheet"  type="text/css" href="/css/styles.css">
+    <!-- Include Handlebars library + Template script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js" integrity="sha512-E1dSFxg+wsfJ4HKjutk/WaCzK7S2wv1POn1RRPGh8ZK+ag9l244Vqxji3r6wgz9YBf6+vhQEYJZpSjqWFPg9gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script id="SiteHead__template" type="text/x-handlebars-template">
+   
+    <header class="SiteHead" id="scroll">
+      <div class="Nav__logo">
+        <button aria-label="Change Theme">
+          <svg id="circle" width="40" height="40" viewBox="-10 -10 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_337_2891)"><rect width="40" height="40" rx="120" fill="black"></rect><circle id="innerBall" cx="20" cy="20" r="8" fill="black" aria-label="Switch to dark theme"></circle></g></svg>
+        </button>
+      </div>     
+      
+      <nav class="Nav" aria-label="Main Navigation">
+        <ul  class="Nav__list">
+          {{#each pages}}
+              <li class="Nav__listItem" ><a class="Nav--listItemLink" id="{{id}}" href="{{url}}">{{title}}</a></li>
+          {{/each}}
+        </ul>
+      </nav>
+      </header>
+    </script>
 </head>
 <body class="Wrapper h-card">
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -82,7 +85,7 @@
       <div class="Blocks e-content">
           <div class="Image full-bleed">
             <div class="aspect-ratio-full">
-              <img class="lazyloaded " data-src="https://res.cloudinary.com/tomasgo/image/upload/w_auto,c_scale/v1575244987/ux-port/projects/arion/Portfolio-project-template_sk5qcr.jpg" alt="Arion Log-in-screen" data-width="1600" src="/img/textile-thumb.jpg">
+              <img data-src="https://res.cloudinary.com/tomasgo/image/upload/v1709798887/tomas-master/img/textile-thumb_oyrnyx.jpg" alt="Colombian migrant women working on textile project" src="https://res.cloudinary.com/tomasgo/image/upload/v1709798887/tomas-master/img/textile-thumb_oyrnyx.jpg">
             </div>
           </div>
           <figure class="Grid">
@@ -152,15 +155,17 @@
         </section>
   </main>
 
-<footer id="site-footer" class="Footer" role="contentinfo">
+<footer class="Footer" role="contentinfo">
   <div class="section-inner">
     <div class="footer-credits">
-      <p class="footer-copyright">© 2024 <a href="#scroll">Tomas</a> </p>
-      <p class="notice"> Coded by <a href="/bio.html">yours</a> truly.</p>
+      <p class="footer-copyright">© 2024 Tomás</p>
+      <p class="notice"> Coded by <a href="/bio">yours</a> truly.</p>
     </div>
-    <a class="to-the-top" href="#scroll"> <span href="#scroll" class="to-the-top-long">To the top</span> </a>
+    <a class="link-reset to-the-top" href="#scroll"> <span href="#scroll" class="to-the-top-long">To the top</span> </a>
     </div>
 </footer>
+<div id="routeAnnouncer" aria-live="assertive" role="alert" class="sr-only"></div>
+
     <script src="/scripts/jquery/dist/jquery.js"></script>  <!-- Load in jQuery library</-->
     <script src="/scripts/js/jquery.lazyload.js" async></script>  <!-- Load in Lazy Load jQuery Plugin library</-->
     <script src="/scripts/js/main.js"> </script>     <!-- Load in main.js - Script document/-->

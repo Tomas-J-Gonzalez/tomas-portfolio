@@ -69,23 +69,32 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+//hello
 
-
-// The mango effect //
+/* 
 document.addEventListener('DOMContentLoaded', function() {
-    var svg = document.getElementById('randomGradientSVG');
+    var circle = document.getElementById('circle');
+    var innerBall = document.getElementById('innerBall');
+    var isDarkTheme = localStorage.getItem('theme') === 'dark'; // Check if dark theme is set
 
-    svg.addEventListener('click', function() {
-        var color1 = getRandomNatureColor();
-        var color2 = getRandomNatureColor();
-        
-        document.getElementById('stop1').setAttribute('stop-color', color1);
-        document.getElementById('stop2').setAttribute('stop-color', color2);
+    setTheme(isDarkTheme); // Set initial theme
+
+    circle.addEventListener('click', function() {
+        isDarkTheme = !isDarkTheme; // Toggle theme
+        setTheme(isDarkTheme); // Apply new theme
+        localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light'); // Save theme preference to localStorage
+        innerBall.setAttribute('aria-label', isDarkTheme ? 'Switch to light theme' : 'Switch to dark theme'); // Update ARIA label
     });
+
+    function setTheme(isDark) {
+        document.body.classList.toggle('dark-theme', isDark);
+        document.body.classList.toggle('light-theme', !isDark);
+        
+        if (isDark) {
+            circle.classList.add('outlined'); // Add outline in dark theme
+        } else {
+            circle.classList.remove('outlined'); // Remove outline in light theme
+        }
+    }
 });
-
-function getRandomNatureColor() {
-    var natureColors = ['#228B22', '#8B4513', '#8B0000', '#CD853F', '#6B8E23'];
-    return natureColors[Math.floor(Math.random() * natureColors.length)];
-}
-
+*/

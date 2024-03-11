@@ -1,15 +1,15 @@
 /* Be ashamed */
 
 .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .hr--full {
@@ -20,21 +20,13 @@
 }
 
 
-#randomGradientSVG {
-    user-select: none; /* Prevent text selection */
-    -webkit-user-select: none; /* For Safari */
-    -moz-user-select: none; /* For Firefox */
-    -ms-user-select: none; /* For Internet Explorer/Edge */
-}
-
-
 .two-column-list ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
   display: grid;
  
-   grid-template-columns: 30% 30%; /* Adjust column widths */
+  grid-template-columns: 30% 30%; /* Adjust column widths */
   row-gap: -10%;
 }
 
@@ -45,5 +37,32 @@
 /* Adjust the margin between columns */
 .two-column-list li:first-child {
   margin-right: -50px; /* Adjust this value to bring the columns closer together */
+}
+
+#circle {
+  user-select: none; /* Prevent text selection */
+  -webkit-user-select: none; /* For Safari */
+  -moz-user-select: none; /* For Firefox */
+  -ms-user-select: none; /* For Internet Explorer/Edge */
+  border-radius: 50%; /* Ensure the image is circular */
+  transition: border 0.3s ease; /* Add smooth transition */
+}
+
+#circle:hover{ 
+  outline: 1px dashed black;
+  outline-offset: 1px;
+}
+
+#circle {
+  border-radius: 50%; /* Ensure the image is circular */
+  transition: border 0.3s ease; /* Add smooth transition */
+}
+
+#circle.outlined {
+   border: 3px solid black; /* Add an outline when the 'outlined' class is present */
+}
+
+#innerBall {
+  transition: transform 0.3s ease-in-out; /* Add smooth transition */
 }
 

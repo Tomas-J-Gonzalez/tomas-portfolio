@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    #COMPONENTS: FOOTER
+    #COMPONENTS: Footer
 \*------------------------------------*/
 
 /**
@@ -49,30 +49,12 @@ display: flex;
       display: inline;
       margin: 0px 0px 0px 2.4rem;
   }
-
-  .notice, .to-the-top {
-      color: rgb(109, 109, 109);
-  }
  
-#site-footer a {
-    text-decoration: none;
-      color: $color-dark;
-      text-decoration: none;
-      font-weight: 500;
-  
-      &:hover {
-        background-color: unset;
-        text-decoration: underline;
-      }
-
-    }
 
 // Footer inner //
 
-
-#site-footer .section-inner {
+.Footer .section-inner {
   width: calc(100% - 0rem);
-
   align-items: baseline;
   display: flex;
   justify-content: space-between;
@@ -82,8 +64,8 @@ display: flex;
   //top - long
 
  .to-the-top-long::after { 
-    border-bottom: 2px solid #111;
-    border-right: 2px solid #111;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
     content: "";
     display: inline-block;
     height: 0.5em;
