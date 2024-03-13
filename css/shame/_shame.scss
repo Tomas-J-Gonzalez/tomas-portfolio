@@ -86,18 +86,6 @@
 }
 
 
-// Mark
-
-mark {
-  display: inline-block;
-  padding: 2px 5px;
-  background-color: rgba($color-accent, 0.8); /* Yellow background */
-  color: #000; /* Black text */
-  font-weight: bold;
-  font-style: italic;
-  border-radius: 5px; /* Rounded corners */
-  position: relative; /* Position for the pseudo-element */
-}
 
 
  .wrapped-link {
