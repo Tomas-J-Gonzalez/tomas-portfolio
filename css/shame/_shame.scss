@@ -20,14 +20,18 @@
 }
 
 
-.three-column-list ol {
-
-  list-style-type: none;
+.glossary-list ol {
+  text-align: start;
+  list-style-type: decimal;
   padding: 0;
-  margin-top: 1rem;
   display: grid;
-  grid-template-columns: 35% 35% 35%; /* Adjust column widths */
-  //row-gap: -10%;
+  grid-template-columns: 50% 50%; /* Adjust column widths */
+  column-gap: 10%;
+  row-gap: 10%;
+  margin-top: 1rem;
+  margin-bottom: 6rem;
+  margin-left: 6%;
+  margin-right: 5%;
 
  &li{
    margin-bottom: 6%; /* Adjust spacing between items */
@@ -81,3 +85,25 @@
   transition: transform 0.3s ease-in-out; /* Add smooth transition */
 }
 
+
+// Mark
+
+mark {
+  display: inline-block;
+  padding: 2px 5px;
+  background-color: rgba($color-accent, 0.8); /* Yellow background */
+  color: #000; /* Black text */
+  font-weight: bold;
+  font-style: italic;
+  border-radius: 5px; /* Rounded corners */
+  position: relative; /* Position for the pseudo-element */
+}
+
+
+ .wrapped-link {
+        word-break: break-all; /* Breaks words to prevent overflow */
+        /* Optional styles */
+        max-width: 100%; /* Ensures links don't overflow their container */
+        display: inline-block; /* Allows width constraints to work */
+        overflow-wrap: break-word; /* Fallback for older browsers */
+    }

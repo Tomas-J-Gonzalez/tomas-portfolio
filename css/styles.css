@@ -590,10 +590,10 @@ form {
   */
 input,
 textarea {
-  background: var(--color-light-mod-2);
-  border: solid 2px var(--color-light-mod-2);
+  background: #f0f0f0;
+  border: solid 2px #f0f0f0;
   border-radius: 0;
-  outline: 2px solid var(--color-light-mod-2);
+  outline: 2px solid #f0f0f0;
   outline-offset: 0;
   padding: 4px 16px;
   position: relative;
@@ -607,7 +607,7 @@ textarea {
 }
 
 select {
-  background: var(--color-light-mod-2);
+  background: #f0f0f0;
   border: 0;
   cursor: pointer;
   font-size: 0.8rem;
@@ -617,7 +617,7 @@ select {
   width: 100%;
 }
 select:after {
-  color: var(--color-dark);
+  color: #1a0e04;
   content: "▾";
   display: block;
   height: 14px;
@@ -1527,7 +1527,6 @@ form button {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover; /* Maintain aspect */
-  margin-top: -0.5px;
   cursor: pointer;
 }
 
@@ -1730,137 +1729,6 @@ form button {
 }
 
 /*------------------------------------*\
-    #OBJECTS: FORM
-\*------------------------------------*/
-/**
- * Component Block
- */
-.Form-label {
-  display: block;
-  margin-bottom: 0.75rem;
-}
-@media screen and (min-width: 48em) {
-  .Form-label {
-    margin-bottom: 0.85rem;
-  }
-}
-
-::-moz-placeholder {
-  color: #333333;
-}
-
-::placeholder {
-  color: #333333;
-}
-
-/**
- * Component Element
- */
-.Form-input,
-.Form-textarea,
-.Form-select {
-  background: #444444;
-  border: solid 2px #444444;
-  border-radius: 0;
-  height: 60px;
-  margin-top: 0.375rem;
-  outline: 2px solid #444444;
-  outline-offset: 0;
-  padding: 0 16px;
-  position: relative;
-  transition: all 0.2s;
-  width: 100%;
-}
-@media screen and (min-width: 48em) {
-  .Form-input,
-  .Form-textarea,
-  .Form-select {
-    margin-top: 0.425rem;
-  }
-}
-.Form-input:focus, .Form-input:active,
-.Form-textarea:focus,
-.Form-textarea:active,
-.Form-select:focus,
-.Form-select:active {
-  border: 2px solid #1B4F39;
-  outline: 4px solid #57c697;
-  outline-offset: 0;
-  transition: all 0.2s;
-}
-
-.Form-select:after {
-  color: #1a0e04;
-  content: "▾";
-  display: block;
-  height: 14px;
-  position: absolute;
-  right: 24px;
-  top: 16px;
-  width: 14px;
-}
-
-.Form-textarea {
-  min-height: 96px;
-  padding-top: 16px;
-}
-
-.Form-button {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-@media screen and (min-width: 48em) {
-  .Form-button {
-    margin-top: 1.7rem;
-  }
-}
-@media screen and (min-width: 48em) {
-  .Form-button {
-    margin-bottom: 1.7rem;
-  }
-}
-
-.Form__checkbox {
-  display: inline;
-  position: relative;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border: solid 2px #1B4F39;
-  border-radius: 4px;
-  background: #fffefc;
-  outline: none;
-  cursor: pointer;
-  padding: 0 1.8%;
-  transition: background-color 0.3s, border-color 0.3s;
-}
-.Form__checkbox:checked {
-  background-color: #1B4F39;
-}
-
-/* Create the checkmark icon using pseudo-elements */
-.Form__checkbox::after {
-  content: "";
-  position: absolute;
-  top: 20%;
-  left: 32%;
-  transform: translate(-50%, -50%);
-  transform: rotate(-45deg);
-  width: 10px;
-  height: 10px;
-  border: 2px solid #fffefc;
-  border-top: none;
-  border-right: none;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-/* Show the checkmark icon when checkbox is checked */
-.Form__checkbox:checked::after {
-  opacity: 1;
-}
-
-/*------------------------------------*\
     #OBJECTS: VIDEO
 \*------------------------------------*/
 /**
@@ -1988,7 +1856,7 @@ form button {
 
 /*------------------------------------*\
     #COMPONENTS: NAV
-
+/*------------------------------------*/
 /**
  * Component Block
  */
@@ -2245,6 +2113,101 @@ p + .Image {
   }
 }
 
+.PullQuote {
+  border-left: none;
+  color: var(--color-dark);
+  max-width: 430px;
+}
+
+.PullQuote > p {
+  font-size: 110%;
+  margin-bottom: 0.75rem;
+  margin-left: 0;
+}
+
+@media screen and (min-width: 48em) {
+  .PullQuote > p {
+    margin-bottom: 0.8rem;
+  }
+}
+@media screen and (min-width: 48em) {
+  .PullQuote > p {
+    margin-left: 0;
+  }
+}
+.PullQuote > figcaption {
+  margin-left: 0;
+}
+
+@media screen and (min-width: 48em) {
+  .PullQuote > figcaption {
+    margin-left: 0;
+  }
+}
+.PullQuote--left {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 48em) {
+  .PullQuote--left {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 48em) {
+  .PullQuote--left {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 48em) {
+  .PullQuote--left {
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 48em) and (min-width: 48em) {
+  .PullQuote--left {
+    margin-left: 0;
+  }
+}
+.PullQuote--right {
+  float: right;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  margin-left: 3rem;
+  margin-right: 1.5rem;
+  width: 400px;
+}
+
+@media screen and (min-width: 48em) {
+  .PullQuote--right {
+    margin-top: 1.6rem;
+  }
+}
+@media screen and (min-width: 48em) {
+  .PullQuote--right {
+    margin-bottom: 3.2rem;
+  }
+}
+@media screen and (min-width: 48em) {
+  .PullQuote--right {
+    margin-left: 3.2rem;
+  }
+}
+@media screen and (min-width: 48em) {
+  .PullQuote--right {
+    margin-right: 1.6rem;
+  }
+}
+@media (min-width: 48em) {
+  .PullQuote--right {
+    margin-right: 12rem;
+  }
+}
+@media screen and (min-width: 48em) and (min-width: 48em) {
+  .PullQuote--right {
+    margin-right: 12.8rem;
+  }
+}
 /*------------------------------------*\
     #COMPONENTS: CALLOUT
 \*------------------------------------*/
@@ -2355,6 +2318,66 @@ ul.Pagination .Pagination-item--current a {
   text-decoration: none;
 }
 
+/*------------------------------------*\
+    #COMPONENTS: NEWSLETTER FORM
+/*------------------------------------*/
+.NewsletterForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 48em) {
+  .NewsletterForm {
+    margin-top: 1.6rem;
+  }
+}
+.NewsletterForm-field:nth-child(even) {
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 48em) {
+  .NewsletterForm-field:nth-child(even) {
+    margin-bottom: 1.6rem;
+  }
+}
+@media (min-width: 48em) {
+  .NewsletterForm {
+    flex-direction: row;
+  }
+  .NewsletterForm-label {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 48em) and (min-width: 48em) {
+  .NewsletterForm-label {
+    margin-top: 0;
+  }
+}
+@media (min-width: 48em) {
+  .NewsletterForm-field {
+    flex: 1;
+    align-self: flex-end;
+  }
+  .NewsletterForm-field:nth-child(even) {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 48em) and (min-width: 48em) {
+  .NewsletterForm-field:nth-child(even) {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 48em) {
+  .NewsletterForm-field:not(:last-of-type) {
+    margin-right: 0.75rem;
+  }
+}
+@media screen and (min-width: 48em) and (min-width: 48em) {
+  .NewsletterForm-field:not(:last-of-type) {
+    margin-right: 0.8rem;
+  }
+}
 /*------------------------------------*\
     #UTILITIES: LAYOUT
 \*------------------------------------*/
@@ -2631,9 +2654,6 @@ a[rel*=external]:hover::after {
   margin-left: 50%;
   transform: translateX(-50%);
 }
-.full-bleed figcaption {
-  margin-left: calc(var(--space) * 2);
-}
 
 .full-bleed-skinny {
   width: 100vw;
@@ -2648,6 +2668,10 @@ a[rel*=external]:hover::after {
      object-fit: cover;
   -o-object-position: 50% 20%;
      object-position: 50% 20%;
+}
+
+.full-bleed-skinny figcaption {
+  margin-left: calc(var(--space) * 2);
 }
 
 /*------------------------------------*\
@@ -2770,14 +2794,21 @@ a[rel*=external]:hover::after {
   opacity: 0.1;
 }
 
-.three-column-list ol {
-  list-style-type: none;
+.glossary-list ol {
+  text-align: start;
+  list-style-type: decimal;
   padding: 0;
-  margin-top: 1rem;
   display: grid;
-  grid-template-columns: 35% 35% 35%; /* Adjust column widths */
+  grid-template-columns: 50% 50%; /* Adjust column widths */
+  -moz-column-gap: 10%;
+       column-gap: 10%;
+  row-gap: 10%;
+  margin-top: 1rem;
+  margin-bottom: 6rem;
+  margin-left: 6%;
+  margin-right: 5%;
 }
-.three-column-list olli {
+.glossary-list olli {
   margin-bottom: 6%; /* Adjust spacing between items */
 }
 
@@ -2824,6 +2855,25 @@ a[rel*=external]:hover::after {
 
 #innerBall {
   transition: transform 0.3s ease-in-out; /* Add smooth transition */
+}
+
+mark {
+  display: inline-block;
+  padding: 2px 5px;
+  background-color: rgba(151, 171, 112, 0.8); /* Yellow background */
+  color: #000; /* Black text */
+  font-weight: bold;
+  font-style: italic;
+  border-radius: 5px; /* Rounded corners */
+  position: relative; /* Position for the pseudo-element */
+}
+
+.wrapped-link {
+  word-break: break-all; /* Breaks words to prevent overflow */
+  /* Optional styles */
+  max-width: 100%; /* Ensures links don't overflow their container */
+  display: inline-block; /* Allows width constraints to work */
+  overflow-wrap: break-word; /* Fallback for older browsers */
 }
 
 body.dark-theme {

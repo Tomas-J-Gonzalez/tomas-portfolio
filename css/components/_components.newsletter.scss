@@ -1,0 +1,70 @@
+/*------------------------------------*\
+    #COMPONENTS: NEWSLETTER FORM
+/*------------------------------------*/
+
+.NewsletterForm {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem
+}
+
+@media screen and (min-width: 48em) {
+    .NewsletterForm {
+        margin-top:1.6rem
+    }
+}
+
+.NewsletterForm-field:nth-child(even) {
+    margin-bottom: 1.5rem
+}
+
+@media screen and (min-width: 48em) {
+    .NewsletterForm-field:nth-child(even) {
+        margin-bottom:1.6rem
+    }
+}
+
+@media(min-width: 48em) {
+    .NewsletterForm {
+        flex-direction:row
+    }
+
+    .NewsletterForm-label {
+        margin-top: 0
+    }
+}
+
+@media screen and (min-width: 48em) and (min-width:48em) {
+    .NewsletterForm-label {
+        margin-top:0
+    }
+}
+
+@media(min-width: 48em) {
+    .NewsletterForm-field {
+        flex:1;
+        align-self: flex-end
+    }
+
+    .NewsletterForm-field:nth-child(even) {
+        margin-bottom: 0
+    }
+}
+
+@media screen and (min-width: 48em) and (min-width:48em) {
+    .NewsletterForm-field:nth-child(even) {
+        margin-bottom:0
+    }
+}
+
+@media(min-width: 48em) {
+    .NewsletterForm-field:not(:last-of-type) {
+        margin-right:.75rem
+    }
+}
+
+@media screen and (min-width: 48em) and (min-width:48em) {
+    .NewsletterForm-field:not(:last-of-type) {
+        margin-right:.8rem
+    }
+}

@@ -10,11 +10,7 @@
   margin-left: 50%;
   transform: translateX(-50%);
 
-  & figcaption {
-    margin-left: calc(var(--space) *2);
-  }
 }
-
 
 .full-bleed-skinny {
   width: 100vw;
@@ -29,3 +25,8 @@
   object-position: 50% 20%; 
   }
 }
+
+.full-bleed-skinny figcaption {
+    margin-left: calc(var(--space) *2);
+}
+
