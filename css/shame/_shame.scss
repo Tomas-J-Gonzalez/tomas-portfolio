@@ -22,7 +22,7 @@
 
 .glossary-list ol {
   text-align: start;
-  list-style-type: decimal;
+  //list-style-type: decimal;
   padding: 0;
   display: grid;
   grid-template-columns: 50% 50%; /* Adjust column widths */
@@ -30,13 +30,11 @@
   row-gap: 10%;
   margin-top: 1rem;
   margin-bottom: 6rem;
-  margin-left: 6%;
-  margin-right: 5%;
+  margin-right: 4%;
 
  &li{
    margin-bottom: 6%; /* Adjust spacing between items */
   }
-
 }
 
 .two-column-list ul {

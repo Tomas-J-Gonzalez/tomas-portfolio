@@ -7,9 +7,9 @@
  */
 
 
-// Base styles
+/* Base styles */
 .accordion {
-  max-width: 600px; //
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -20,11 +20,11 @@
   padding: 15px;
   cursor: pointer;
   background-color: #f5f5f5;
+}
 
-  &:hover {
-    background-color: rgba($color-accent, 0.09);
-    transition: 0.4s ease-in-out;
-  }
+.accordion__label:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+  transition: background-color 0.4s ease-in-out;
 }
 
 .accordion__content {
@@ -36,4 +36,10 @@
   display: block;
 }
 
-
+.accordion__checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

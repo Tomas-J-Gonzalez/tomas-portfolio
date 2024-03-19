@@ -12,7 +12,7 @@
  */
 
  [class*='ratio-'] {
-  background-color:  var(--color-light-mod-2);;
+  background-color:  $color-white;
   display: block;
   position: relative;
 }
@@ -41,6 +41,13 @@
   padding-bottom: 66.6666%;
   /* 3:2 Aspect Ratio */
 }
+
+
+.aspect-ratio-landscape-skinny {
+  padding-bottom: 33.3333%;
+  /* 3:2 Aspect Ratio */
+}
+
 
 .aspect-ratio-portrait {
   padding-bottom: calc(564 / 395 * 100%);

@@ -17,13 +17,28 @@
   }
 }
 
-.Project .Message {
-  border: dotted 1px;
-  padding: 32px 64px;
-}
 
 .Project-heading {
   margin-top: 1.25rem;
 }
+
+
+.Project h2 { //h2 elements, when descendants of an element with the class .Project, will have a max-width of 60% before they wrap to next line
+  max-width: 60%; 
+  word-wrap: break-word; 
+}
+
+
+.Project h3 {
+  font-weight: 500;
+}
+
+
+.Project .Message {
+  border: dotted 1px;
+  padding: 32px 64px;
+  cursor: default;
+}
+
 
 

@@ -245,7 +245,7 @@ html {
   }
 }
 body {
-  background-color: #FEFDF8;
+  background-color: #ffffff;
   color: #333444;
   font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 400;
@@ -1229,13 +1229,23 @@ form button {
     margin-top: 1.7rem;
   }
 }
+.Project-heading {
+  margin-top: 1.25rem;
+}
+
+.Project h2 {
+  max-width: 60%;
+  word-wrap: break-word;
+}
+
+.Project h3 {
+  font-weight: 500;
+}
+
 .Project .Message {
   border: dotted 1px;
   padding: 32px 64px;
-}
-
-.Project-heading {
-  margin-top: 1.25rem;
+  cursor: default;
 }
 
 /*------------------------------------*\
@@ -1734,6 +1744,7 @@ form button {
 /**
  * Component Block
  */
+/* Base styles */
 .accordion {
   max-width: 600px;
   margin: 0 auto;
@@ -1747,9 +1758,10 @@ form button {
   cursor: pointer;
   background-color: #f5f5f5;
 }
+
 .accordion__label:hover {
-  background-color: rgba(151, 171, 112, 0.09);
-  transition: 0.4s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.09);
+  transition: background-color 0.4s ease-in-out;
 }
 
 .accordion__content {
@@ -1759,6 +1771,14 @@ form button {
 
 .accordion__checkbox:checked + .accordion__label + .accordion__content {
   display: block;
+}
+
+.accordion__checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 /*------------------------------------*\
@@ -2274,11 +2294,6 @@ p.Callout:not(:first-of-type) {
     margin-bottom: 5rem;
   }
 }
-.Project h2 {
-  max-width: 60%;
-  word-wrap: break-word;
-}
-
 /*------------------------------------*\
     #COMPONENTS: PAGINATION
 \*------------------------------------*/
@@ -2381,12 +2396,6 @@ ul.Pagination .Pagination-item--current a {
 /*------------------------------------*\
     #UTILITIES: LAYOUT
 \*------------------------------------*/
-.Project .Message {
-  border: dotted 1px;
-  padding: 32px 64px;
-  cursor: default;
-}
-
 /* Object position classes for moving images */
 .center-image {
   -o-object-position: center center !important;
@@ -2655,6 +2664,10 @@ a[rel*=external]:hover::after {
   transform: translateX(-50%);
 }
 
+.full-bleed figcaption {
+  margin-left: calc(var(--space) * 2);
+}
+
 .full-bleed-skinny {
   width: 100vw;
   margin-left: 50%;
@@ -2666,12 +2679,64 @@ a[rel*=external]:hover::after {
   height: 75vh;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 50% 20%;
-     object-position: 50% 20%;
 }
 
 .full-bleed-skinny figcaption {
   margin-left: calc(var(--space) * 2);
+}
+
+/* Center */
+.center-image {
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+
+/* Center left */
+.center-left-image {
+  -o-object-position: 0% 50%;
+     object-position: 0% 50%;
+}
+
+/* Center right */
+.center-right-image {
+  -o-object-position: 100% 50%;
+     object-position: 100% 50%;
+}
+
+/* Top center */
+.top-center-image {
+  -o-object-position: 50% 0%;
+     object-position: 50% 0%;
+}
+
+/* Bottom center */
+.bottom-center-image {
+  -o-object-position: 50% 100%;
+     object-position: 50% 100%;
+}
+
+/* Top left */
+.top-left-image {
+  -o-object-position: 0% 0%;
+     object-position: 0% 0%;
+}
+
+/* Top right */
+.top-right-image {
+  -o-object-position: 100% 0%;
+     object-position: 100% 0%;
+}
+
+/* Bottom left */
+.bottom-left-image {
+  -o-object-position: 0% 100%;
+     object-position: 0% 100%;
+}
+
+/* Bottom right */
+.bottom-right-image {
+  -o-object-position: 100% 100%;
+     object-position: 100% 100%;
 }
 
 /*------------------------------------*\
@@ -2723,7 +2788,7 @@ a[rel*=external]:hover::after {
  * 3:4 = ratio portrait
  */
 [class*=ratio-] {
-  background-color: var(--color-light-mod-2);
+  background-color: #ffffff;
   display: block;
   position: relative;
 }
@@ -2751,6 +2816,11 @@ a[rel*=external]:hover::after {
 
 .aspect-ratio-landscape {
   padding-bottom: 66.6666%;
+  /* 3:2 Aspect Ratio */
+}
+
+.aspect-ratio-landscape-skinny {
+  padding-bottom: 33.3333%;
   /* 3:2 Aspect Ratio */
 }
 
@@ -2796,7 +2866,6 @@ a[rel*=external]:hover::after {
 
 .glossary-list ol {
   text-align: start;
-  list-style-type: decimal;
   padding: 0;
   display: grid;
   grid-template-columns: 50% 50%; /* Adjust column widths */
@@ -2805,8 +2874,7 @@ a[rel*=external]:hover::after {
   row-gap: 10%;
   margin-top: 1rem;
   margin-bottom: 6rem;
-  margin-left: 6%;
-  margin-right: 5%;
+  margin-right: 4%;
 }
 .glossary-list olli {
   margin-bottom: 6%; /* Adjust spacing between items */

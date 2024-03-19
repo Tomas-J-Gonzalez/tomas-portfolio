@@ -5,11 +5,15 @@
  * and sit horizontally central
  * https://andy-bell.design/wrote/creating-a-full-bleed-css-utility/
  */
+
  .full-bleed {
   width: 100vw;
   margin-left: 50%;
   transform: translateX(-50%);
+}
 
+.full-bleed figcaption {
+    margin-left: calc(var(--space) *2);
 }
 
 .full-bleed-skinny {
@@ -22,7 +26,7 @@
   width: 100%; 
   height: 75vh; 
   object-fit: cover; 
-  object-position: 50% 20%; 
+  //object-position: 50% 20%; 
   }
 }
 
@@ -30,3 +34,50 @@
     margin-left: calc(var(--space) *2);
 }
 
+
+// Image Positioning
+
+/* Center */
+.center-image {
+  object-position: 50% 50%;
+}
+
+/* Center left */
+.center-left-image {
+  object-position: 0% 50%;
+}
+
+/* Center right */
+.center-right-image {
+  object-position: 100% 50%;
+}
+
+/* Top center */
+.top-center-image {
+  object-position: 50% 0%;
+}
+
+/* Bottom center */
+.bottom-center-image {
+  object-position: 50% 100%;
+}
+
+/* Top left */
+.top-left-image {
+  object-position: 0% 0%;
+}
+
+/* Top right */
+.top-right-image {
+  object-position: 100% 0%;
+}
+
+/* Bottom left */
+.bottom-left-image {
+  object-position: 0% 100%;
+}
+
+/* Bottom right */
+.bottom-right-image {
+  object-position: 100% 100%;
+}
