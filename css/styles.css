@@ -486,6 +486,7 @@ blockquote cite, blockquote figcaption {
   font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
   font-weight: 700;
   margin-top: 0.75rem;
+  margin-left: 1rem;
 }
 
 @media screen and (min-width: 48em) {

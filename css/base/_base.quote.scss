@@ -2,6 +2,9 @@
     #BASE: QUOTES
 \*------------------------------------*/
 
+
+//Create large variation of quote
+
 blockquote {
   border-left: 2px solid $color-dark;
   color: $color-dark;
@@ -39,7 +42,8 @@ blockquote cite,blockquote figcaption {
   font-style: normal;
   font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
   font-weight: 700;
-  margin-top: .75rem
+  margin-top: .75rem;
+  margin-left: 1rem;
 }
 
 @media screen and (min-width: 48em) {
