@@ -44,7 +44,10 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('SiteHead__container').innerHTML = renderedHtml;
 });
 
-/* Automatically add Nav--listItemLinkActive class to Active Page link  (Only for Primary NavLinks)*/
+
+
+/* Automatically add Nav--listItemLinkActive class to Active Page link <a> (Only for Primary NavLinks) */
+
 document.addEventListener('DOMContentLoaded', function() {
     // Get the current URL path
     const path = window.location.pathname;
@@ -52,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get the navigation links
     const navLinks = document.querySelectorAll('.Nav--listItemLink');
 
-   // Loop through each navigation link
+    // Loop through each navigation link
     navLinks.forEach(function(link) {
         // Get the link's href attribute
         const href = link.getAttribute('href');
@@ -63,8 +66,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Check if the normalized href matches the normalized current path
         if (normalizedPath === normalizedHref) {
-            // Add the active class to the link's parent element (list item)
-            link.parentNode.classList.add('Nav--linkActive');
+            // Add the active class to the link itself
+            link.classList.add('Nav--linkActive');
         }
     });
 });
@@ -120,3 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
             touchStartTimestamp = 0;
         }, 300);
     });
+
+
+    
+

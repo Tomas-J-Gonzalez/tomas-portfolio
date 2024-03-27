@@ -22,24 +22,16 @@
   }
 }
 
-.Nav--listItemLink{
-  padding: calc(var(--space) *.5);
+.Nav--listItemLink {
+  padding: calc(var(--space) * 0.5);
 }
 
-.Nav--listItemLink:hover {
-  
+.Nav--listItemLink:hover:not(.Nav--linkActive) {
   color: inherit;
   background-color: unset;
-  text-decoration: underline
+  text-decoration: underline dotted;
 }
 
-.Nav--listItemLink.is-active {
-  text-decoration: underline
-}
-
-.Nav--linkActive {
+.Nav--listItemLink.Nav--linkActive {
   text-decoration: underline;
 }
-
-
-
