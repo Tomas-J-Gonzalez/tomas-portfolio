@@ -45,6 +45,16 @@ p + .Image {
   }
 }
 
+@media (min-width: 37.5em) { 
+.Image--pullRight {
+    width: 55%;
+    float: right;
+    margin-left: 48px;
+    margin-bottom: 32px;
+    margin-top: 0;
+}
+}
+
 //Apply stickyBoy only when screen size is above 1500px 
 /*
 @media screen and (min-width: 1500px) {

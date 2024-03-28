@@ -2037,6 +2037,15 @@ p + .Image {
   }
 }
 
+@media (min-width: 37.5em) {
+  .Image--pullRight {
+    width: 55%;
+    float: right;
+    margin-left: 48px;
+    margin-bottom: 32px;
+    margin-top: 0;
+  }
+}
 /*
 @media screen and (min-width: 1500px) {
 .stickyBoy {
@@ -2283,12 +2292,12 @@ p.Callout:not(:first-of-type) {
 
 @media screen and (min-width: 48em) {
   .Hero {
-    margin-top: 5rem;
+    margin-top: 4rem;
   }
 }
 @media screen and (min-width: 48em) {
   .Hero {
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
   }
 }
 /*------------------------------------*\
