@@ -1432,7 +1432,8 @@ form button {
 
 .PostListItem-title a:hover {
   background-color: unset;
-  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 .PostListItem-meta {
@@ -2268,7 +2269,7 @@ p.Callout:not(:first-of-type) {
  */
 .Hero {
   margin-top: 4.5rem;
-  margin-bottom: 6rem;
+  margin-bottom: 4.5rem;
 }
 @media screen and (min-width: 48em) {
   .Hero {
@@ -2277,7 +2278,7 @@ p.Callout:not(:first-of-type) {
 }
 @media screen and (min-width: 48em) {
   .Hero {
-    margin-bottom: 6.8rem;
+    margin-bottom: 5.1rem;
   }
 }
 

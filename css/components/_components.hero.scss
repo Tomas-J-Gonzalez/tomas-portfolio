@@ -8,7 +8,7 @@
 
 .Hero {
   @include margin-top(3);
-  @include margin-bottom(4);
+  @include margin-bottom(3);
 }
 
 .Hero-date {
@@ -23,13 +23,13 @@
 
 @media screen and (min-width: 48em) {
   .Hero {
-      margin-top:4rem
+      margin-top:4rem;
   }
 }
 
 @media screen and (min-width: 48em) {
   .Hero {
-      margin-bottom:4rem
+      margin-bottom:4rem;
   }
 }
 
