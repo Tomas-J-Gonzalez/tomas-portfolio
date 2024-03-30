@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         pages: [
             { title: 'Index', url: '/', id: 'index-link' },
             { title: 'Bio', url: '/bio', id: 'bio-link' },
+            { title: 'Initiatives', url: '/initiatives', id: 'initiatives-link' },
             { title: 'Writing', url: '/writing', id: 'writing-link' },
         ]
     };
@@ -104,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
 */
 
 
- // Prevent zooming on double tap for mobile devices
+ /* Prevent zooming on double tap for mobile devices
     var touchStartTimestamp = 0;
     var svg = document.getElementById('circle');
 
@@ -123,7 +124,73 @@ document.addEventListener('DOMContentLoaded', function() {
             touchStartTimestamp = 0;
         }, 300);
     });
-
+*/
 
     
+// Side nav menu for case studies
+document.addEventListener('DOMContentLoaded', function() {
+  const sections = document.querySelectorAll('.content section');
 
+  function setActiveNav() {
+    sections.forEach(section => {
+      const id = section.id;
+      const navLink = document.querySelector(`.sidebar-nav a[href="#${id}"]`);
+
+      if (isInViewport(section)) {
+        navLink.classList.add('active');
+      } else {
+        navLink.classList.remove('active');
+      }
+    });
+  }
+
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+    );
+  }
+
+  window.addEventListener('scroll', setActiveNav);
+});
+
+
+// Side nav appear within e-content div
+document.addEventListener('DOMContentLoaded', function() {
+  console.log("JavaScript is working!");
+
+  const sidebar = document.getElementById('sidebar');
+  const blocksContainer = document.querySelector('.Blocks.e-content');
+
+  // Function to show the sidebar
+  function showSidebar() {
+    sidebar.style.display = 'block';
+  }
+
+  // Function to hide the sidebar
+  function hideSidebar() {
+    sidebar.style.display = 'none';
+  }
+
+  // Check if the blocks container is in view
+  function checkBlocksContainerInView() {
+    const containerRect = blocksContainer.getBoundingClientRect();
+    const sidebarRect = sidebar.getBoundingClientRect();
+
+    // Check if the sidebar is within the blocks container vertically
+    const isWithinVerticalBounds = (containerRect.top <= sidebarRect.top && containerRect.bottom >= sidebarRect.bottom);
+
+    if (isWithinVerticalBounds) {
+      showSidebar();
+    } else {
+      hideSidebar();
+    }
+  }
+
+  // Add scroll event listener to check if the blocks container is in view
+  window.addEventListener('scroll', checkBlocksContainerInView);
+
+  // Initial check when the page loads
+  checkBlocksContainerInView();
+});

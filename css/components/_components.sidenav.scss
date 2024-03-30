@@ -1,0 +1,70 @@
+// Side Nav (Case Studies)
+
+.Sidebar {
+  display: none; /* Initially hide the sidebar */
+
+  /* Show the sidebar on screens with a minimum width of 1024px */
+  @media only screen and (min-width: 1024px) {
+    display: block;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 150px; /* Adjust width as needed */
+    background-color: transparent; /* Transparent background */
+    max-width: 20%; /* Set max-width to prevent overflow */
+  }
+}
+
+
+
+.Sidebar {
+  position: relative;
+  z-index: 1;
+  top: 50%;
+  right: 0;
+
+  transform: translateY(-50%);
+  width: max-content;
+  background-color: #ffffff99; /* Transparent background */
+  max-width: 15%; /* Set max-width to prevent overflow */
+  line-height: 80%;
+}
+
+.Sidebar-nav {
+  padding: 0;
+  margin: 0;
+  position: sticky;
+}
+
+.Sidebar-nav ul {
+  list-style-type: none;
+}
+
+.Sidebar-nav ul li {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.Sidebar-nav ul li a {
+  text-decoration: none;
+  color: #666666; 
+  display: block;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.Sidebar-nav ul li a:hover {
+    text-decoration: none;
+    background-color: transparent;
+    color: $color-brand;
+}
+
+.Sidebar-nav ul li a.active {
+ color: $color-brand; 
+  font-weight: 800;
+}
+
+

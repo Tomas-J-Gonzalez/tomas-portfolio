@@ -1563,37 +1563,51 @@ form button {
   opacity: 1.9;
 }
 
-/*
-.card__text {
-  font-size: var(--step-1);
-  margin-bottom: 0.5rem;
-}
-*/
-/*
-.card__btn {
-  display: block;
+/* Projects Cards */
+.project-card {
+  background-color: #666666;
+  border-radius: 5px;
   width: 100%;
-  padding: 1.5rem;
-  font-size: 2rem;
-  text-align: center;
-  color: #3363ff;
-  background-color: #e6ecff;
-  border: none;
-  border-radius: 0.4rem;
-  transition: 0.2s;
-  cursor: pointer;
+  margin-top: 4em;
+  margin-bottom: 2em;
+  padding: 2em;
 }
-.card__btn span {
-  margin-left: 1rem;
-  transition: 0.2s;
+
+.project-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
 }
-.card__btn:hover, .card__btn:active {
-  background-color: #dce4ff;
+
+.project-card__section {
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  flex-wrap: wrap;
+  row-gap: 40px;
 }
-.card__btn:hover span, .card__btn:active span {
-  margin-left: 1.5rem;
+
+.project-card__heading {
+  margin-top: 0;
+  color: #ffffff;
 }
-*/
+
+.project-card__item {
+  background-color: #666666;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.project-card__title {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.project-card__description {
+  margin-top: 0.5em;
+}
+
 /*------------------------------------*\
     #OBJECTS: BUTTON
 \*------------------------------------*/
@@ -2400,6 +2414,72 @@ ul.Pagination .Pagination-item--current a {
     margin-right: 0.8rem;
   }
 }
+.Sidebar {
+  display: none; /* Initially hide the sidebar */
+  /* Show the sidebar on screens with a minimum width of 1024px */
+}
+@media only screen and (min-width: 1024px) {
+  .Sidebar {
+    display: block;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 150px; /* Adjust width as needed */
+    background-color: transparent; /* Transparent background */
+    max-width: 20%; /* Set max-width to prevent overflow */
+  }
+}
+
+.Sidebar {
+  position: relative;
+  z-index: 1;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: -moz-max-content;
+  width: max-content;
+  background-color: rgba(255, 255, 255, 0.6); /* Transparent background */
+  max-width: 15%; /* Set max-width to prevent overflow */
+  line-height: 80%;
+}
+
+.Sidebar-nav {
+  padding: 0;
+  margin: 0;
+  position: sticky;
+}
+
+.Sidebar-nav ul {
+  list-style-type: none;
+}
+
+.Sidebar-nav ul li {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.Sidebar-nav ul li a {
+  text-decoration: none;
+  color: #666666;
+  display: block;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.Sidebar-nav ul li a:hover {
+  text-decoration: none;
+  background-color: transparent;
+  color: #1B4F39;
+}
+
+.Sidebar-nav ul li a.active {
+  color: #1B4F39;
+  font-weight: 800;
+}
+
 /*------------------------------------*\
     #UTILITIES: LAYOUT
 \*------------------------------------*/
@@ -2938,45 +3018,4 @@ a[rel*=external]:hover::after {
   max-width: 100%; /* Ensures links don't overflow their container */
   display: inline-block; /* Allows width constraints to work */
   overflow-wrap: break-word; /* Fallback for older browsers */
-}
-
-body.dark-theme {
-  background-color: #000;
-  color: #FEFDF8;
-  accent-color: #97AB70;
-}
-
-/* Selection color for dark theme */
-body.dark-theme ::-moz-selection {
-  background-color: #97AB70; /* Nokia */
-  color: #fff; /* White text color */
-}
-body.dark-theme ::selection {
-  background-color: #97AB70; /* Nokia */
-  color: #fff; /* White text color */
-}
-
-/* Apply dark theme to specific elements */
-.dark-theme a {
-  color: #fff; /* Links */
-}
-
-.dark-theme svg {
-  fill: #fff; /* SVG paths */
-}
-
-/* Header color for dark theme */
-body.dark-theme h1,
-body.dark-theme h2,
-body.dark-theme h3 {
-  color: #FEFDF8; /* White color for headers */
-}
-
-.dark-theme ul {
-  color: #FEFDF8;
-}
-
-.dark-theme .Badge {
-  background-color: rgba(255, 255, 255, 0.09);
-  color: white;
 }/*# sourceMappingURL=styles.css.map */
