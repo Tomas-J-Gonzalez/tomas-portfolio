@@ -2956,9 +2956,9 @@ a[rel*=external]:hover::after {
   text-align: start;
   padding: 0;
   display: grid;
-  grid-template-columns: 50% 50%; /* Adjust column widths */
-  -moz-column-gap: 10%;
-       column-gap: 10%;
+  grid-template-columns: 48% 48%; /* Adjust column widths */
+  -moz-column-gap: 6%;
+       column-gap: 6%;
   row-gap: 10%;
   margin-top: 1rem;
   margin-bottom: 6rem;
