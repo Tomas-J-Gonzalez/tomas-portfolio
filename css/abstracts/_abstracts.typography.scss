@@ -67,9 +67,8 @@
 
 
 
-
 // Fonts
-$font-system-rg: -apple-system, BlinkMacSystemFont, Inter, Arial, Helvetica, "Segoe UI", Roboto,
+$font-system-rg: -apple-system, BlinkMacSystemFont, Inter, Helvetica, Arial, Roboto, "Segoe UI",
    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-system-md: -apple-system, BlinkMacSystemFont, Inter, Arial, Helvetica, "Segoe UI", Roboto,
    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -119,7 +118,6 @@ $fs-subtitle: 1.1rem;
 
 
 
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
+// Importing Inter
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap')

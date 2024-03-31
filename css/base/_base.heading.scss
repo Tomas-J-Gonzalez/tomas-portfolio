@@ -4,7 +4,7 @@
 
 h1,h2,h3,h4,h5,h6 {
   color: $color-dark;
-  font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+  font-family: $font-system-rg;
   font-weight: 700;
   
   letter-spacing: -.015em;
