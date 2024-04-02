@@ -2659,7 +2659,7 @@ a[rel*=external]:hover::after {
 /* font family */
 .mono {
   font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 0.7em;
 }
 
