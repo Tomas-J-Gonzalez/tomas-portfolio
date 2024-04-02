@@ -2177,10 +2177,6 @@ p + .Image {
     margin-left: 0;
   }
 }
-.PullQuote > figcaption {
-  margin-left: 0;
-}
-
 @media screen and (min-width: 48em) {
   .PullQuote > figcaption {
     margin-left: 0;
@@ -2663,6 +2659,7 @@ a[rel*=external]:hover::after {
 /* font family */
 .mono {
   font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
+  font-weight: 700;
   font-size: 0.7em;
 }
 
