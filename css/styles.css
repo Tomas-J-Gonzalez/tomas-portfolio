@@ -3070,8 +3070,8 @@ a[rel*=external]:hover::after {
   content: "•••";
   position: relative;
   text-align: center;
-  font-size: 9px;
-  line-height: 0.7rem;
+  font-size: 8px; /* Adjust font size as needed */
+  line-height: 14px; /* Adjust line height to match circle height */
   font-weight: bold;
   float: right;
   width: 18px;
