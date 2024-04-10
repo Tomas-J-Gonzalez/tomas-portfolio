@@ -21,6 +21,7 @@ function announceRouteChange(message) {
     routeAnnouncer.textContent = message;
 }
 
+
 // Handlebar.js for Navigation module
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -29,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         pages: [
             { title: 'Index', url: '/', id: 'index-link' },
             { title: 'Bio', url: '/bio', id: 'bio-link' },
-            { title: 'Initiatives', url: '/initiatives', id: 'initiatives-link' },
+            { title: 'Resume', url: 'https://res.cloudinary.com/tomasgo/image/upload/v1711784420/tomas-master/pdf/Tomas_Gonzalez_Experience_Designer_Resume_i9vufo.pdf', target: '_blank', id: 'resume-link'  },
             { title: 'Writing', url: '/writing', id: 'writing-link' },
         ]
     };
@@ -43,6 +44,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Insert the rendered HTML into the SiteHead container (Exists within HTML File)
     document.getElementById('SiteHead__container').innerHTML = renderedHtml;
+
+    // Update the links with target="_blank"
+    const resumeLink = document.querySelector('#resume-link');
+    if (resumeLink) {
+        resumeLink.setAttribute('target', '_blank');
+    }
 });
 
 
