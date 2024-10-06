@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         pages: [
             { title: 'Index', url: '/', id: 'index-link' },
             { title: 'Bio', url: '/bio', id: 'bio-link' },
-            { title: 'Resume', url: 'https://res.cloudinary.com/tomasgo/image/upload/v1720318666/tomas-master/pdf/Tomas_Gonzalez_Resume_UX_Design_pknclp.pdf', target: '_blank', id: 'resume-link'  },
+            { title: 'Resume', url: 'https://res.cloudinary.com/tomasgo/image/upload/v1728188476/tomas-master/pdf/Tomas_Gonzalez_UX_Designer_Oct.2024_wwt3oa.pdf', target: '_blank', id: 'resume-link'  },
             { title: 'Writing', url: '/writing', id: 'writing-link' },
         ]
     };
