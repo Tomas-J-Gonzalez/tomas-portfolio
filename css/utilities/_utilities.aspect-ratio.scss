@@ -48,6 +48,10 @@
   /* 3:2 Aspect Ratio */
 }
 
+.aspect-ratio-portrait-headshot {
+ padding-bottom: calc(533 / 400 * 100%);
+  /* 3:4 Aspect Ratio */
+}
 
 .aspect-ratio-portrait {
   padding-bottom: calc(564 / 395 * 100%);
