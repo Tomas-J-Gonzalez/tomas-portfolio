@@ -2913,7 +2913,7 @@ a[rel*=external]:hover::after {
 }
 
 .aspect-ratio-portrait-headshot {
-  padding-bottom: 133.25%;
+  padding-bottom: 123.25%;
   /* 3:4 Aspect Ratio */
 }
 
