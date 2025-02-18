@@ -2058,6 +2058,7 @@ p + .Image {
     width: 55%;
     float: right;
     margin-left: 48px;
+    padding-left: 150px;
     margin-bottom: 32px;
     margin-top: 0;
   }
@@ -2909,6 +2910,11 @@ a[rel*=external]:hover::after {
 .aspect-ratio-landscape-skinny {
   padding-bottom: 33.3333%;
   /* 3:2 Aspect Ratio */
+}
+
+.aspect-ratio-portrait-headshot {
+  padding-bottom: 133.25%;
+  /* 3:4 Aspect Ratio */
 }
 
 .aspect-ratio-portrait {
