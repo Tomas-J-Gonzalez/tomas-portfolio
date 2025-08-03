@@ -3026,6 +3026,24 @@ a[rel*=external]:hover::after {
   overflow-wrap: break-word; /* Fallback for older browsers */
 }
 
+/* Asterix SVG */
+.asterisk {
+  display: inline-block;
+  transform-origin: center;
+}
+
+.asterisk:hover {
+  animation: rotate-slow 4s linear infinite;
+}
+
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 /* Apple Notes */
 .front {
   position: sticky;
