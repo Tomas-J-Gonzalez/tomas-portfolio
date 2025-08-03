@@ -32,26 +32,38 @@
     -->
 
     <link rel="stylesheet"  type="text/css" href="/css/styles.css">
+     <!-- Navigation Header-->
     <!-- Include Handlebars library + Template script-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js" integrity="sha512-E1dSFxg+wsfJ4HKjutk/WaCzK7S2wv1POn1RRPGh8ZK+ag9l244Vqxji3r6wgz9YBf6+vhQEYJZpSjqWFPg9gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script id="SiteHead__template" type="text/x-handlebars-template">
-   
     <header class="SiteHead" id="scroll">
       <div class="Nav__logo">
-       <a href="/"> 
-        <svg id="circle" width="40" height="40" viewBox="-10 -10 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_337_2891)"><rect width="40" height="40" rx="120" fill="black"></rect><circle id="innerBall" cx="20" cy="20" r="8" fill="black" aria-label="Switch to dark theme"></circle></g></svg>
+       <a href="#"> 
+
+     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 400 400" class="asterisk">
+  <g data-name="Layer 2">
+    <g data-name="Layer 1">
+      <rect width="60" height="400" x="170" rx="3.15" style="fill:#0b1b12"/>
+      <rect width="60" height="400" x="170" rx="3.15" style="fill:#0b1b12" transform="rotate(90 200 200)"/>
+      <rect width="51.25" height="341.65" x="174.38" y="29.18" rx="2.69" style="fill:#0b1b12" transform="rotate(45 199.99672575 200.00135624)"/>
+      <rect width="51.25" height="341.65" x="174.38" y="29.18" rx="2.69" style="fill:#0b1b12" transform="rotate(-45 200.00135624 199.99672575)"/>
+    </g>
+  </g>
+</svg>
+        <!-- <svg id="circle" width="40" height="40" viewBox="-10 -10 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_337_2891)"><rect width="40" height="40" rx="120" fill="black"></rect><circle id="innerBall" cx="20" cy="20" r="8" fill="black" aria-label="Switch to dark theme"></circle></g></svg>-->
       </a>   
       </div>     
       
       <nav class="Nav" aria-label="Main Navigation">
         <ul  class="Nav__list">
           {{#each pages}}
-              <li class="Nav__listItem" ><a class="Nav--listItemLink" id="{{id}}" href="{{url}}">{{title}}</a></li>
+              <li class="Nav__listItem"><a class="Nav--listItemLink" id="{{id}}" href="{{url}}">{{title}}</a></li>
           {{/each}}
         </ul>
       </nav>
       </header>
     </script>
+    <!-- Navigation Header End-->
 </head>
 <body class="Wrapper h-card">
 <a class="skip-link" href="#main-content">Skip to main content</a>
